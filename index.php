@@ -563,7 +563,7 @@ session_start();
         }
       </script>
 
-      <p>© AV Web Development</p>
+      <p>© Subha Das</p>
     </div>
 
     <div>

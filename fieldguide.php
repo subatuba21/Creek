@@ -502,7 +502,7 @@ $_SESSION['page'] = "field-guide";
         }
       </script>
 
-      <p>© AV Web Development</p>
+      <p>© Subha Das</p>
     </div>
 
     <div>
