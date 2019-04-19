@@ -1,0 +1,18 @@
+/*creeke.css*/
+
+.normaltext {
+  font-family: 'Dosis', sans-serif;
+  font-weight: 400;
+}
+.herotext {
+  font-family: 'Dosis', sans-serif;
+  font-weight: 600;
+  font-size: 60pt;
+}
+#hero {
+}
+.logo {
+  font-family: 'Dosis', sans-serif;
+  font-weight: 700;
+  font-size: 20pt;
+}
