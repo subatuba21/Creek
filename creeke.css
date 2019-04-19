@@ -6,13 +6,20 @@
 }
 .herotext {
   font-family: 'Dosis', sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 60pt;
+  color: white;
 }
 #hero {
+  background: url(arroyo-del-valle.jpg) center/cover;
 }
 .logo {
   font-family: 'Dosis', sans-serif;
   font-weight: 700;
   font-size: 20pt;
+}
+.navtext {
+  font-family: 'Dosis', sans-serif;
+  font-weight: 400;
+  font-size: 16pt;
 }
