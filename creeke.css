@@ -1,8 +1,11 @@
 /*creeke.css*/
-
+#navbar {
+  border-bottom: 2px black solid;
+}
 .normaltext {
   font-family: 'Dosis', sans-serif;
   font-weight: 400;
+  font-size: 15pt;
 }
 .herotext {
   font-family: 'Dosis', sans-serif;
@@ -31,4 +34,45 @@ a {
 }
 #datades {
   margin-top: 30px;
+}
+h2 {
+  font-family: 'Dosis', sans-serif;
+  font-weight: 500;
+  font-size: 20pt;
+}
+#site1{
+  margin-top: 10px;
+}
+#site2{
+  background-color: blue
+}
+#site3{
+  background-color: green
+}
+#site4{
+  background-color: yellow
+}
+#pcwriting {
+  margin-top: 1em;
+}
+#gallery {
+  width: 400px;
+  height: 300px;
+}
+#pcw {
+  border-radius: 15px;
+  background-color: yellow;
+  padding: 60px;
+}
+#avweb {
+  color: yellow;
+  font-weight: bold;
+  background-color: purple;
+}
+#tiles {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+#section1 {
+  margin-top: 10px;
 }
