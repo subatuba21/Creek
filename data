@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Arroyo Del Valle</title>
+    <link rel="stylesheet" href="creek.css">
+    <link rel="stylesheet" href="creeke.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
+    <script src="creekm.js" charset="utf-8"></script>
+  </head>
+<body>
+  <section class="section has-background-light">
+			<div class="container">
+				<div class="columns">
+					<div class="column is-one-third">
+						<article class="media notification is-info">
+							<figure class="media-left">
+								<span class="icon is-medium">
+									<i class="fab fa-2x fa-css3-alt"></i>
+								</span>
+							</figure>
+							<div class="media-content">
+								<div class="content">
+									<h1 class="title is-size-4">Bulma?</h1>
+									<p class="is-size-5">
+										Bulma is a modern CSS framework from @jgthms, based on Flexbox.
+										Using Bulma, we can describe our website's design using just classes. <span class="emoticon">ᕕ( ᐛ )ᕗ</span>
+									</p>
+								</div>
+							</div>
+						</article>
+					</div>
+					<div class="column">
+						<article class="media notification is-primary">
+							<figure class="media-left">
+								<span class="icon is-medium">
+									<i class="fas fa-2x fa-align-justify"></i>
+								</span>
+							</figure>
+							<div class="media-content">
+								<div class="content">
+									<h1 class="title is-size-4">…Flexbox?</h1>
+									<p class="is-size-5">
+										Flexbox is a CSS spec that makes sectioning and aligning more natural.
+										We don't need to know Flexbox but it's how Bulma works behind-the-scenes. <span class="emoticon">⦤(^ー^)⦥</span>
+									</p>
+								</div>
+							</div>
+						</article>
+					</div>
+					<div class="column">
+						<article class="media notification is-warning">
+							<figure class="media-left">
+								<span class="icon is-medium">
+									<i class="fas fa-2x fa-shield-alt"></i>
+								</span>
+							</figure>
+							<div class="media-content">
+								<div class="content">
+									<h1 class="title is-size-4">…Classes?</h1>
+									<p class="is-size-5">
+										Instead of writing our CSS per-element, we can use predefined classes.
+										With enough classes, we can describe our website design using semantics. <span class="emoticon">٩(^ᴗ^)۶</span>
+									</p>
+								</div>
+							</div>
+						</article>
+					</div>
+</body>
