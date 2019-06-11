@@ -1,11 +1,12 @@
 /*creeke.css*/
 #navbar {
   border-bottom: 2px black solid;
+  margin-bottom: 0px;
 }
 .normaltext {
   font-family: 'Dosis', sans-serif;
   font-weight: 400;
-  font-size: 15pt;
+  font-size: 18pt;
 }
 .herotext {
   font-family: 'Dosis', sans-serif;
@@ -38,19 +39,7 @@ a {
 h2 {
   font-family: 'Dosis', sans-serif;
   font-weight: 500;
-  font-size: 20pt;
-}
-#site1{
-  margin-top: 10px;
-}
-#site2{
-  background-color: blue
-}
-#site3{
-  background-color: green
-}
-#site4{
-  background-color: yellow
+  font-size: 25pt;
 }
 #pcwriting {
   margin-top: 1em;
@@ -58,11 +47,17 @@ h2 {
 #gallery {
   width: 400px;
   height: 300px;
+  float: left;
+  margin-right: 15px;
+  border-radius: 10px;
 }
 #pcw {
   border-radius: 15px;
   background-color: yellow;
   padding: 60px;
+  padding-top: 30px;
+  padding-bottom: 40px;
+  margin-bottom: 0px;
 }
 #avweb {
   color: yellow;
@@ -75,4 +70,45 @@ h2 {
 }
 #section1 {
   margin-top: 10px;
+}
+.datatile {
+  font-size: 17pt;
+}
+h1 {
+  font-size: 20pt;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+footer {
+  background-color: grey;
+  margin-top: 40px;
+  border-top: 10px solid purple;
+}
+h3 {
+  font-size: 20pt;
+  font-weight: 700;
+  margin-bottom: 40px;
+  margin-top: 30px;
+}
+.sitepics {
+  margin-top: 30px;
+}
+.sitepic {
+  margin: 10px;
+  height: 345px;
+  width: 457px;
+}
+.sites {
+  margin-top: 30px;
+
+}
+.sitelink {
+  color: black;
+  margin: 10px;
+  font-size: 13.5pt;
+}
+h4 {
+  font-size: 20pt;
+  font-weight: 700;
+  font-family: 'Dosis', sans-serif;
 }

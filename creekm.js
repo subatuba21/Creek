@@ -25,5 +25,9 @@ $(document).ready(function() {
       }
     }, 3000);
 
+  };
+  if (document.title=="Study Sites") {
+    var position = $("#site1").position();
+    window.scrollTo(0, position.top);
   }
 });
