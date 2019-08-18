@@ -227,46 +227,46 @@ Site Nine has much deeper water than located at sites seven and eight. The flowi
       </div>
     </footer>
     <nav class="navbar is-fixed-bottom has-text-centered" style="border-top: 2px black solid">
-      <a class = "sitelink button is-link is-normal" href="#site1">
+      <a class = "sitelink button is-link is-small" href="#site1">
         Site 1
       </a>
-      <a class = "sitelink button is-link is-normal" href="#site2">
+      <a class = "sitelink button is-link is-small" href="#site2">
         Site 2
       </a>
-      <a class = "sitelink button is-link is-normal" href="#site3">
+      <a class = "sitelink button is-link is-small" href="#site3">
         Site 3
       </a>
-      <a class = "sitelink button is-link is-normal" href="#site4">
+      <a class = "sitelink button is-link is-small" href="#site4">
         Site 4
       </a>
-      <a class = "sitelink button is-link is-normal" href="#site5">
+      <a class = "sitelink button is-link is-small" href="#site5">
         Site 5
       </a>
-      <a class = "sitelink button is-link is-normal" href="#site6">
+      <a class = "sitelink button is-link is-small" href="#site6">
         Site 6
       </a>
-      <a class = "sitelink button is-link is-normal" href="#site7">
+      <a class = "sitelink button is-link is-small" href="#site7">
         Site 7
       </a>
-      <a class = "sitelink button is-link is-normal" href="#site8">
+      <a class = "sitelink button is-link is-small" href="#site8">
         Site 8
       </a>
-      <a class = "sitelink button is-link is-normal" href="#site9">
+      <a class = "sitelink button is-link is-small" href="#site9">
         Site 9
       </a>
-      <a class = "sitelink button is-link is-normal" href="#site10">
+      <a class = "sitelink button is-link is-small" href="#site10">
         Site 10
       </a>
-      <a class = "sitelink button is-link is-normal" href="#site11">
+      <a class = "sitelink button is-link is-small" href="#site11">
         Site 11
       </a>
-      <a class = "sitelink button is-link is-normal" href="#site12">
+      <a class = "sitelink button is-link is-small" href="#site12">
         Site 12
       </a>
-      <a class = "sitelink button is-link is-normal" href="#site13">
+      <a class = "sitelink button is-link is-small" href="#site13">
         Site 13
       </a>
-      <a class = "sitelink button is-link is-normal" href="#site14">
+      <a class = "sitelink button is-link is-small" href="#site14">
         Site 14
       </a>
       <div class="navbar-end normaltext">
