@@ -16,11 +16,12 @@
      <div id='sitecont'>
        <?php
           print "
-            <h2 id='siteheader'>Site 1</h2>
+            <h2 id='siteheader'>Enter a number below to proceed</h2>
             <p id='sitetext'>
 
             </p>
             <div id='siteimages'>
+              <img src='pics/downarrow.png' style='height: 200px;'>
             </div>
 
 
@@ -35,7 +36,7 @@
      <div id="navbar-bottom">
        <div class="navbar-item">
          Enter site number:
-         <input id='sitechanger' style="font-family: 'Dosis', sans-serif;" type="text" name="site" placeholder="1-21">
+         <input id='sitechanger' style="font-family: 'Dosis', sans-serif;" type="text" name="site" placeholder="1-14">
          <script src="js/sitechanger.js" charset="utf-8"></script>
        </div>
      </div>
