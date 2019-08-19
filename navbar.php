@@ -4,10 +4,10 @@
     <div id='navbar'>
       <div id='navbar-left'>
         <div class='navbar-item' id='home'>
-          <a href='#'>Home</a>
+          <a href='index.php'>Home</a>
         </div>
         <div class='navbar-item' id='study-sites'>
-          <a href='#'>Study Sites</a>
+          <a href='studysites.php'>Study Sites</a>
         </div>
         <div class='navbar-item' id='data'>
           <a href='#'>Data</a>

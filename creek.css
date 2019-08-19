@@ -192,8 +192,43 @@ h2 {
 
 .panelim {
   border-radius: 10%;
-  height: 75%;
+  width: 100%;
+  min-height: 50%;
   max-height: 75%;
   max-width: 100%;
   object-fit: cover;
+}
+
+#sitecont {
+  margin: 50px;
+  text-align: center;
+  margin: 30px;
+  text-align: center;
+  font-family: 'Dosis', sans-serif;
+  font-size: 19pt;
+}
+
+#navbar-bottom {
+  position: fixed;
+  border-top: 3px solid black;
+  overflow: hidden;
+  bottom: 0;
+  width: 100%;
+  font-family: 'Dosis', sans-serif;
+  font-size: 15pt;
+  text-align: center;
+  background-color: white;
+}
+
+#siteimages {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.siteims {
+  max-height: 45%;
+  max-width: 45%;
+  margin: 10px;
 }
