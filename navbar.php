@@ -10,7 +10,7 @@
           <a href='studysites.php'>Study Sites</a>
         </div>
         <div class='navbar-item' id='data'>
-          <a href='#'>Data</a>
+          <a href='data.php'>Data</a>
         </div>
         <div class='navbar-item' id='field-guide'>
           <a href='#'>Field Guide</a>

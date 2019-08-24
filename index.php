@@ -46,7 +46,7 @@
           <img src="pics/fox.jpg" alt="" class="panelim">
         </div>
         <div id="rightpanelb">
-          <img src="pics/man.jpeg" alt="" class="panelim">
+          <img src="pics/fox.jpg" alt="" class="panelim">
         </div>
       </div>
     </div>
