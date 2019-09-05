@@ -23,12 +23,6 @@
     </div>
     <div id="maintext">
       <div id="mtgrid">
-       <div id="leftpanelt">
-          <img src="pics/owl.jpeg" alt="" class="panelim">
-        </div>
-        <div id="leftpanelb">
-          <img src="pics/ducks.jpeg" alt="" class="panelim">
-        </div>
         <div id="visit">
           <h2>Visiting the Creek</h2>
           Visiting the creek site requires a short walk from Amador. We typically will get there and back in a single class period. While at the study site, Amador students assess water quality by collecting chemical measurements, capturing indicator species, and making qualitative observations regarding the abundance and distribution of flora and fauna. Grant money provided by the Amador Parent Teacher Student Association, Pleasanton Partners In Education and the Tri Valley Community Fund have enabled us to purchase the necessary tools to collect, store, and display what we have found. Significant changes have been observed over the years and fortunately most have been positive. Recently the city has followed our lead and began introducing native plant species accompanied by wire to protect the plants from deer and irrigation to sustain the young plants during the summer. We envision that one day the Arroyo Del Valle "creek" will be a place where members of the Pleasanton community will enjoy bringing their children to observe and appreciate an abundance of wildlife. We hope this web site will encourage you to visit the study area and become an active participant in the revitalization and beautification of this wonderful Pleasanton ecosystem. While there, if you see any Endangered Species or acquire information that may assist us in our research please e-mail ethiel@pleasanton.k12.ca.us.
@@ -40,13 +34,6 @@
         <div id="goal">
           <h2>The Goal</h2>
           The goal of the project is to provide field experience opportunities for Amador science students while at the same time support efforts in transforming the "creek" channel into an environment that is respected, enjoyed, and maintained by the Pleasanton Community. The web site will hopefully act as inspiration to other organizations to initiate similar habitat reclamation projects and promote a heightened level of concern about the "Land Sea" connection. We all need to work together to reclaim all that has been overlooked or forgotten and stop the flow of toxics into our oceans. We must recognize that habitat protection and stable biologically diverse ecosystems must be a priority.
-        </div>
-
-        <div id="rightpanelt">
-          <img src="pics/fox.jpg" alt="" class="panelim">
-        </div>
-        <div id="rightpanelb">
-          <img src="pics/fox.jpg" alt="" class="panelim">
         </div>
       </div>
     </div>

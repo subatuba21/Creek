@@ -13,7 +13,7 @@
           <a href='data.php'>Data</a>
         </div>
         <div class='navbar-item' id='field-guide'>
-          <a href='#'>Field Guide</a>
+          <a href='fieldguide.php'>Field Guide</a>
         </div>
         </div>
       <div id='logo'> <!--logo-->
