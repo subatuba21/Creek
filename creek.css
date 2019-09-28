@@ -7,11 +7,10 @@ html, body {
   width: 100%;
   display: inline;
   position: fixed;
-  border-bottom: 3px solid black;
   font-family: 'Dosis', sans-serif;
   font-size: 15pt;
   text-align: center;
-  background-color: white;
+  background-color: #607F1F;
 }
 
 #navbar-left {
@@ -80,14 +79,16 @@ html, body {
 }
 
 #hero {
-  background-image: url('pics/arroyo-del-valle.jpg');
+  background-image: url('pics/5.jpg');
   width: 100%;
   background-position: center;
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 120%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin-bottom: 0px;
 }
 
 #heropic {
@@ -103,16 +104,15 @@ h1 {
   text-align: center;
 }
 #herotext {
-   background: rgba(255, 255, 255, 0.6);
+   background: rgba(220,220,220, 0.6);
   padding: 30px;
   border: 2px solid black;
-  border-radius: 10px;
   max-width: 50%;
 }
 
 #herotext p {
   font-family: 'Dosis', sans-serif;
-  font-size: 20pt;
+  font-size: 18pt;
   color: black;
   text-align: center;
 }
@@ -121,8 +121,11 @@ h1 {
   margin: 0px;
   text-align: center;
   font-family: 'Dosis', sans-serif;
-  font-size: 20pt;
-  background-color:  	#90EE90;
+  font-size: 17.5pt;
+  background-color: #6B8E23;
+  width: 100%;
+  padding-bottom: 20px;
+  display: inline-block;
   }
 
 h2 {
@@ -132,18 +135,48 @@ h2 {
   text-align: center;
 }
 
-#mtgrid {
+.mtgrid {
   display: grid;
   grid-template-columns: 15% 35% 35% 15%;
-  grid-template-rows: auto auto;
+  grid-template-rows: 1fr 1fr;
   justify-content: center;
   align-content: center;
   grid-column-gap: 20px;
   grid-row-gap: 10px;
+  padding-bottom: 20px;
+}
+
+#im1 {
+  grid-area: 1/2/2/3;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#im2 {
+  grid-area: 2/2/3/3;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mtgrid img {
+  max-width: 80%;
+  object-fit: cover;
+  border: 2px solid green;
 }
 
 #visit {
-  grid-area: 1/2/3/3;
+  text-align: center;
+  margin-bottom: 2%;
+}
+
+#visit p {
+  margin-left: 15%;
+  margin-right: 15%;
 }
 
 #use {
@@ -154,40 +187,12 @@ h2 {
   grid-area: 2/3/3/4;
 }
 
-#leftpanelt {
-  grid-area: 1/1/2/2;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-left: 13px;
-}
-
-#leftpanelb {
-  grid-area: 2/1/3/2;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-left: 13px;
-}
-
-#rightpanelt {
-  grid-area: 1/4/2/5;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-right: 13px;
-}
-
-#rightpanelb {
-  grid-area: 2/4/3/5;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-right: 13px;
+#panel {
+  grid-area: 1/3/3/4;
+  background: url(pics/rivpic.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 
@@ -346,4 +351,101 @@ h2 {
   margin: 10px;
   border: 5px solid black;
   border-radius: 10px;
+}
+
+#switchbuttons {
+  float: right;
+}
+
+.switchbutton {
+  display: flex;
+  height: 130px;
+  width: 130px;
+  background-color: blue;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.c1 {
+  background: url(pics/leafp.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.c2 {
+  background: url(pics/fish.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#duck {
+max-height: 100px;
+max-width: 100px;
+}
+
+h6 {
+  width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+.separator {
+  width: 20%;
+  margin-top: 50px;
+  color: #256d7b;
+}
+
+#about {
+  text-align: center;
+  width: 100%;
+}
+
+#about p {
+  display: inline-block;
+  width: 70%;
+  margin-top: 2%;
+}
+
+#filebar {
+  display: inline-block;
+  width: 73%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  background-color: rgba(220,220,220, 0.6);
+  border-radius: 4px;
+  padding: .5%;
+}
+
+#filebar i {
+  display: inline-block;
+  margin-left: 2%;
+  margin-right: 2%;
+  float: left;
+  font-size: 30pt;
+  clear: right;
+  border-right: 2px solid black;
+  padding-right: .9%;
+}
+
+#filebar li {
+  list-style-type: none;
+  margin-right: 2%;
+  float: left;
+
+}
+
+#filebar li:hover {
+  opacity: .6;
+}
+
+#filebar a{
+  text-decoration: none;
+  color: black;
+}
+
+#filebar ul {
+  position: relative;
+  top: -12px;
 }

@@ -17,7 +17,7 @@
         </div>
         </div>
       <div id='logo'> <!--logo-->
-          <img id='logoimg' src='pics/logo.jpg'>
+          <img id='logoimg' src=''>
       </div>
       <div id='navbar-right'>
       </div>
