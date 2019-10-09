@@ -6,6 +6,54 @@
     <title>Study Sites</title>
     <link rel="stylesheet" href="creek.css">
     <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.4.95/css/materialdesignicons.min.css">
+    <style>
+
+      #sitetext {
+        display: block;
+        margin: 0px;
+        font-size: 1.5vw;
+        margin-bottom: 2%;
+      }
+
+      #sitecont h2 {
+        font-size: 2vw;
+      }
+
+      #sitecont {
+        margin: 0px;
+        margin-left: 2%;
+        margin-right: 2%;
+        padding: none;
+      }
+
+      #navbar-bottom {
+        border: none;
+        background-color: #6B8E23;
+      }
+      body {
+        overflow-y: hidden;
+      }
+
+      input {
+        background-color: #607F1F;
+        padding: .3%;
+        border-radius: 2px;
+        border: none;
+        font-size: .9vw;
+      }
+      #navbar-bottom .navbar-item {
+        font-size: 1.3vw;
+      }
+
+      i {
+        font-size: 1.6vw;
+        position: relative;
+        top: 2px;
+        color: 	#809c13;
+      }
+    </style>
+
   </head>
   <body>
     <?php
@@ -28,17 +76,21 @@
           ";
 
        ?>
-     </div>
-     <div id="navbar-bottom">
-       <div class="navbar-item">
-         Enter site number:
-         <input id='sitechanger' style="font-family: 'Dosis', sans-serif;" type="text" name="site" placeholder="1-14">
-         <script src="js/sitechanger.js" charset="utf-8"></script>
-       </div>
-     </div>
-     <div id="placeholderb">
+       <div id="navbar-bottom">
+         <div class="navbar-item">
+           Enter site number:
+           <input id='sitechanger' style="font-family: 'Dosis', sans-serif;" type="text" name="site" placeholder="1-14">
+           <i class="mdi mdi-arrow-right-bold-circle"></i>
 
+
+           <i style="margin-left: 2%;"class="mdi mdi-arrow-left"></i>
+           <i class="mdi mdi-arrow-right"></i>
+           <script src="js/sitechanger.js" charset="utf-8"></script>
+         </div>
+       </div>
+       <script src="" charset="utf-8"></script>
      </div>
-     <script src="js/navbottom.js" charset="utf-8"></script>
+     <script src="js/sitecont.js" charset="utf-8"></script>
+
   </body>
 </html>

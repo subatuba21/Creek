@@ -6,6 +6,17 @@
   <title>Study Sites</title>
   <link rel="stylesheet" href="creek.css">
   <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
+  <style>
+    #displaytitle {
+      background-color: 	#809c13;
+    }
+    #displayarea {
+      background-color: 	#809c13;
+    }
+    #displaymedia {
+      background-color: 	#809c13;
+    }
+  </style>
 </head>
 <body>
   <?php
@@ -20,25 +31,55 @@
         Conductivity
       </div>
       <div class="button">
-        Fluidity
+        Turbidity
       </div>
       <div class="button">
-        Fluidity
+        Temperature
       </div>
       <div class="button">
-        Fluidity
+        Productivity
       </div>
       <div class="button">
-        Fluidity
+        Depth
       </div>
       <div class="button">
-        Fluidity
+        Phosphate Levels
       </div>
       <div class="button">
-        Fluidity
+        pH
       </div>
       <div class="button">
-        Fluidity
+        Nitrate
+      </div>
+      <div class="button">
+        Humidity
+      </div>
+      <div class="button">
+        Flow Rate
+      </div>
+      <div class="button">
+        DO
+      </div>
+      <div class="button">
+        Plankton Net
+      </div>
+      <div class="button">
+        Kick Net
+      </div>
+      <div class="button">
+        Seine Net
+      </div>
+      <div class="button">
+        Dip Net
+      </div>
+      <div class="button">
+        Succession
+      </div>
+      <div class="button">
+        Sediments
+      </div>
+      <div class="button">
+        Clean Up
       </div>
     </div>
     <div id="displayarea">

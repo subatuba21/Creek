@@ -1,6 +1,7 @@
 /*creek.css*/
 html, body {
   margin: 0px;
+  background-color: #6B8E23;
 }
 
 #navbar {
@@ -38,10 +39,10 @@ html, body {
 
 @keyframes hoverlink {
   from {
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid #607F1F;
   }
   to {
-    border-bottom: 2px solid gold;
+    border-bottom: 2px solid #ADFF2F;
   }
 }
 
@@ -206,9 +207,6 @@ h2 {
 }
 
 #sitecont {
-  margin: 50px;
-  text-align: center;
-  margin: 30px;
   text-align: center;
   font-family: 'Dosis', sans-serif;
   font-size: 25pt;
@@ -255,7 +253,7 @@ h2 {
 
 #displayarea {
   grid-area: 1/2/6/4;
-  background-color: white;
+  background-color: #DCDCDC;
   border: 1px solid black;
   border-radius: 10px;
   margin: 10px;
@@ -279,25 +277,17 @@ h2 {
   width: 45%;
   margin: 10px;
   border-radius: 10px;
-  background-color: orange;
+   background: rgba(220,220,220, .6);
   justify-content: center;
   align-items: center;
   font-size: 18pt;
   font-family: 'Dosis', sans-serif;
-  box-shadow: 0px 9px black;
+  box-shadow: 0px 4px black;
 }
 
 .button:active {
-  box-shadow: 0 5px black;
-  transform: translateY(4px);
-}
-
-.button:hover {
-
-}
-
-#displaytitle {
-  background-color: white;
+  box-shadow: 0 1px black;
+  transform: translateY(3px);
 }
 
 #displayword {

@@ -68,17 +68,5 @@ Many residents and local industry aren't aware of what the Arroyo once was and w
 
       </div>
     </div>
-
-<!--
-<div class="switchbutton c1">
-  <h6>The Goal</h6>
-</div>
-<div class="switchbutton c2">
-  <h6>How to use this website</h6>
-</div>
-
-
-  -->
-
   </body>
 </html>
