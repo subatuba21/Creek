@@ -5,7 +5,7 @@ getData.onreadystatechange = function() {
     document.getElementById('displayarea').innerHTML = datahtml;
   }
 }
-viewporth = window.innerHeight;
+var viewporth = window.innerHeight;
 var height = document.getElementById('navbar').clientHeight;
 var dataheight = viewporth - height;
 dataheight = dataheight.toString();
