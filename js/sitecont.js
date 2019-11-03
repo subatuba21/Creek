@@ -1,6 +1,4 @@
-viewporth = window.innerHeight;
-var height = document.getElementById('navbar').clientHeight;
-var heroheight = viewporth - height;
-heroheight = heroheight.toString();
-heroheight+='px';
-document.getElementById('sitecont').style.height=heroheight;
+var heightone = document.getElementById('navbar-bottom').clientHeight;
+heightone = heightone.toString();
+heightone+='px';
+document.getElementById('siteimages').style.marginBottom=heightone;

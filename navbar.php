@@ -1,7 +1,13 @@
 <?php
   $page = $_SESSION['page'];
+  $homestyle = '';
+  $homeDis='';
+  if ($page=='home') {
+    $homestyle = 'background-color: rgba(255, 0, 0, 0);';
+    $homeDis = 'display:none;';
+  }
   print "
-    <div id='navbar'>
+    <div id='navbar' style='$homestyle'>
       <div id='navbar-left'>
         <div class='navbar-item' id='home'>
           <a href='index.php'>Home</a>
@@ -22,7 +28,7 @@
       <div id='navbar-right'>
       </div>
     </div>
-    <div id='placeholder'>
+    <div id='placeholder' style='$homeDis'>
 
     </div>
 

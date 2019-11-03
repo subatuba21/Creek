@@ -11,8 +11,15 @@ var dataheight = viewporth - height;
 dataheight = dataheight.toString();
 dataheight+='px';
 document.getElementById('datagrid').style.height=dataheight;
+var items = document.getElementsByClassName("button");
 
-function conductivity(item) {
+function dataPrint(item) {
   getData.open("POST", "data/dataprint.php", true);
   getData.send(item);
+}
+
+for (let item of items) {
+  item.addEventListener('click', function() {
+    dataPrint(item.innerText.toLowerCase());
+  })
 }

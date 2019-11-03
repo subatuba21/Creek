@@ -32,3 +32,48 @@ document.getElementById('sitechanger').addEventListener("keydown", event => {
 }
 
 );
+
+document.getElementById("arrow-go").addEventListener("click", function() {
+  site = document.getElementById('sitechanger').value.toString();
+  var jsonu = {
+    site: site
+  };
+
+  getsite.open("POST", "study-sites/siteprint.php", true);
+  getsite.setRequestHeader("Content-Type", "application/json");
+  getsite.send(JSON.stringify(jsonu));
+});
+
+document.getElementById("arrow-left").addEventListener("click", function() {
+  site = document.getElementById('siteheader').innerText;
+  site = site.trim();
+  site = site.substring(site.length-2, site.length);
+  site = site.trim();
+  site = parseInt(site);
+  site--;
+  site = site.toString();
+  var jsonu = {
+    site: site
+  };
+
+  getsite.open("POST", "study-sites/siteprint.php", true);
+  getsite.setRequestHeader("Content-Type", "application/json");
+  getsite.send(JSON.stringify(jsonu));
+});
+
+document.getElementById("arrow-right").addEventListener("click", function() {
+  site = document.getElementById('siteheader').innerText;
+  site = site.trim();
+  site = site.substring(site.length-2, site.length);
+  site = site.trim();
+  site = parseInt(site);
+  site++;
+  site = site.toString();
+  var jsonu = {
+    site: site
+  };
+
+  getsite.open("POST", "study-sites/siteprint.php", true);
+  getsite.setRequestHeader("Content-Type", "application/json");
+  getsite.send(JSON.stringify(jsonu));
+});

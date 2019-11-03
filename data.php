@@ -25,9 +25,8 @@
   include 'navbar.php';
   ?>
   <div id="datagrid">
-    <script src="js/data.js" charset="utf-8"></script>
     <div id="buttonarea">
-      <div class="button" onclick="conductivity('conductivity')">
+      <div class="button">
         Conductivity
       </div>
       <div class="button">
@@ -82,6 +81,7 @@
         Clean Up
       </div>
     </div>
+    <script src="js/data.js" charset="utf-8"></script>
     <div id="displayarea">
       <h2 id='displaytitle'>Conductivity</h2>
       <div id="displaymedia">

@@ -1,6 +1,5 @@
 viewporth = window.innerHeight;
-var height = document.getElementById('navbar').clientHeight;
-var heroheight = viewporth - height;
+var heroheight = viewporth;
 heroheight = heroheight.toString();
 heroheight+='px';
 document.getElementById('hero').style.height=heroheight;
