@@ -1,7 +1,13 @@
 /*creek.css*/
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap');
+
 html, body {
   margin: 0px;
   background-color: #6B8E23;
+}
+
+:root {
+  --light-green: #7FFF00;
 }
 
 #navbar {
@@ -28,9 +34,11 @@ html, body {
   float: right;
   display: inline-flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   min-height: 1px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 20pt;
 }
 
 .navbar-item {
@@ -80,7 +88,7 @@ html, body {
 }
 
 #hero {
-  background-image: url('pics/5.jpg');
+  background-image: url('images/5.jpg');
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -179,14 +187,17 @@ h2 {
 #visit p {
   margin-left: 15%;
   margin-right: 15%;
+  text-align: left;
 }
 
 #use {
   grid-area: 1/3/2/4;
+  text-align: left;
 }
 
 #goal {
   grid-area: 2/3/3/4;
+  text-align: left;
 }
 
 #panel {
@@ -309,7 +320,7 @@ h2 {
 
 }
 
-.displayitem{
+.displayitem {
   text-align: center;
   margin: 10px;
   max-width: 100%;
@@ -388,7 +399,6 @@ h6 {
 }
 
 #about {
-  text-align: center;
   width: 100%;
 }
 
@@ -396,6 +406,16 @@ h6 {
   display: inline-block;
   width: 70%;
   margin-top: 2%;
+  margin-bottom: 0px;
+  text-align: left;
+}
+
+#about p::after {
+  content: "...";
+}
+
+.computer-hidden {
+  display: none;
 }
 
 #filebar {
@@ -438,4 +458,80 @@ h6 {
 #filebar ul {
   position: relative;
   top: -12px;
+}
+
+.expandb {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 30pt;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  color: var(--light-green);
+  cursor: pointer;
+}
+
+#menu {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  #navbar-right {
+    display: inline-block;
+  }
+  #menu {
+    display: inline-block;
+    font-size: 25pt;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  #navbar-left .navbar-item, .is-active {
+    display: none;
+  }
+  #navbar-left {
+    justify-content: flex-start;
+    font-size: 20pt;
+  }
+  #maintext {
+    font-size: 13pt;
+  }
+  #about p{
+    width: 95%;
+  }
+
+  h1 {
+    font-size: 20pt;
+  }
+  #herotext {
+    max-width: 75%;
+    width: 75%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border-radius: 3px;
+  }
+  #herotext p {
+    font-size: 14pt;
+  }
+  #hero {
+    background-size: cover;
+  }
+  #visit p{
+    width: 95%;
+    margin-left: 2.5%;
+  }
+  .mobile-hidden {
+    display: none;
+  }
+
+  .mobile-hidden::after {
+    content: "...";
+  }
+  .mtgrid {
+    display: block;
+    width: 95%;
+    margin-left: 2.5%;
+  }
+  #im1, #im2 {
+    display: none;
+  }
 }

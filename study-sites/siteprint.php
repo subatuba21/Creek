@@ -4,6 +4,7 @@
   $site = $data['site'];
   $urlt = "site" . "$site/text.txt";
   $urlm = "site" . "$site/images";
+  $urlim = "Site_$site";
   try {
     $file_handle = @fopen($urlt, "r");
     if (!$file_handle) {
@@ -15,7 +16,7 @@
       $studysite = array('text' => $text, 'images' => array());
       $images = array_diff(scandir($urlm), array('..', '.'));
       foreach ($images as $image) {
-        $htmlstr = "<img class='siteims' src='study-sites/$urlm/$image'>";
+        $htmlstr = "<img class='siteims' src='images/Study_Sites/$urlim/$image'>";
         array_push($studysite['images'], $htmlstr);
       }
       print json_encode($studysite);

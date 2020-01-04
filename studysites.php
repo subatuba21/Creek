@@ -8,6 +8,11 @@
   <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.4.95/css/materialdesignicons.min.css">
   <style>
+  #navbar {
+    position: absolute;
+    top:0;
+    position: fixed;
+  }
 
   #sitetext {
     display: block;
@@ -16,6 +21,7 @@
     margin-bottom: 2%;
     margin-left: 2%;
     margin-right: 2%;
+    text-align: left;
   }
 
   #sitecont h2 {
@@ -57,7 +63,7 @@
     background-color: #607F1F; !important
   }
 
-  i {
+  #navbar-bottom i {
     font-size: 1.6vw;
     position: relative;
     top: 3px;
@@ -65,13 +71,38 @@
     cursor: pointer;
   }
 
-  #eye-off {
-    margin-left: 1%;
+  @media (max-width: 768px) {
+    #sitecont {
+      margin-top: 80px;
+    }
+    #navbar-bottom .navbar-item {
+      font-size: 16pt;
+    }
+    #navbar-bottom .navbar-item span {
+      font-size: 13pt;
+      padding: 2%;
+    }
+    #navbar-bottom i {
+      font-size: 17pt;
+    }
+    input {
+      font-size: 13pt;
+      width: 60px;
+    }
+    #sitetext {
+      font-size: 13pt;
+    }
+
+    #sitecont h2 {
+      font-size: 15pt;
+      padding: top: 50px;
+    }
   }
   </style>
 
 </head>
 <body>
+  <image-gallery></image-gallery>
   <?php
   session_start();
   $_SESSION['page']="study-sites";
@@ -86,8 +117,8 @@
 
     </p>
     <div id='siteimages'>
-    <img class='siteims' src='study-sites/site1/images/site1a.jpg'>
-    <img class='siteims' src='study-sites/site1/images/site1b.jpg'>
+    <img class='siteims' src='images/Study_Sites/Site_1/site1a.jpg'>
+    <img class='siteims' src='images/Study_Sites/Site_1/site1b.jpg'>
     </div>
     ";
 
@@ -100,13 +131,12 @@
           <i class="mdi mdi-arrow-right-bold-circle" id='arrow-go'></i>
           <i style="margin-left: 1%;"class="mdi mdi-arrow-left" id='arrow-left'></i>
           <i class="mdi mdi-arrow-right" id='arrow-right'></i>
-          <i class="mdi mdi-eye-off" id='eye-off'></i>
           <script src="js/sitechanger.js" charset="utf-8"></script>
         </span>
       </div>
     </div>
   </div>
   <!-- <script src="js/sitecont.js" charset="utf-8"></script> -->
-
+    <script src="js/gallery.js" charset="utf-8"></script>
 </body>
 </html>

@@ -13,8 +13,9 @@ getsite.onreadystatechange = function() {
       document.getElementById('siteimages').innerHTML = "";
       restext['images'].forEach(function(element) {
         document.getElementById('siteimages').innerHTML += element;
-    });
-  }
+      });
+      newIms();
+    }
   }
 };
 

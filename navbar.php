@@ -9,6 +9,7 @@
   print "
     <div id='navbar' style='$homestyle'>
       <div id='navbar-left'>
+        <i class='mdi mdi-menu' id='menu'></i>
         <div class='navbar-item' id='home'>
           <a href='index.php'>Home</a>
         </div>
@@ -26,6 +27,9 @@
           <img id='logoimg' src=''>
       </div>
       <div id='navbar-right'>
+        <div class='navbar-item'>
+          <a href=''>Creekwatch</a>
+        </div>
       </div>
     </div>
     <div id='placeholder' style='$homeDis'>
@@ -49,12 +53,17 @@
         rightwidth += 'px';
         document.getElementById('navbar-left').style.width = rightwidth;
       }
-      height = height.toString();
-      height+='px';
-      document.getElementById('logoimg').style.maxHeight = height;
-      document.getElementById('navbar').style.maxHeight = height;
-      height = document.getElementById('navbar').style.maxHeight;
-      document.getElementById('placeholder').style.height = height;
+      if (window.innerWidth>768){
+        height = height.toString();
+        height+='px';
+        document.getElementById('logoimg').style.maxHeight = height;
+        document.getElementById('navbar').style.maxHeight = height;
+        height = document.getElementById('navbar').style.maxHeight;
+        document.getElementById('placeholder').style.height = height;
+      }
+      else {
+        document.getElementById('navbar-left').style.height = document.getElementById('navbar-right').clientHeight.toString() + 'px';
+      }
     </script>
   ";
 
