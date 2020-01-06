@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- suitable for mobile devices-->
   <title>AV Creek Website</title>
   <link rel="stylesheet" href="creek.css">
+  <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.4.95/css/materialdesignicons.min.css">
   <script src="js/gallery.js" charset="utf-8"></script>

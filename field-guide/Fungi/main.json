@@ -1,6 +1,6 @@
 {
-  "name": "Plants",
+  "name": "Fungi",
   "text": "",
   "level": 1,
-  "folders": ["Herbaceous_Plants", "Protists", "Non-arthropods"]
+  "folders": ["Lichens", "Mushrooms"]
 }

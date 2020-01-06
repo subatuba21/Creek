@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- suitable for mobile devices-->
   <title>Field Guide</title>
   <link rel="stylesheet" href="creek.css">
+  <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.4.95/css/materialdesignicons.min.css">
   <style>
@@ -60,24 +61,6 @@
     margin-top: .5%;
   }
 
-  #fgbuttons {
-    display: inline-block;
-    width: 30%;
-  }
-
-  #fgbuttons button {
-    width: 45%;
-    margin: 0px;
-    padding: 2%;
-    background: rgba(220,220,220, .6);
-    border: 0px;
-    border-radius: 3px;
-    font-size: 20pt;
-    font-family: 'Dosis', sans-serif;
-    cursor: pointer;
-    margin: 1%;
-  }
-
   #fgbuttons button:hover {
     opacity: .8;
   }
@@ -102,6 +85,7 @@
     float: left;
     width: 35%;
     margin-right: 2%;
+
   }
 
   #speciesInfo p {
@@ -110,9 +94,7 @@
     margin-top: 0px;
     margin-bottom: 10px;
   }
-  #genInfo {
 
-  }
   #fgtree {
     text-align: center;
     margin-bottom: 1.5%;
@@ -153,6 +135,7 @@
   .arrow {
     display: inline-block;
     font-size: 25pt;
+    z-index: 0;
   }
   .arrow:hover {
     opacity: .4;
@@ -174,21 +157,7 @@
   include 'navbar.php';
   ?>
   <h2>Organisms at the Arroyo Del Valle!</h2>
-  <div class="cont">
-    <p>
-      A multitude of organisms have been observed in the Arroyo Del Valle. We have been able to capture images of many using hand held cameras as well as a flex cam connected to a microscope back in the classroom. We plan on adding new creatures to our field guide as we are lucky enough to capture them on camera. Biology students are made aware of there levels of complexity and evolutionary relationships during the course of the year. A simple phylogenetic tree, as shown below, helps the students to organize what we find into it's appropriate taxonomic category and visualize their evolutionary origins.
-    </p>
-  </div>
-  <div class="cont">
-    <div id="fgbuttons">
-      <button type="button" id="display">Display</button>
-      <button type="button" id="tree">Tree</button>
-    </div>
-  </div>
   <script>
-  document.getElementById("display").addEventListener("click", function() {
-
-  });
   document.getElementById("tree").addEventListener("click", function() {
     document.getElementById("fgdisplay").innerHTML = "";
   });
@@ -199,99 +168,247 @@
 
     <div id="fgtree">
       <div class="displaych" style="text-align: center">
-        <i class="mdi mdi-arrow-left arrow arrow-disabled" style="float: left; margin-left: 30%"></i>
-        <i class="mdi mdi-arrow-right arrow arrow-disabled" style="float: right; margin-right: 30%"></i>
+        <i class="mdi mdi-arrow-left arrow arrow-disabled" style="float: left; margin-left: 30%; position: relative"></i>
+        <i class="mdi mdi-arrow-right arrow arrow-disabled" style="float: right; margin-right: 30%; position: relative"></i>
         <h2 style="margin-bottom: 10px">Phylogenetic Tree</h2>
-
-        <div class="card">
-          <div class="card-image">
-            <img src="http://placekitten.com/200/300" alt="hellokitty">
-          </div>
-          <div class="card-text">
-            Animals
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-image">
-            <img src="http://placekitten.com/200/400" alt="hellokitty">
-          </div>
-          <div class="card-text">
-            Plants
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-image">
-            <img src="http://placekitten.com/200/400" alt="hellokitty">
-          </div>
-          <div class="card-text">
-            Fungi
-          </div>
-        </div>
-
       </div>
     </div>
 
     <div class="displaych">
-      <h2>Animals</h2>
-      <img src="images/4.jpg" alt="image">
+      <h2 id="general-header"></h2>
+      <img id="general-image" src="" alt="image">
       <div id='speciesInfo'>
-        <p>Kingdom: Plantae</p>
-        <p>Phylum: Spermatophyte</p>
-        <p>Class: Monocotyledon</p>
-        <p>Order: Poales</p>
-        <p>Family: Sparganiaceae</p>
-        <p>Genus: Sparganiaceae</p>
-        <p>Species: Sparganiaceae</p>
-        <p id='genInfo'> <br>
-
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam efficitur a metus nec finibus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris eu dictum nisl. Aenean non convallis lorem. Aenean nec commodo quam, non aliquam orci. Cras dapibus vulputate nibh et finibus. Sed mollis diam leo, in porttitor massa semper non. Quisque vel erat ut est fermentum condimentum sit amet sit amet dui.
-
-          Nunc in commodo leo. Mauris sagittis varius mauris, suscipit elementum eros efficitur a. Morbi ornare, urna non molestie venenatis, neque neque aliquam tellus, in accumsan nisi quam vitae purus. Donec imperdiet pretium mi eget bibendum. Curabitur lectus diam, cursus non interdum eu, lacinia eget lectus. Suspendisse consequat erat nec diam varius ullamcorper. Proin at fermentum metus. Nunc consequat, turpis vitae suscipit semper, tortor lectus blandit justo, ut dapibus est tellus id est. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla eu elit ultrices, tincidunt ligula pretium, porttitor justo. Vestibulum tellus ipsum, maximus ac risus vel, tempor scelerisque ante. Sed ac felis ac dui malesuada tincidunt. Proin hendrerit efficitur venenatis. Suspendisse efficitur suscipit orci, id pretium enim finibus non. Mauris ut enim sapien. Duis eleifend ex tortor. </p>
-
-        </div>
+        <p id="kingdom"></p>
+        <p id="phylum"></p>
+        <p id="class"></p>
+        <p id="order"></p>
+        <p id="family"></p>
+        <p id="genus"></p>
+        <p id="species"></p>
+        <p id='genInfo'></p>
       </div>
+      <div style="clear: both"></div>
     </div>
+  </div>
 
-    <script>
+  <script>
 
-      class pathmaker {
-        constructor() {
-          this.level=1;
-          this.levels = new Map();
-          this.levels.set(1, null);
-          this.levels.set(2, null);
-          this.levels.set(3, null);
-          this.levels.set(4, null);
-          this.levels.set(5, null);
-          this.levels.set(6, null);
-          this.levels.set(7, null);
-        }
+  class pathmaker {
+    constructor() {
+      this.level=1;
+      this.levels = new Map();
+      this.levels.set(1, null);
+      this.levels.set(2, null);
+      this.levels.set(3, null);
+      this.topLevel = 4;
+      this.backCounter=0;
+    }
 
-        function changePath(level, item) {
+    changePath(level, item) {
+      this.levels.set(level, item);
+      for (let i = level+1; i<=this.topLevel; i++) {
+        this.levels.set(i, null);
+      }
+    }
 
-          this.levels.set(level, item);
-        }
+    setPath(level, item) {
+      this.levels.set(level, item);
+    }
 
-        function getBackwardLevel() {
-
-        }
-
-        function getForwardLevel() {
-
-        }
-
-        function getlevel () {
-          this.level++;
-          return this.level-1;
-        }
+    getBackwardPath() {
+      this.backCounter++;
+      let i = 1;
+      this.pathStr="";
+      if (this.levels.get(i)==null) {
+        this.backCounter--;
+        return null;
       }
 
-      var path = new pathmaker();
+      for (i; i<=this.getTopLevel()-this.backCounter; i++) {
+        this.pathStr += "/";
+        this.pathStr += this.levels.get(i);
+      }
+      return this.pathStr;
+    }
 
-    </script>
+    getForwardPath() {
 
-    <script src="js/gallery.js" charset="utf-8"></script>
-  </body>
-  </html>
+    }
+
+    getCurrentPath () {
+      let i = 1;
+      this.pathStr="";
+      if (this.levels.get(i)==null) {
+        return "";
+      }
+
+      for (i; i<=this.getTopLevel()-this.backCounter; i++) {
+        this.pathStr += "/";
+        this.pathStr += this.levels.get(i);
+      }
+      return this.pathStr;
+    }
+
+    getPath () {
+      this.levels.i = 1;
+      this.pathStr="";
+      while(this.levels.get(this.levels.i)!=null) {
+        this.pathStr += "/";
+        this.pathStr += this.levels.get(this.levels.i);
+        this.levels.i++;
+      }
+      return this.pathStr;
+    }
+
+    getTopLevel () {
+      let topLevel = 0;
+      while(this.levels.get(topLevel+1)!=null) {
+        topLevel++;
+      }
+      console.log(topLevel);
+      return topLevel;
+    }
+
+  }
+
+  var pathMaker = new pathmaker();
+
+  function setCardProperty (path) {
+
+    for (let card of document.getElementsByClassName("card")) {
+      card.addEventListener("click", () => {
+        let header;
+        for (let child of card.children) {
+          if (child.classList.contains("card-text")) {
+            header=child.innerText.trim();
+            header = header.replace(/ /g, "_")
+            break;
+          }
+        }
+        changeContent(path, header)
+      });
+    }
+  }
+
+  function changeContent (path, header) {
+    fetch(`field-guide${path}/${header}/main.json`).then(function(response) {
+      return response.json();
+    }).then( (json) => {
+
+      if (json["organism"]!=null) {
+        console.log("organism");
+      }
+      else {
+        pathMaker.changePath(json.level, json.name);
+        backCount=1;
+        while(document.getElementsByClassName("card").length!=0) {
+          for (let olditem of document.getElementsByClassName("card")) {
+            olditem.remove();
+          }
+        }
+        for (let item of json["folders"]) {
+          let card = document.createElement("div");
+          card.classList.add("card");
+          let imageDiv = document.createElement("div");
+          imageDiv.classList.add("card-image");
+          let image = document.createElement("img");
+          console.log(item[1]);
+          image.src=item[1];
+          image.classList.add("gallery-exception");
+          let textDiv = document.createElement("div");
+          textDiv.classList.add("card-text");
+          let itemInstance = item[0];
+          itemInstance = itemInstance.replace(/_/g, " ");
+          textDiv.innerText = itemInstance;
+          imageDiv.appendChild(image);
+          card.appendChild(imageDiv);
+          card.appendChild(textDiv);
+          document.getElementsByClassName("displaych")[0].appendChild(card);
+          console.log(pathMaker.getCurrentPath());
+          setCardProperty(pathMaker.getCurrentPath());
+        }
+        newIms();
+        document.getElementById("kingdom").innerText="";
+        document.getElementById("phylum").innerText="";
+        document.getElementById("class").innerText="";
+        document.getElementById("order").innerText="";
+        document.getElementById("family").innerText="";
+        document.getElementById("genus").innerText="";
+        document.getElementById("species").innerText="";
+        document.getElementById("genInfo").innerText=json.text;
+        document.getElementById("general-image").src = json.image;
+        document.getElementById("general-header").innerText = json.name;
+        pathMaker.backCounter=0;
+      }
+
+    });
+  }
+
+  function changeContentBack (path, header) {
+    fetch(`field-guide${path}/${header}/main.json`).then(function(response) {
+      return response.json();
+    }).then( (json) => {
+
+      if (json["organism"]!=null) {
+        console.log("organism");
+      }
+      else {
+        pathMaker.setPath(json.level, json.name);
+        while(document.getElementsByClassName("card").length!=0) {
+          for (let olditem of document.getElementsByClassName("card")) {
+            olditem.remove();
+          }
+        }
+        for (let item of json["folders"]) {
+          let card = document.createElement("div");
+          card.classList.add("card");
+          let imageDiv = document.createElement("div");
+          imageDiv.classList.add("card-image");
+          let image = document.createElement("img");
+          console.log(item[1]);
+          image.src=item[1];
+          image.classList.add("gallery-exception");
+          let textDiv = document.createElement("div");
+          textDiv.classList.add("card-text");
+          let itemInstance = item[0];
+          itemInstance = itemInstance.replace(/_/g, " ");
+          textDiv.innerText = itemInstance;
+          imageDiv.appendChild(image);
+          card.appendChild(imageDiv);
+          card.appendChild(textDiv);
+          document.getElementsByClassName("displaych")[0].appendChild(card);
+          setCardProperty(pathMaker.getCurrentPath());
+        }
+        newIms();
+        document.getElementById("kingdom").innerText="";
+        document.getElementById("phylum").innerText="";
+        document.getElementById("class").innerText="";
+        document.getElementById("order").innerText="";
+        document.getElementById("family").innerText="";
+        document.getElementById("genus").innerText="";
+        document.getElementById("species").innerText="";
+        document.getElementById("genInfo").innerText=json.text;
+        document.getElementById("general-image").src = json.image;
+        document.getElementById("general-header").innerText = json.name;
+      }
+
+    });
+  }
+
+  changeContent("", "");
+
+  document.querySelector(".mdi-arrow-left").addEventListener("click", function() {
+    let path = pathMaker.getBackwardPath();
+    console.log(path);
+    if (path!==null) {
+      changeContentBack(path, "");
+    }
+  });
+
+  setCardProperty("");
+
+  </script>
+
+  <script src="js/gallery.js" charset="utf-8"></script>
+</body>
+</html>

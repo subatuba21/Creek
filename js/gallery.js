@@ -141,7 +141,7 @@ class gallery extends HTMLElement {
             let element = document.createElement("span");
             element.innerText=item;
             maindiv.setAttribute("data-path", path+`/${item}`);
-            image.src = "images/" + maindiv.getAttribute("data-path");
+            image.src = "images" + maindiv.getAttribute("data-path");
             maindiv.addEventListener("click", function() {
               gallery.setview(this.getAttribute("data-path"), object);
             });
@@ -182,21 +182,19 @@ class gallery extends HTMLElement {
 customElements.define('image-gallery', gallery);
 
 window.addEventListener("load", function() {
-  for (let image of document.getElementsByTagName("img")) {
-    console.log("hi");
-    image.addEventListener("click", ()=> {
-      let temp = document.querySelector("image-gallery");
-      gallery.open(temp, image.src.substring(image.src.indexOf("/images")+7));
-    });
-  }
+  newIms();
 });
 
 function newIms() {
+
   for (let image of document.getElementsByTagName("img")) {
-    console.log("hi");
-    image.addEventListener("click", ()=> {
-      let temp = document.querySelector("image-gallery");
-      gallery.open(temp, image.src.substring(image.src.indexOf("/images")+7));
-    });
+    if(image.classList.contains("gallery-exception")==false) {
+      console.log("hi");
+      image.addEventListener("click", ()=> {
+        let temp = document.querySelector("image-gallery");
+        gallery.open(temp, image.src.substring(image.src.indexOf("/images")+7));
+      });
+    }
   }
+  
 }

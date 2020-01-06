@@ -1,4 +1,8 @@
 {
+  "name": "Animals",
+  "text": "The presence or absence of many species of animal may be a consequence of a variety of different circumstances. Some species are seasonal only being present in the spring, summer, or fall months when environmental conditions support their growth and reproductive cycles. Many species will only be present in areas of the creek where water quality is at it's absolute best. The presence or absence of a given species of plant will impact those animals which may be directly or indirectly dependent upon the plant for nutrition. Invasive species, such as bullfrogs, may prevent native species of frog, like the red legged frog, from maintaining their presence. Since the beginning of our study we have witnessed a number of changes in animal diversity within the creek. One of our goals is to attempt to understand these changes and try and determine if they are narural part of the creeks movement toward stability or if other factors are in play. To simplify your ability to learn about the animals we have found in our study site we have divided the species into three main categories. Click on the group of interest to learn more."
+,
+  "image": "images/Field_Guide/Animals/Arthropods/ladybug3.jpg",
   "level": 1,
-  "folders": ["Vertebrates", "Arthropods", "Non-arthropods"]
+  "folders": [["Vertebrates", "images/Field_Guide/Animals/Vertebrates/bass.jpg"], ["Arthropods", "images/Field_Guide/Animals/Arthropods/bumble_bee.jpg"], ["Non_Arthropod_Invertebrates", "images/Field_Guide/Animals/Non_Arthropod_Invertebrates/leech.jpg"]]
 }

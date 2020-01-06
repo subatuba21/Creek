@@ -1,0 +1,23 @@
+{
+  "name": "creek",
+  "version": "1.0.0",
+  "description": "Creek website",
+  "main": "index.php",
+  "dependencies": {
+    "@webcomponents/webcomponentsjs": "^2.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "none"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/subatuba21/Creek.git"
+  },
+  "author": "Subha Das",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/subatuba21/Creek/issues"
+  },
+  "homepage": "https://github.com/subatuba21/Creek#readme"
+}
