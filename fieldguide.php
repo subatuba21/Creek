@@ -144,6 +144,9 @@
   .arrow-disabled {
     opacity: .4;
   }
+  .levels {
+    font-weight: 600;
+  }
   </style>
 </head>
 <body>
@@ -178,13 +181,13 @@
       <h2 id="general-header"></h2>
       <img id="general-image" src="" alt="image">
       <div id='speciesInfo'>
-        <p id="kingdom"></p>
-        <p id="phylum"></p>
-        <p id="class"></p>
-        <p id="order"></p>
-        <p id="family"></p>
-        <p id="genus"></p>
-        <p id="species"></p>
+        <p id="kingdom" class="levels"></p>
+        <p id="phylum" class="levels"></p>
+        <p id="class" class="levels"></p>
+        <p id="order" class="levels"></p>
+        <p id="family" class="levels"></p>
+        <p id="genus" class="levels"></p>
+        <p id="species" class="levels"></p>
         <p id='genInfo'></p>
       </div>
       <div style="clear: both"></div>
@@ -281,7 +284,8 @@
         for (let child of card.children) {
           if (child.classList.contains("card-text")) {
             header=child.innerText.trim();
-            header = header.replace(/ /g, "_")
+            path=path.replace(/ /g, "_");
+            header = header.replace(/ /g, "_");
             break;
           }
         }
@@ -297,6 +301,31 @@
 
       if (json["organism"]!=null) {
         console.log("organism");
+        newIms();
+        if (json.kingdom!=null) {
+          document.getElementById("kingdom").innerText="Kingdom: " + json.kingdom;
+        }
+        if (json.phylum!=null) {
+          document.getElementById("phylum").innerText="Phylum: " + json.phylum;
+        }
+        if (json.class!=null) {
+          document.getElementById("class").innerText="Class: " + json.class;
+        }
+        if (json.order!=null) {
+          document.getElementById("order").innerText="Order: " + json.order;
+        }
+        if (json.family!=null) {
+          document.getElementById("family").innerText="Family: " + json.family;
+        }
+        if (json.genus!=null) {
+          document.getElementById("genus").innerText="Genus: " + json.genus;
+        }
+        if (json.species!=null) {
+          document.getElementById("species").innerText="Species: " + json.species;
+        }
+        document.getElementById("genInfo").innerText=json.text;
+        document.getElementById("general-image").src = json.image;
+        document.getElementById("general-header").innerText = json.name;
       }
       else {
         pathMaker.changePath(json.level, json.name);
@@ -351,6 +380,17 @@
 
       if (json["organism"]!=null) {
         console.log("organism");
+        newIms();
+        document.getElementById("kingdom").innerText="";
+        document.getElementById("phylum").innerText="";
+        document.getElementById("class").innerText="";
+        document.getElementById("order").innerText="";
+        document.getElementById("family").innerText="";
+        document.getElementById("genus").innerText="";
+        document.getElementById("species").innerText="";
+        document.getElementById("genInfo").innerText=json.text;
+        document.getElementById("general-image").src = json.image;
+        document.getElementById("general-header").innerText = json.name;
       }
       else {
         pathMaker.setPath(json.level, json.name);

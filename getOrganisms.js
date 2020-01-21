@@ -5,16 +5,42 @@ var r1 = readline.createInterface({
   output: process.stdout
 });
 
+function convertFile(html) {
+  html = html.replace(/<style([\s\S]*?)<\/style>/gi, '');
+  html = html.replace(/<script([\s\S]*?)<\/script>/gi, '');
+  html = html.replace(/<\/div>/ig, '\n');
+  html = html.replace(/<\/li>/ig, '\n');
+  html = html.replace(/<li>/ig, '  *  ');
+  html = html.replace(/<\/ul>/ig, '\n');
+  html = html.replace(/<\/p>/ig, '\n');
+  html = html.replace(/<br\s*[\/]?>/gi, "\n");
+  html = html.replace(/<[^>]+>/ig, '');
+  return html;
+}
+
 r1.question("Type 0 for cards, 1 for organism: ", function(answer) {
   switch(parseInt(answer)) {
 
 
 
     case 1:
+
       console.log("organisms");
+      r1.question("Path: ", function(path) {
+        r1.question("JSON Path: ", function(jsonp) {
+          var json = fs.readFileSync(jsonp, "utf-8");
+          var jsonParent = jsonp.substring(0, jsonp.lastIndexOf("/")+1);
+          json=JSON.parse(json);
+          console.log(json.image);
+          console.log(jsonParent);
+          var folders=json.folders;
+          var dir = fs.opendirSync(path);
+          for (var organism of folders) {
+            fs.mkdirSync(jsonParent+organism[0]);
+          }
+        });
+      });
       break;
-
-
 
     case 0:
 

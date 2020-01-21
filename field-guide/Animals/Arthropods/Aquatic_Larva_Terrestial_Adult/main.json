@@ -1,0 +1,7 @@
+{
+  "name": "Aquatic Larva Terrestial Adult",
+  "text": "",
+  "image": "images/Field_Guide/Animals/Arthropods/ladybug3.jpg",
+  "level": 3,
+  "folders": [["Black_Fly","images/Field_Guide/Animals/Arthropods/blackfly.jpg"],["Soldier_Fly","images/Field_Guide/Animals/Arthropods/soldierfly.jpg"],["Midge","images/Field_Guide/Animals/Arthropods/midge.jpg"],["Biting_Midge","images/Field_Guide/Animals/Arthropods/bitingmidge.jpg"],["Dragonfly","images/Field_Guide/Animals/Arthropods/dragonfly.jpg"],["Damselfly","images/Field_Guide/Animals/Arthropods/damselfly.jpg"],["Crane_Fly","images/Field_Guide/Animals/Arthropods/cranefly.jpg"],["Mayfly","images/Field_Guide/Animals/Arthropods/mayfly.jpg"],["Stonefly","images/Field_Guide/Animals/Arthropods/stonefly.jpg"],["Dobsonfly","images/Field_Guide/Animals/Arthropods/dobsonfly.jpg"],["Caddisfly","images/Field_Guide/Animals/Arthropods/caddisfly.jpg"]]
+}
