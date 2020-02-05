@@ -124,7 +124,7 @@ r1.question("Type 0 for cards, 1 for organism: ", function(answer) {
       file = file.split("\n");
       for (let ind in file) {
         if (file[ind].includes("___")) {
-          start = ind+1;
+          start = parseInt(ind)+1;
         }
         if (file[ind].includes("If You see any Endangered Species")) {
           end = ind;
