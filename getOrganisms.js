@@ -56,7 +56,7 @@ function analyze(text, folderjson) {
 var usedIns = [];
 function connect(organism, folderjson) {
   var allOrgs = folderjson.folders;
-  for (let folderin in allOrgs) {
+  for (let folderin=0; folderin<allOrgs.length; folderin++) {
     let orgname = allOrgs[folderin][0];
     let regexp = new RegExp(orgname, "i");
     if (organism.convertedName.search(regexp)!=-1) {
@@ -122,12 +122,13 @@ r1.question("Type 0 for cards, 1 for organism: ", function(answer) {
       var start;
       var end;
       file = file.split("\n");
-      for (let ind in file) {
+      for (let ind=0; ind<file.length; ind++) {
         if (file[ind].includes("___")) {
           start = parseInt(ind)+1;
         }
         if (file[ind].includes("If You see any Endangered Species")) {
           end = ind;
+          break;
         }
       }
       for (let i=start; i<end; i++) {
