@@ -160,12 +160,6 @@
   include 'navbar.php';
   ?>
   <h2>Organisms at the Arroyo Del Valle!</h2>
-  <script>
-  document.getElementById("tree").addEventListener("click", function() {
-    document.getElementById("fgdisplay").innerHTML = "";
-  });
-
-  </script>
 
   <div id="fgdisplay" class="cont">
 
@@ -268,7 +262,7 @@
       while(this.levels.get(topLevel+1)!=null) {
         topLevel++;
       }
-      console.log(topLevel);
+      //console.log(topLevel);
       return topLevel;
     }
 
@@ -300,7 +294,7 @@
     }).then( (json) => {
 
       if (json["organism"]!=null) {
-        console.log("organism");
+        //console.log("organism");
         newIms();
         if (json.kingdom!=null) {
           document.getElementById("kingdom").innerText="Kingdom: " + json.kingdom;
@@ -329,7 +323,8 @@
       }
       else {
         pathMaker.changePath(json.level, json.name);
-        backCount=1;
+        pathMaker.backCounter=0;
+        //alert(pathMaker.getCurrentPath());
         while(document.getElementsByClassName("card").length!=0) {
           for (let olditem of document.getElementsByClassName("card")) {
             olditem.remove();
@@ -341,7 +336,7 @@
           let imageDiv = document.createElement("div");
           imageDiv.classList.add("card-image");
           let image = document.createElement("img");
-          console.log(item[1]);
+          //console.log(item[1]);
           image.src=item[1];
           image.classList.add("gallery-exception");
           let textDiv = document.createElement("div");
@@ -353,7 +348,6 @@
           card.appendChild(imageDiv);
           card.appendChild(textDiv);
           document.getElementsByClassName("displaych")[0].appendChild(card);
-          console.log(pathMaker.getCurrentPath());
           setCardProperty(pathMaker.getCurrentPath());
         }
         newIms();
@@ -367,7 +361,7 @@
         document.getElementById("genInfo").innerText=json.text;
         document.getElementById("general-image").src = json.image;
         document.getElementById("general-header").innerText = json.name;
-        pathMaker.backCounter=0;
+        //pathMaker.backCounter=0;
       }
 
     });
@@ -379,7 +373,7 @@
     }).then( (json) => {
 
       if (json["organism"]!=null) {
-        console.log("organism");
+        //console.log("organism");
         newIms();
         document.getElementById("kingdom").innerText="";
         document.getElementById("phylum").innerText="";
@@ -405,7 +399,7 @@
           let imageDiv = document.createElement("div");
           imageDiv.classList.add("card-image");
           let image = document.createElement("img");
-          console.log(item[1]);
+          //console.log(item[1]);
           image.src=item[1];
           image.classList.add("gallery-exception");
           let textDiv = document.createElement("div");
@@ -439,7 +433,7 @@
 
   document.querySelector(".mdi-arrow-left").addEventListener("click", function() {
     let path = pathMaker.getBackwardPath();
-    console.log(path);
+    //console.log(path);
     if (path!==null) {
       changeContentBack(path, "");
     }

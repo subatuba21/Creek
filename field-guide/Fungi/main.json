@@ -1,6 +1,7 @@
 {
   "name": "Fungi",
-  "text": "",
+  "text": "Every ecosystem benefits from the action of fungi. As key decomposers they assist in the recycling of organic matter. We are aware that many species of fungi can be found in the creek channel but at this time we have only been able to photograph a commonly found mushroom and lichens. We hope to have additional images very soon.",
+  "image": "images/Field_Guide/Fungi/lichen3.jpg",
   "level": 1,
-  "folders": ["Lichens", "Mushrooms"]
+  "folders": [["Agaricaceae","images/Field_Guide/Fungi/agaricaceae.jpg"],["Lichens","images/Field_Guide/Fungi/lichens.jpg"],["Bolbitius","images/Field_Guide/Fungi/bolbitius.jpg"]]
 }
