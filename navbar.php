@@ -3,7 +3,7 @@
   $homestyle = '';
   $homeDis='';
   if ($page=='home') {
-    $homestyle = 'background-color: rgba(255, 0, 0, 0);';
+    $homestyle = 'background-color: rgba(255, 0, 0, 0); box-shadow:0px 0px 0px';
     $homeDis = 'display:none;';
   }
   print "

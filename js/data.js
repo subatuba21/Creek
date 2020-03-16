@@ -7,7 +7,7 @@ getData.onreadystatechange = function() {
 }
 var viewporth = window.innerHeight;
 var height = document.getElementById('navbar').clientHeight;
-var dataheight = viewporth - height;
+var dataheight = viewporth - height - 20;
 dataheight = dataheight.toString();
 dataheight+='px';
 document.getElementById('datagrid').style.height=dataheight;

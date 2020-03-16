@@ -61,18 +61,12 @@
     margin-top: .5%;
   }
 
-  #fgbuttons button:hover {
-    opacity: .8;
-  }
-
   #fgdisplay {
     text-align: center;
     border-radius: 3px;
-    border: 2px solid black;
     width: 90%;
     margin-left: 5%;
     margin-top: 1.5%;
-    background-color: #809c13;
     margin-bottom: 1.5%;
   }
 
@@ -101,6 +95,8 @@
     background-color: var(--grey);
     display: inline-block;
     width: 100%;
+    border-radius: 2px;
+    box-shadow: 0px 3px 5px 4px #474747;
   }
 
   .card {

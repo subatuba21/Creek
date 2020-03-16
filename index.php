@@ -35,20 +35,22 @@
   @keyframes nav-one {
     from {
       background-color: transparent;
-      color: white;
+      box-shadow: 0px 0px 0px;
     }
     to {
-      background-color: #607F1F;
-      color: black
+      background-color: #6B8E23;
+      box-shadow: 0px 1px 10px;
     }
   }
 
   @keyframes nav-two {
     from {
-      background-color: #607F1F;
+      background-color: #6B8E23;
+      box-shadow: 0px 1px 10px;
     }
     to {
       background-color: transparent;
+      box-shadow: 0px 0px 0px;
     }
   }
   </style>
