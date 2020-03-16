@@ -16,6 +16,13 @@
     animation-fill-mode: forwards;
   }
 
+  #navbar:hover {
+    animation-name: nav-one;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+  }
+
+
   .nav-transition-two {
     animation-name: nav-two;
     animation-duration: 0.4s;
@@ -61,7 +68,21 @@
   $_SESSION['page']="home";
   include 'navbar.php';
   ?>
-  <script type="text/javascript">
+  <script>
+  var navbar = document.getElementById("navbar");
+
+  var hover =0;
+  function firstHover () {
+    console.log("hi");
+    if (hover===0 && navbar.classList.contains("nav-transition-one")==false && navbar.classList.contains("nav-transition-two")==false) {
+      navbar.classList.add("nav-transition-two");
+      navbar.removeEventListener("mouseover", firstHover);
+    }
+    hover++;
+  }
+
+  var hoverListen = navbar.addEventListener("mouseover", firstHover);
+
   function changeColor(transparent) {
     if (transparent==false) {
       navbar.classList.add("nav-transition-one");
@@ -72,8 +93,8 @@
       navbar.classList.remove("nav-transition-one");
     }
   }
+
   var below = false;
-  var navbar = document.getElementById("navbar");
   window.addEventListener('scroll', function() {
     var scrollpos = window.scrollY;
     if (scrollpos>(window.innerHeight*7/8)) {
