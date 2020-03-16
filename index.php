@@ -38,14 +38,14 @@
       box-shadow: 0px 0px 0px;
     }
     to {
-      background-color: #6B8E23;
+      background-color: var(--body-color);
       box-shadow: 0px 1px 10px;
     }
   }
 
   @keyframes nav-two {
     from {
-      background-color: #6B8E23;
+      background-color: var(--body-color);
       box-shadow: 0px 1px 10px;
     }
     to {

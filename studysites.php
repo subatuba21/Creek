@@ -45,30 +45,32 @@
   }
 
   input {
-    background-color: #6B8E23;
+    background-color: var(--grey);
     padding: .3%;
     border-radius: 2px;
     border: none;
     font-size: .9vw;
   }
+
   #navbar-bottom .navbar-item {
     font-size: 1.3vw;
   }
 
   #navbar-bottom .navbar-item span {
-    padding: .5%;
-    padding-bottom: .9%;
+    padding-top:.4%;
+    padding-bottom: .7%;
     padding-left: .9%;
     padding-right: .7%;
     border-radius: 3px;
-    background-color: #607F1F; !important
+    background-color: var(--grey);
+    box-shadow: 0px 2px 3px 2px #474747;
   }
 
   #navbar-bottom i {
     font-size: 1.6vw;
     position: relative;
     top: 3px;
-    color: 	#809c13;
+    color: 	black;
     cursor: pointer;
   }
 
@@ -129,7 +131,7 @@
         <span>
           Enter site number:
           <input id='sitechanger' style="font-family: 'Dosis', sans-serif;" type="text" name="site" placeholder="1-14">
-          <i class="mdi mdi-arrow-right-bold-circle" id='arrow-go'></i>
+          <i class="mdi mdi-arrow-right-drop-circle-outline" id='arrow-go'></i>
           <i style="margin-left: 1%;"class="mdi mdi-arrow-left" id='arrow-left'></i>
           <i class="mdi mdi-arrow-right" id='arrow-right'></i>
           <script src="js/sitechanger.js" charset="utf-8"></script>
