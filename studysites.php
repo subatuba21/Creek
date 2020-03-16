@@ -9,11 +9,6 @@
   <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.4.95/css/materialdesignicons.min.css">
   <style>
-  #navbar {
-    position: absolute;
-    top:0;
-    position: fixed;
-  }
 
   #sitetext {
     display: block;

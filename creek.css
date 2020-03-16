@@ -14,8 +14,8 @@ html, body {
 
 #navbar {
   width: 100%;
-  display: inline;
   position: fixed;
+  top: 0px;
   font-family: 'Dosis', sans-serif;
   font-size: 15pt;
   text-align: center;

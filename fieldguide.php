@@ -123,7 +123,6 @@
   .card-text {
     width: 100%;
     display: inline-block;
-    font-size: 15pt;
     text-align: center;
     font-family: 'Dosis', sans-serif;
     font-size: 20pt;
@@ -143,6 +142,44 @@
   .levels {
     font-weight: 600;
   }
+  .mdi-arrow-left {
+    margin-left: 30%;
+  }
+  .mdi-arrow-right {
+    margin-right: 30%;
+  }
+
+  @media (max-width: 768px) {
+    h2:first-of-type {
+      margin-top: 80px;
+      font-size: 15pt;
+    }
+    .card-image {
+      display: none;
+    }
+    .mdi-arrow-left {
+      margin-left: 10%;
+    }
+    .mdi-arrow-right {
+      margin-right: 10%;
+    }
+    .arrow {
+      font-size: 20pt;
+      margin-top: 10px;
+    }
+    #fgtree {
+      padding: 0px;
+      display: block;
+      padding-bottom: 10px
+    }
+    #fgtree h2:first-of-type {
+      display: inline-block;
+      margin-top: 10px;
+    }
+    .card-text {
+      font-size: 15pt;
+    }
+  }
   </style>
 </head>
 <body>
@@ -161,8 +198,8 @@
 
     <div id="fgtree">
       <div class="displaych" style="text-align: center">
-        <i class="mdi mdi-arrow-left arrow arrow-disabled" style="float: left; margin-left: 30%; position: relative"></i>
-        <i class="mdi mdi-arrow-right arrow arrow-disabled" style="float: right; margin-right: 30%; position: relative"></i>
+        <i class="mdi mdi-arrow-left arrow arrow-disabled" style="float: left; position: relative"></i>
+        <i class="mdi mdi-arrow-right arrow arrow-disabled" style="float: right; position: relative"></i>
         <h2 style="margin-bottom: 10px">Phylogenetic Tree</h2>
       </div>
     </div>
