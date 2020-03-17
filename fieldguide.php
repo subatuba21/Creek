@@ -9,9 +9,9 @@
   <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.4.95/css/materialdesignicons.min.css">
   <style>
-  :root {
+  /* :root {
     --grey: rgba(220,220,220, .6);
-  }
+  } */
   p {
     width: 75%;
     font-size: 24px;
@@ -125,7 +125,7 @@
     display: inline-block;
     text-align: center;
     font-family: 'Dosis', sans-serif;
-    font-size: 20pt;
+    font-size: 18pt;
   }
   .arrow {
     display: inline-block;
@@ -204,7 +204,7 @@
       </div>
     </div>
 
-    <div class="displaych">
+    <div class="displaych" id="main-display-area">
       <h2 id="general-header"></h2>
       <img id="general-image" src="" alt="image">
       <div id='speciesInfo'>
@@ -325,7 +325,7 @@
     fetch(`field-guide${path}/${header}/main.json`).then(function(response) {
       return response.json();
     }).then( (json) => {
-
+      document.querySelector("#fgtree h2").innerText = `Home${pathMaker.getPath()}`;
       if (json["organism"]!=null) {
         //console.log("organism");
         newIms();
@@ -353,9 +353,12 @@
         document.getElementById("genInfo").innerText=json.text;
         document.getElementById("general-image").src = json.image;
         document.getElementById("general-header").innerText = json.name;
+        var displayArea = document.getElementById("main-display-area");
+        window.scrollTo(0, displayArea.offsetTop - parseInt(window.getComputedStyle(document.getElementById("navbar")).getPropertyValue("height")) -20);
       }
       else {
         pathMaker.changePath(json.level, json.name);
+        document.querySelector("#fgtree h2").innerText = `Home${pathMaker.getPath()}`;
         pathMaker.backCounter=0;
         //alert(pathMaker.getCurrentPath());
         while(document.getElementsByClassName("card").length!=0) {
@@ -404,7 +407,6 @@
     fetch(`field-guide${path}/${header}/main.json`).then(function(response) {
       return response.json();
     }).then( (json) => {
-
       if (json["organism"]!=null) {
         //console.log("organism");
         newIms();
@@ -421,6 +423,7 @@
       }
       else {
         pathMaker.setPath(json.level, json.name);
+        document.querySelector("#fgtree h2").innerText = `Home${pathMaker.getCurrentPath()}`;
         while(document.getElementsByClassName("card").length!=0) {
           for (let olditem of document.getElementsByClassName("card")) {
             olditem.remove();
