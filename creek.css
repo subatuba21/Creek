@@ -254,19 +254,6 @@ h2 {
   padding: 10px;
 }
 
-#displayarea {
-  grid-area: 1/2/6/4;
-  background-color: #DCDCDC;
-  border: 1px solid black;
-  border-radius: 10px;
-  margin: 10px;
-  font-size: 18pt;
-  font-family: 'Dosis', sans-serif;
-  overflow-y: scroll;
-  overflow: -moz-scrollbars-vertical;
-  min-height: 0;
-
-}
 #buttonarea {
   grid-area: 1/1/6/2;
   display: flex;
