@@ -13,7 +13,7 @@
   #sitetext {
     display: block;
     margin: 0px;
-    font-size: 1.5vw;
+    font-size: 20pt;
     margin-bottom: 2%;
     margin-left: 2%;
     margin-right: 2%;
@@ -21,7 +21,7 @@
   }
 
   #sitecont h2 {
-    font-size: 2vw;
+    font-size: 25pt;
   }
 
   #navbar-bottom {
@@ -34,9 +34,6 @@
       -ms-user-select: none; /* Internet Explorer/Edge */
           user-select: none; /* Non-prefixed version, currently
                                 supported by Chrome, Opera and Firefox */
-  }
-  body {
-    overflow-y: auto;
   }
 
   input {
@@ -69,9 +66,20 @@
     cursor: pointer;
   }
 
+  #sitecont {
+    width: 75%;
+    display: inline-block;
+  }
+
+  .siteims {
+    width: 35%;
+    margin: 2%;
+  }
+
   @media (max-width: 768px) {
     #sitecont {
       margin-top: 80px;
+      width: 95%;
     }
     #navbar-bottom .navbar-item {
       font-size: 16pt;
@@ -88,12 +96,17 @@
       width: 60px;
     }
     #sitetext {
-      font-size: 13pt;
+      font-size: 16pt;
     }
 
     #sitecont h2 {
-      font-size: 15pt;
+      font-size: 19pt;
       padding: top: 50px;
+    }
+
+    .siteims {
+      display: inline-block;
+      width: 85%;
     }
   }
   </style>
@@ -106,6 +119,7 @@
   $_SESSION['page']="study-sites";
   include 'navbar.php';
   ?>
+  <div style="text-align:center">
   <div id='sitecont'>
     <?php
     print "
@@ -134,6 +148,7 @@
       </div>
     </div>
   </div>
+</div>
   <!-- <script src="js/sitecont.js" charset="utf-8"></script> -->
     <script src="js/gallery.js" charset="utf-8"></script>
 </body>

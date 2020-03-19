@@ -239,19 +239,6 @@ h2 {
   text-align: center;
 }
 
-#siteimages {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-
-.siteims {
-  max-height: 45%;
-  max-width: 25%;
-  margin: 10px;
-}
-
 #siteheader {
   font-size: 30pt;
 }

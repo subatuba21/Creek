@@ -18,6 +18,10 @@
     #displaymedia {
       background-color: 	#809c13;
     }
+    #displayarea p {
+      margin-left: 15px;
+      margin-right: 15px;
+    }
   </style>
 </head>
 <body>
@@ -85,6 +89,7 @@
     </div>
     <script src="js/data.js" charset="utf-8"></script>
     <div id="displayarea">
+
       <h2 id='displaytitle'>Conductivity</h2>
       <div id="displaymedia">
 
