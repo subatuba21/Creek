@@ -56,7 +56,7 @@
   }
 
   .siteims {
-    width: 35%;
+    width: 40%;
     margin: 2%;
   }
 
@@ -184,14 +184,17 @@
 
     document.querySelector(".mdi-eye-off-outline").addEventListener("click", function () {
       fadeIn(sticky);
-      //fadeOutAtHeight(sticky, 20);
       fadeOut(navbarBottom);
+      window.scrollTo(window.scrollX, window.scrollY - 1);
+      window.scrollTo(window.scrollX, window.scrollY + 1);
 
     });
 
     sticky.addEventListener("click", function () {
       fadeOut(sticky);
       fadeIn(navbarBottom);
+      window.scrollTo(window.scrollX, window.scrollY - 1);
+      window.scrollTo(window.scrollX, window.scrollY + 1);
     });
 
   </script>
