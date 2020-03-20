@@ -41,6 +41,72 @@
       padding: 5px;
     }
 
+    #datagrid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: auto auto auto auto auto;
+      padding: 10px;
+    }
+
+    #buttonarea {
+      grid-area: 1/1/6/2;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      flex-basis: 33%;
+    }
+
+    .button {
+      display: flex;
+      width: 45%;
+      margin: 10px;
+      border-radius: 10px;
+       background: rgba(220,220,220, .6);
+      justify-content: center;
+      align-items: center;
+      font-size: 18pt;
+      font-family: 'Dosis', sans-serif;
+      box-shadow: 0px 4px black;
+    }
+
+    .button:active {
+      box-shadow: 0 1px black;
+      transform: translateY(3px);
+    }
+
+    #displayword {
+      margin: 30px;
+      margin-top: 0px;
+    }
+
+    #displaymedia {
+      max-width: 100%;
+      background-color: white;
+      margin-top: 0px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+      grid-auto-flow: row dense;
+      grid-auto-columns: 1fr;
+      margin-bottom: 10px;
+      overflow-x: hidden;
+
+    }
+
+    .displayitem {
+      text-align: center;
+      margin: 10px;
+      max-width: 100%;
+    }
+
+    .displayitem iframe{
+      width: 100%;
+    }
+
+    .displayitem img{
+      width: 100%;
+    }
+
   </style>
 </head>
 <body>

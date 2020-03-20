@@ -91,23 +91,6 @@ html, body {
   padding-bottom: 0px;
 }
 
-#hero {
-  background-image: url('images/5.jpg');
-  width: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 120%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 0px;
-}
-
-#heropic {
-  object-fit: cover;
-  width: 100%;
-}
 h1 {
   font-family: 'Dosis', sans-serif;
   font-size: 60pt;
@@ -116,236 +99,12 @@ h1 {
   margin-top: 10px;
   text-align: center;
 }
-#herotext {
-  background: rgba(220,220,220, 0.6);
-  padding: 30px;
-  border: 2px solid black;
-  max-width: 50%;
-}
-
-#herotext p {
-  font-family: 'Dosis', sans-serif;
-  font-size: 18pt;
-  color: black;
-  text-align: center;
-}
-
-#maintext {
-  margin: 0px;
-  text-align: center;
-  font-family: 'Dosis', sans-serif;
-  font-size: 17.5pt;
-  background-color: var(--body-color);
-  width: 100%;
-  padding-bottom: 20px;
-  display: inline-block;
-  }
 
 h2 {
   font-family: 'Dosis', sans-serif;
   font-size: 20pt;
   font-weight: 600;
   text-align: center;
-}
-
-.mtgrid {
-  display: grid;
-  grid-template-columns: 15% 35% 35% 15%;
-  grid-template-rows: 1fr 1fr;
-  justify-content: center;
-  align-content: center;
-  grid-column-gap: 20px;
-  grid-row-gap: 10px;
-  padding-bottom: 20px;
-}
-
-#im1 {
-  grid-area: 1/2/2/3;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#im2 {
-  grid-area: 2/2/3/3;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.mtgrid img {
-  width: 80%;
-  object-fit: cover;
-  border-radius: 3px;
-
-}
-
-#visit {
-  text-align: center;
-  margin-bottom: 2%;
-}
-
-#visit p {
-  margin-left: 15%;
-  margin-right: 15%;
-  text-align: left;
-}
-
-#use {
-  grid-area: 1/3/2/4;
-  text-align: left;
-}
-
-#goal {
-  grid-area: 2/3/3/4;
-  text-align: left;
-}
-
-#panel {
-  grid-area: 1/3/3/4;
-  background: url(pics/rivpic.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-
-.panelim {
-  border-radius: 10%;
-  width: 100%;
-  min-height: 50%;
-  max-height: 75%;
-  max-width: 100%;
-  object-fit: cover;
-}
-
-#sitecont {
-  text-align: center;
-  font-family: 'Dosis', sans-serif;
-  font-size: 25pt;
-}
-
-#navbar-bottom {
-  position: fixed;
-  overflow: hidden;
-  bottom: 0;
-  width: 100%;
-  font-family: 'Dosis', sans-serif;
-  font-size: 15pt;
-  background-color: white;
-  text-align: center;
-}
-
-#siteheader {
-  font-size: 30pt;
-}
-
-#placeholderb {
-  min-width: 1px;
-}
-
-#datagrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto auto auto auto auto;
-  padding: 10px;
-}
-
-#buttonarea {
-  grid-area: 1/1/6/2;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  flex-basis: 33%;
-}
-
-.button {
-  display: flex;
-  width: 45%;
-  margin: 10px;
-  border-radius: 10px;
-   background: rgba(220,220,220, .6);
-  justify-content: center;
-  align-items: center;
-  font-size: 18pt;
-  font-family: 'Dosis', sans-serif;
-  box-shadow: 0px 4px black;
-}
-
-.button:active {
-  box-shadow: 0 1px black;
-  transform: translateY(3px);
-}
-
-#displayword {
-  margin: 30px;
-  margin-top: 0px;
-}
-
-#displaymedia {
-  max-width: 100%;
-  background-color: white;
-  margin-top: 0px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: auto;
-  grid-auto-flow: row dense;
-  grid-auto-columns: 1fr;
-  margin-bottom: 10px;
-  overflow-x: hidden;
-
-}
-
-.displayitem {
-  text-align: center;
-  margin: 10px;
-  max-width: 100%;
-}
-
-.displayitem iframe{
-  width: 100%;
-}
-
-.displayitem img{
-  width: 100%;
-}
-
-#fieldgrid {
-  display: grid;
-  grid-template-columns:1fr 2fr 1fr;
-  grid-template-rows: auto;
-  width: 100%;
-}
-
-.fieldbuttons {
-  text-align: center;
-  margin: 10px;
-
-}
-
-#fielddisplay {
-  text-align: center;
-  margin: 10px;
-  border: 5px solid black;
-  border-radius: 10px;
-}
-
-#switchbuttons {
-  float: right;
-}
-
-.switchbutton {
-  display: flex;
-  height: 130px;
-  width: 130px;
-  background-color: blue;
-  justify-content: center;
-  align-items: center;
-  margin: 10px;
-  border-radius: 10px;
 }
 
 .c1 {
@@ -360,11 +119,6 @@ h2 {
   background-size: cover;
 }
 
-#duck {
-max-height: 100px;
-max-width: 100px;
-}
-
 h6 {
   width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
@@ -377,66 +131,8 @@ h6 {
   color: #256d7b;
 }
 
-#about {
-  width: 100%;
-}
-
-#about p {
-  display: inline-block;
-  width: 70%;
-  margin-top: 2%;
-  margin-bottom: 0px;
-  text-align: left;
-}
-
-#about p::after {
-  content: "...";
-}
-
 .computer-hidden {
   display: none;
-}
-
-#filebar {
-  display: inline-block;
-  width: 73%;
-  margin-top: 2%;
-  margin-bottom: 2%;
-  background-color: rgba(220,220,220, 0.6);
-  border-radius: 4px;
-  padding: .5%;
-}
-
-#filebar i {
-  display: inline-block;
-  margin-left: 2%;
-  margin-right: 2%;
-  float: left;
-  font-size: 30pt;
-  clear: right;
-  border-right: 2px solid black;
-  padding-right: .9%;
-}
-
-#filebar li {
-  list-style-type: none;
-  margin-right: 2%;
-  float: left;
-
-}
-
-#filebar li:hover {
-  opacity: .6;
-}
-
-#filebar a{
-  text-decoration: none;
-  color: black;
-}
-
-#filebar ul {
-  position: relative;
-  top: -12px;
 }
 
 .expandb {
@@ -452,6 +148,21 @@ h6 {
 
 #menu {
   display: none;
+}
+
+.bottom-left-sticky {
+  position: fixed;
+  bottom: 15px;
+  left: 15px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 8px;
+  background-color: var(--grey);
+  display: inline;
+  padding: 10px;
+  font-family: 'Dosis', sans-serif;
+  font-size: 16pt;
+  cursor: pointer;
+  z-index: 100;
 }
 
 @media (max-width: 768px) {

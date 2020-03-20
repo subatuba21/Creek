@@ -24,17 +24,6 @@
     font-size: 25pt;
   }
 
-  #navbar-bottom {
-    background-color: transparent;
-    margin-bottom: .8%;
-    -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari */
-   -khtml-user-select: none; /* Konqueror HTML */
-     -moz-user-select: none; /* Old versions of Firefox */
-      -ms-user-select: none; /* Internet Explorer/Edge */
-          user-select: none; /* Non-prefixed version, currently
-                                supported by Chrome, Opera and Firefox */
-  }
 
   input {
     background-color: var(--grey);
@@ -66,15 +55,43 @@
     cursor: pointer;
   }
 
-  #sitecont {
-    width: 75%;
-    display: inline-block;
-  }
-
   .siteims {
     width: 35%;
     margin: 2%;
   }
+
+
+  #sitecont {
+    text-align: center;
+    font-family: 'Dosis', sans-serif;
+    font-size: 25pt;
+    width: 75%;
+    display: inline-block;
+  }
+
+  #navbar-bottom {
+    position: fixed;
+    bottom: 15px;
+    width: 100%;
+    font-family: 'Dosis', sans-serif;
+    font-size: 15pt;
+    background-color: white;
+    text-align: center;
+    background-color: transparent;
+    /* margin-bottom: .8%; */
+    -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Old versions of Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome, Opera and Firefox */
+  }
+
+  #siteheader {
+    font-size: 30pt;
+  }
+
 
   @media (max-width: 768px) {
     #sitecont {
@@ -135,19 +152,50 @@
     ";
 
     ?>
-    <div id="navbar-bottom">
-      <div class="navbar-item">
-        <span>
-          Enter site number:
-          <input id='sitechanger' style="font-family: 'Dosis', sans-serif;" type="text" name="site" placeholder="1-14">
-          <i class="mdi mdi-arrow-right-drop-circle-outline" id='arrow-go'></i>
-          <i style="margin-left: 1%;"class="mdi mdi-arrow-left" id='arrow-left'></i>
-          <i class="mdi mdi-arrow-right" id='arrow-right'></i>
-          <script src="js/sitechanger.js" charset="utf-8"></script>
-        </span>
-      </div>
+  </div>
+
+  <div class="bottom-left-sticky">Open Site Navigation</div>
+  <script src="js/bottom-left-sticky.js" charset="utf-8"></script>
+
+
+  <div id="navbar-bottom">
+    <div class="navbar-item">
+      <span>
+        Enter site number:
+        <input id='sitechanger' style="font-family: 'Dosis', sans-serif;" type="text" name="site" placeholder="1-14">
+        <i class="mdi mdi-arrow-right-drop-circle-outline" id='arrow-go'></i>
+        <i style="margin-left: 1%;"class="mdi mdi-arrow-left" id='arrow-left'></i>
+        <i class="mdi mdi-arrow-right" id='arrow-right'></i>
+        <i class="mdi mdi-eye-off-outline"></i>
+        <script src="js/sitechanger.js" charset="utf-8"></script>
+      </span>
     </div>
   </div>
+
+  <script>
+    var sticky = document.querySelector(".bottom-left-sticky");
+    var stickyHeight = window.getComputedStyle(sticky).getPropertyValue("height");
+    sticky.style.opacity = "0";
+    var navbarBottom = document.getElementById("navbar-bottom");
+    var navHeight = window.getComputedStyle(navbarBottom).getPropertyValue("height");
+    fixedUntilHeight(navbarBottom, 1000, navHeight);
+    fixedUntilHeight(sticky, 1000, stickyHeight);
+    navbarBottom.style.opacity = "1";
+
+    document.querySelector(".mdi-eye-off-outline").addEventListener("click", function () {
+      fadeIn(sticky);
+      //fadeOutAtHeight(sticky, 20);
+      fadeOut(navbarBottom);
+
+    });
+
+    sticky.addEventListener("click", function () {
+      fadeOut(sticky);
+      fadeIn(navbarBottom);
+    });
+
+  </script>
+
 </div>
   <!-- <script src="js/sitecont.js" charset="utf-8"></script> -->
     <script src="js/gallery.js" charset="utf-8"></script>

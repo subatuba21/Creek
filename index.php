@@ -1,3 +1,7 @@
+<?php
+  session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
@@ -33,6 +37,172 @@
     width:70%;
   }
 
+  #hero {
+    background-image: url('images/5.jpg');
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 120%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0px;
+  }
+
+  #heropic {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  #herotext {
+    background: rgba(220,220,220, 0.6);
+    padding: 30px;
+    border: 2px solid black;
+    max-width: 50%;
+  }
+
+  #herotext p {
+    font-family: 'Dosis', sans-serif;
+    font-size: 18pt;
+    color: black;
+    text-align: center;
+  }
+
+  #maintext {
+    margin: 0px;
+    text-align: center;
+    font-family: 'Dosis', sans-serif;
+    font-size: 17.5pt;
+    background-color: var(--body-color);
+    width: 100%;
+    padding-bottom: 20px;
+    display: inline-block;
+    }
+
+    .mtgrid {
+      display: grid;
+      grid-template-columns: 15% 35% 35% 15%;
+      grid-template-rows: 1fr 1fr;
+      justify-content: center;
+      align-content: center;
+      grid-column-gap: 20px;
+      grid-row-gap: 10px;
+      padding-bottom: 20px;
+    }
+
+    #im1 {
+      grid-area: 1/2/2/3;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #im2 {
+      grid-area: 2/2/3/3;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .mtgrid img {
+      width: 80%;
+      object-fit: cover;
+      border-radius: 3px;
+
+    }
+
+    #visit {
+      text-align: center;
+      margin-bottom: 2%;
+    }
+
+    #visit p {
+      margin-left: 15%;
+      margin-right: 15%;
+      text-align: left;
+    }
+
+    #use {
+      grid-area: 1/3/2/4;
+      text-align: left;
+    }
+
+    #goal {
+      grid-area: 2/3/3/4;
+      text-align: left;
+    }
+
+    #panel {
+      grid-area: 1/3/3/4;
+      background: url(pics/rivpic.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    #about {
+      width: 100%;
+    }
+
+    #about p {
+      display: inline-block;
+      width: 70%;
+      margin-top: 2%;
+      margin-bottom: 0px;
+      text-align: left;
+    }
+
+    #filebar {
+      display: inline-block;
+      width: 73%;
+      margin-top: 2%;
+      margin-bottom: 2%;
+      background-color: rgba(220,220,220, 0.6);
+      border-radius: 4px;
+      padding: .5%;
+    }
+
+    #filebar i {
+      display: inline-block;
+      margin-left: 2%;
+      margin-right: 2%;
+      float: left;
+      font-size: 30pt;
+      clear: right;
+      border-right: 2px solid black;
+      padding-right: .9%;
+    }
+
+    #filebar li {
+      list-style-type: none;
+      margin-right: 2%;
+      float: left;
+
+    }
+
+    #filebar li:hover {
+      opacity: .6;
+    }
+
+    #filebar a{
+      text-decoration: none;
+      color: black;
+    }
+
+    #filebar ul {
+      position: relative;
+      top: -12px;
+    }
+
+    #about p::after {
+      content: "...";
+    }
+
+
   @media (max-width: 768px) {
     #banner {
       width: 95%;
@@ -64,7 +234,6 @@
 </head>
 <body>
   <?php
-  session_start();
   $_SESSION['page']="home";
   include 'navbar.php';
   ?>
