@@ -156,7 +156,7 @@ h6 {
   left: 15px;
   border-radius: 5px;
   box-shadow: 0px 0px 8px;
-  background-color: var(--grey);
+  background-color: #b5c594;
   display: inline;
   padding: 10px;
   font-family: 'Dosis', sans-serif;
@@ -165,7 +165,43 @@ h6 {
   z-index: 100;
 }
 
+#navbar-mobile a {
+  display: block;
+  font-family: 'Dosis', sans-serif;
+  font-size: 16pt;
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+#navbar-mobile {
+  text-align: center;
+  transition: width 1s;
+}
+
+#navbar-mobile i {
+  cursor: pointer;
+  font-size: 25px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+   /* transition: width 1s;  */
+}
+
+#navbar-mobile div {
+  transition: width 1s;
+}
+
+#navbar-mobile a {
+  transition: width 1s;
+}
+
 @media (max-width: 768px) {
+  #navbar-mobile {
+    display: block;
+  }
+
   #navbar-right {
     display: inline-block;
   }

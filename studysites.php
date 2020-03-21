@@ -43,7 +43,7 @@
     padding-left: .9%;
     padding-right: .7%;
     border-radius: 3px;
-    background-color: var(--grey);
+    background-color: #b5c594;
     box-shadow: 0px 2px 3px 2px #474747;
   }
 
@@ -136,6 +136,9 @@
   $_SESSION['page']="study-sites";
   include 'navbar.php';
   ?>
+
+  <script src="js/navbar-mobile.js" charset="utf-8"></script>
+  
   <div style="text-align:center">
   <div id='sitecont'>
     <?php

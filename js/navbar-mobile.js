@@ -1,0 +1,48 @@
+var menu = document.createElement("div");
+menu.id = "navbar-mobile";
+menu.style.width=window.innerWidth + "px";
+menu.style.height=window.innerHeight + "px";
+menu.style.position = "absolute";
+menu.style.top = "0px";
+menu.style.left = "0px";
+menu.style.backgroundColor = "white";
+menu.style.zIndex=1000;
+//menu.style.width="0px";
+menu.close = function() {
+  this.style.width = "0px";
+}
+
+menu.open = function () {
+  this.style.width = window.innerWidth + "px";
+}
+
+var crossIcon = document.createElement("i");
+crossIcon.classList.add("mdi");
+crossIcon.classList.add("mdi-close");
+var pageHolder = document.createElement("div");
+
+ pageHolder.style.width = window.innerWidth-40 + "px";
+ pageHolder.style.display = "inline-block";
+ pageHolder.innerHTML =
+ "<a href='index.php'>Home</a>" +
+"<a href='studysites.php'>Study Sites</a>" +
+"<a href='data.php'>Data</a>" +
+"<a href='fieldguide.php'>Field Guide</a>";
+
+
+
+menu.appendChild(pageHolder);
+menu.appendChild(crossIcon);
+document.body.appendChild(menu);
+
+pageHolder.style.top = (window.innerHeight - parseInt(window.getComputedStyle(pageHolder).getPropertyValue("height")))/2.75  + "px";
+pageHolder.style.right = (window.innerWidth - parseInt(window.getComputedStyle(pageHolder).getPropertyValue("width")))/2 + "px";
+pageHolder.style.position = "absolute";
+
+crossIcon.addEventListener("click", function () {
+  menu.close();
+});
+
+document.getElementById('menu').addEventListener("click", function () {
+  menu.open();
+});
