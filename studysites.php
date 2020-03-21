@@ -95,7 +95,7 @@
 
   @media (max-width: 768px) {
     #sitecont {
-      margin-top: 80px;
+      margin-top: 60px;
       width: 95%;
     }
     #navbar-bottom .navbar-item {
@@ -103,7 +103,7 @@
     }
     #navbar-bottom .navbar-item span {
       font-size: 13pt;
-      padding: 2%;
+      padding: 3.5%;
     }
     #navbar-bottom i {
       font-size: 17pt;
@@ -117,8 +117,7 @@
     }
 
     #sitecont h2 {
-      font-size: 19pt;
-      padding: top: 50px;
+      font-size: 19pt
     }
 
     .siteims {
@@ -136,9 +135,9 @@
   $_SESSION['page']="study-sites";
   include 'navbar.php';
   ?>
+<!--
+  <script src="js/navbar-mobile.js" charset="utf-8"></script> -->
 
-  <script src="js/navbar-mobile.js" charset="utf-8"></script>
-  
   <div style="text-align:center">
   <div id='sitecont'>
     <?php

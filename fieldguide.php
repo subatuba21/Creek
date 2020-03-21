@@ -179,6 +179,18 @@
     .card-text {
       font-size: 15pt;
     }
+    p {
+      font-size: 13pt;
+    }
+    .displaych img {
+      width: 100%;
+      margin: 0%;
+      float: left;
+      margin-bottom: 10px;
+    }
+    #general-header {
+      margin-top: 35px;
+    }
   }
   </style>
 </head>

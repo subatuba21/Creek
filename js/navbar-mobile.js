@@ -2,18 +2,18 @@ var menu = document.createElement("div");
 menu.id = "navbar-mobile";
 menu.style.width=window.innerWidth + "px";
 menu.style.height=window.innerHeight + "px";
-menu.style.position = "absolute";
+menu.style.position = "fixed";
 menu.style.top = "0px";
 menu.style.left = "0px";
-menu.style.backgroundColor = "white";
 menu.style.zIndex=1000;
-//menu.style.width="0px";
+menu.style.width="0px";
 menu.close = function() {
   this.style.width = "0px";
 }
 
 menu.open = function () {
   this.style.width = window.innerWidth + "px";
+  this.style.height = window.innerHeight + "px";
 }
 
 var crossIcon = document.createElement("i");
@@ -29,6 +29,8 @@ var pageHolder = document.createElement("div");
 "<a href='data.php'>Data</a>" +
 "<a href='fieldguide.php'>Field Guide</a>";
 
+var currentPage = document.title.toLowerCase();
+console.log(currentPage);
 
 
 menu.appendChild(pageHolder);
@@ -40,9 +42,20 @@ pageHolder.style.right = (window.innerWidth - parseInt(window.getComputedStyle(p
 pageHolder.style.position = "absolute";
 
 crossIcon.addEventListener("click", function () {
+  document.body.style.height = "";
+  document.body.style.overflowY="";
   menu.close();
 });
 
 document.getElementById('menu').addEventListener("click", function () {
   menu.open();
+  document.body.style.height = "100%";
+  document.body.style.overflowY="hidden";
 });
+
+for (var element of document.querySelectorAll("#navbar-mobile a")) {
+  console.log(element.innerText);
+  if (element.innerText.trim().toLowerCase()==currentPage) {
+    element.style.fontWeight="600";
+  }
+}

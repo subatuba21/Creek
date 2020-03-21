@@ -65,6 +65,8 @@
         document.getElementById('navbar-left').style.height = document.getElementById('navbar-right').clientHeight.toString() + 'px';
       }
     </script>
+
+    <script src='js/navbar-mobile.js'></script>
   ";
 
 

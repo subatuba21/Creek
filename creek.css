@@ -10,6 +10,7 @@ html, body {
   --light-green: #7FFF00;
   --body-color: #7aa329;
   --grey: rgba(220,220,220, .6);
+  --solid-grey: #b5c594;
 }
 
 #navbar {
@@ -171,13 +172,14 @@ h6 {
   font-size: 16pt;
   text-decoration: none;
   color: black;
-  font-weight: 600;
-  margin-top: 8px;
+  margin-top: 25px;
+  transition: width 1s;
 }
 
 #navbar-mobile {
   text-align: center;
   transition: width 1s;
+  background-color: var(--solid-grey);
 }
 
 #navbar-mobile i {
@@ -193,9 +195,6 @@ h6 {
   transition: width 1s;
 }
 
-#navbar-mobile a {
-  transition: width 1s;
-}
 
 @media (max-width: 768px) {
   #navbar-mobile {
