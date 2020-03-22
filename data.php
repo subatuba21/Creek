@@ -12,8 +12,8 @@
 
     #displayarea {
       background-color: var(--grey);
-      grid-area: 1/2/6/4;
       box-shadow: 0px 0px 8px;
+      grid-area: 1/2/6/4;
       border-radius: 10px;
       margin: 10px;
       font-size: 18pt;
@@ -107,6 +107,59 @@
       width: 100%;
     }
 
+    #dropup-content {
+      display: none;
+      position: absolute;
+      position: absolute;
+      bottom: 40px;
+      background-color: #f1f1f1;
+      width: 130px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+      background-color: var(--solid-grey);
+      border-radius: 2px;
+    }
+
+    #sitechanger:active #dropup-content {
+      display: block;
+    }
+     #dropup-content:active {
+       display: block;
+     }
+     #navbar-bottom {
+       display: none;
+     }
+
+
+
+    @media (max-width:768px) {
+      #displayarea {
+        display: block;
+        background-color: transparent;
+        box-shadow: 0px 0px 0px;
+        font-size: 13pt;
+        margin: 1.5%;
+        margin-top: 50px;
+      }
+      #displayarea p {
+        margin-left: 0px;
+        margin-right: 0px;
+      }
+
+      #displayarea h2 {
+        font-size: 19pt;
+      }
+      #datagrid {
+        display: block;
+      }
+      #buttonarea {
+        display: none;
+      }
+      #navbar-bottom {
+        display: inline-block;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -173,8 +226,75 @@
       </div>
     </div>
     <script src="js/data.js" charset="utf-8"></script>
-    <div id="displayarea">
+    <div id="displayarea"></div>
+    <div id="navbar-bottom">
+      <div class="navbar-item">
+        <span>
+          <div id='sitechanger' style="font-family: 'Dosis', sans-serif; width: 130px;">
+            Select Page
+            <div id="dropup-content">
+              <div>
+                Conductivity
+              </div>
+              <div>
+                Turbidity
+              </div>
+              <div>
+                Temperature
+              </div>
+              <div >
+                Productivity
+              </div>
+              <div >
+                Depth
+              </div>
+              <div >
+                Phosphate Levels
+              </div>
+              <div >
+                pH
+              </div>
+              <div >
+                Nitrate
+              </div>
+              <div >
+                Humidity
+              </div>
+              <div >
+                Flow Rate
+              </div>
+              <div >
+                DO
+              </div>
+              <div >
+                Plankton Net
+              </div>
+              <div >
+                Kick Net
+              </div>
+              <div >
+                Seine Net
+              </div>
+              <div >
+                Dip Net
+              </div>
+              <div >
+                Succession
+              </div>
+              <div >
+                Sediments
+              </div>
+              <div >
+                Clean Up
+              </div>
+            </div>
 
-  </div>
+
+          </div>
+          <i class="mdi mdi-eye-off-outline"></i>
+          <!-- <script src="js/sitechanger.js" charset="utf-8"></script> -->
+        </span>
+      </div>
+    </div>
 </body>
 </html>

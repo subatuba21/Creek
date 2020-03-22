@@ -24,37 +24,6 @@
     font-size: 25pt;
   }
 
-
-  input {
-    background-color: var(--grey);
-    padding: .3%;
-    border-radius: 2px;
-    border: none;
-    font-size: .9vw;
-  }
-
-  #navbar-bottom .navbar-item {
-    font-size: 1.3vw;
-  }
-
-  #navbar-bottom .navbar-item span {
-    padding-top:.4%;
-    padding-bottom: .7%;
-    padding-left: .9%;
-    padding-right: .7%;
-    border-radius: 3px;
-    background-color: #b5c594;
-    box-shadow: 0px 2px 3px 2px #474747;
-  }
-
-  #navbar-bottom i {
-    font-size: 1.6vw;
-    position: relative;
-    top: 3px;
-    color: 	black;
-    cursor: pointer;
-  }
-
   .siteims {
     width: 40%;
     margin: 2%;
@@ -69,25 +38,6 @@
     display: inline-block;
   }
 
-  #navbar-bottom {
-    position: fixed;
-    bottom: 15px;
-    width: 100%;
-    font-family: 'Dosis', sans-serif;
-    font-size: 15pt;
-    background-color: white;
-    text-align: center;
-    background-color: transparent;
-    /* margin-bottom: .8%; */
-    -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari */
-   -khtml-user-select: none; /* Konqueror HTML */
-     -moz-user-select: none; /* Old versions of Firefox */
-      -ms-user-select: none; /* Internet Explorer/Edge */
-          user-select: none; /* Non-prefixed version, currently
-                                supported by Chrome, Opera and Firefox */
-  }
-
   #siteheader {
     font-size: 30pt;
   }
@@ -98,22 +48,8 @@
       margin-top: 60px;
       width: 95%;
     }
-    #navbar-bottom .navbar-item {
-      font-size: 16pt;
-    }
-    #navbar-bottom .navbar-item span {
-      font-size: 13pt;
-      padding: 3.5%;
-    }
-    #navbar-bottom i {
-      font-size: 17pt;
-    }
-    input {
-      font-size: 13pt;
-      width: 60px;
-    }
     #sitetext {
-      font-size: 16pt;
+      font-size: 13pt;
     }
 
     #sitecont h2 {
