@@ -8,6 +8,7 @@
   <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.4.95/css/materialdesignicons.min.css">
+  <script src="js/bottom-left-sticky.js" charset="utf-8"></script>
   <style>
 
     #displayarea {
@@ -110,23 +111,25 @@
     #dropup-content {
       display: none;
       position: absolute;
-      position: absolute;
       bottom: 40px;
       background-color: #f1f1f1;
       width: 130px;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      z-index: 1;
       background-color: var(--solid-grey);
-      border-radius: 2px;
+      cursor: pointer;
+      font-size: 14pt;
     }
 
-    #sitechanger:active #dropup-content {
-      display: block;
+    #dropup-content div {
+      padding-top: 1px;
     }
-     #dropup-content:active {
-       display: block;
+
+     #dropup-content div:hover {
+       opacity: .6;
      }
      #navbar-bottom {
+       display: none;
+     }
+     .bottom-left-sticky {
        display: none;
      }
 
@@ -140,6 +143,7 @@
         font-size: 13pt;
         margin: 1.5%;
         margin-top: 50px;
+        margin-bottom: 25px;
       }
       #displayarea p {
         margin-left: 0px;
@@ -157,6 +161,9 @@
       }
       #navbar-bottom {
         display: inline-block;
+      }
+      .bottom-left-sticky {
+        display: block;
       }
     }
 
@@ -225,8 +232,8 @@
         Clean Up
       </div>
     </div>
-    <script src="js/data.js" charset="utf-8"></script>
     <div id="displayarea"></div>
+  </div>
     <div id="navbar-bottom">
       <div class="navbar-item">
         <span>
@@ -296,5 +303,7 @@
         </span>
       </div>
     </div>
+    <div class="bottom-left-sticky">Open Page Select</div>
+    <script src="js/data.js" charset="utf-8"></script>
 </body>
 </html>

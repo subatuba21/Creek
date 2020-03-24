@@ -196,6 +196,7 @@ h6 {
 }
 
 #navbar-bottom {
+  z-index: 4;
   position: fixed;
   bottom: 15px;
   width: 100%;
@@ -251,6 +252,10 @@ h6 {
 
 
 @media (max-width: 768px) {
+  .bottom-left-sticky {
+    font-size: 13pt;
+    padding: 5px;
+  }
   #sitechanger {
     font-size: 13pt;
     width: 60px;
