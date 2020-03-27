@@ -463,6 +463,8 @@
 
   setCardProperty("");
 
+  let currentUrl=window.location.href;
+  var url = new URL(currentUrl);
   let extraPath = url.searchParams.get("p");
   let organism = url.searchParams.get("o");
   if (extraPath) {
