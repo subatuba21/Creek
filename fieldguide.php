@@ -8,9 +8,10 @@
   <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.4.95/css/materialdesignicons.min.css">
+
   <style>
   /* :root {
-    --grey: rgba(220,220,220, .6);
+  --grey: rgba(220,220,220, .6);
   } */
   p {
     width: 75%;
@@ -302,6 +303,13 @@
       return this.pathStr;
     }
 
+    setFullPath (path) {
+      let pathArr =path.split("/");
+      for (var i=0; i<pathArr.length; i++) {
+        this.setPath(i, pathArr[i]);
+      }
+    }
+
     getTopLevel () {
       let topLevel = 0;
       while(this.levels.get(topLevel+1)!=null) {
@@ -370,45 +378,8 @@
       }
       else {
         pathMaker.changePath(json.level, json.name);
-        document.querySelector("#fgtree h2").innerText = `Home${pathMaker.getPath()}`;
         pathMaker.backCounter=0;
-        //alert(pathMaker.getCurrentPath());
-        while(document.getElementsByClassName("card").length!=0) {
-          for (let olditem of document.getElementsByClassName("card")) {
-            olditem.remove();
-          }
-        }
-        for (let item of json["folders"]) {
-          let card = document.createElement("div");
-          card.classList.add("card");
-          let imageDiv = document.createElement("div");
-          imageDiv.classList.add("card-image");
-          let image = document.createElement("img");
-          //console.log(item[1]);
-          image.src=item[1];
-          image.classList.add("gallery-exception");
-          let textDiv = document.createElement("div");
-          textDiv.classList.add("card-text");
-          let itemInstance = item[0];
-          itemInstance = itemInstance.replace(/_/g, " ");
-          textDiv.innerText = itemInstance;
-          imageDiv.appendChild(image);
-          card.appendChild(imageDiv);
-          card.appendChild(textDiv);
-          document.getElementsByClassName("displaych")[0].appendChild(card);
-          setCardProperty(pathMaker.getCurrentPath());
-        }
-        newIms();
-        document.getElementById("kingdom").innerText="";
-        document.getElementById("phylum").innerText="";
-        document.getElementById("class").innerText="";
-        document.getElementById("order").innerText="";
-        document.getElementById("family").innerText="";
-        document.getElementById("genus").innerText="";
-        document.getElementById("species").innerText="";
-        document.getElementById("genInfo").innerText=json.text;
-        document.getElementById("general-image").src = json.image;
-        document.getElementById("general-header").innerText = json.name;
+        displayCards(json);
         //pathMaker.backCounter=0;
       }
 
@@ -435,49 +406,52 @@
       }
       else {
         pathMaker.setPath(json.level, json.name);
-        document.querySelector("#fgtree h2").innerText = `Home${pathMaker.getCurrentPath()}`;
-        while(document.getElementsByClassName("card").length!=0) {
-          for (let olditem of document.getElementsByClassName("card")) {
-            olditem.remove();
-          }
-        }
-        for (let item of json["folders"]) {
-          let card = document.createElement("div");
-          card.classList.add("card");
-          let imageDiv = document.createElement("div");
-          imageDiv.classList.add("card-image");
-          let image = document.createElement("img");
-          //console.log(item[1]);
-          image.src=item[1];
-          image.classList.add("gallery-exception");
-          let textDiv = document.createElement("div");
-          textDiv.classList.add("card-text");
-          let itemInstance = item[0];
-          itemInstance = itemInstance.replace(/_/g, " ");
-          textDiv.innerText = itemInstance;
-          imageDiv.appendChild(image);
-          card.appendChild(imageDiv);
-          card.appendChild(textDiv);
-          document.getElementsByClassName("displaych")[0].appendChild(card);
-          setCardProperty(pathMaker.getCurrentPath());
-        }
-        newIms();
-        document.getElementById("kingdom").innerText="";
-        document.getElementById("phylum").innerText="";
-        document.getElementById("class").innerText="";
-        document.getElementById("order").innerText="";
-        document.getElementById("family").innerText="";
-        document.getElementById("genus").innerText="";
-        document.getElementById("species").innerText="";
-        document.getElementById("genInfo").innerText=json.text;
-        document.getElementById("general-image").src = json.image;
-        document.getElementById("general-header").innerText = json.name;
+        displayCards(json);
       }
 
     });
   }
 
-  changeContent("", "");
+  function displayCards (json) {
+    document.querySelector("#fgtree h2").innerText = `Home${pathMaker.getCurrentPath()}`;
+    //alert(pathMaker.getCurrentPath());
+    while(document.getElementsByClassName("card").length!=0) {
+      for (let olditem of document.getElementsByClassName("card")) {
+        olditem.remove();
+      }
+    }
+    for (let item of json["folders"]) {
+      let card = document.createElement("div");
+      card.classList.add("card");
+      let imageDiv = document.createElement("div");
+      imageDiv.classList.add("card-image");
+      let image = document.createElement("img");
+      //console.log(item[1]);
+      image.src=item[1];
+      image.classList.add("gallery-exception");
+      let textDiv = document.createElement("div");
+      textDiv.classList.add("card-text");
+      let itemInstance = item[0];
+      itemInstance = itemInstance.replace(/_/g, " ");
+      textDiv.innerText = itemInstance;
+      imageDiv.appendChild(image);
+      card.appendChild(imageDiv);
+      card.appendChild(textDiv);
+      document.getElementsByClassName("displaych")[0].appendChild(card);
+      setCardProperty(pathMaker.getCurrentPath());
+    }
+    newIms();
+    document.getElementById("kingdom").innerText="";
+    document.getElementById("phylum").innerText="";
+    document.getElementById("class").innerText="";
+    document.getElementById("order").innerText="";
+    document.getElementById("family").innerText="";
+    document.getElementById("genus").innerText="";
+    document.getElementById("species").innerText="";
+    document.getElementById("genInfo").innerText=json.text;
+    document.getElementById("general-image").src = json.image;
+    document.getElementById("general-header").innerText = json.name;
+  }
 
   document.querySelector(".mdi-arrow-left").addEventListener("click", function() {
     let path = pathMaker.getBackwardPath();
@@ -488,6 +462,17 @@
   });
 
   setCardProperty("");
+
+  let extraPath = url.searchParams.get("p");
+  let organism = url.searchParams.get("o");
+  if (extraPath) {
+    pathMaker.setFullPath(extraPath);
+    changeContent("/" +extraPath, "");
+    if (organism) {
+      changeContent("/" +extraPath + "/" + organism, "");
+    }
+  }
+  else changeContent("", "");
 
   </script>
 
