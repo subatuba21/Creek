@@ -234,93 +234,10 @@
     </div>
   </div>
 
+
+  <script src="js/pathmaker.js" charset="utf-8"></script>
+
   <script>
-
-  class pathmaker {
-    constructor() {
-      this.level=1;
-      this.levels = new Map();
-      this.levels.set(1, null);
-      this.levels.set(2, null);
-      this.levels.set(3, null);
-      this.topLevel = 4;
-      this.backCounter=0;
-    }
-
-    changePath(level, item) {
-      this.levels.set(level, item);
-      for (let i = level+1; i<=this.topLevel; i++) {
-        this.levels.set(i, null);
-      }
-    }
-
-    setPath(level, item) {
-      this.levels.set(level, item);
-    }
-
-    getBackwardPath() {
-      this.backCounter++;
-      let i = 1;
-      this.pathStr="";
-      if (this.levels.get(i)==null) {
-        this.backCounter--;
-        return null;
-      }
-
-      for (i; i<=this.getTopLevel()-this.backCounter; i++) {
-        this.pathStr += "/";
-        this.pathStr += this.levels.get(i);
-      }
-      return this.pathStr;
-    }
-
-    getForwardPath() {
-
-    }
-
-    getCurrentPath () {
-      let i = 1;
-      this.pathStr="";
-      if (this.levels.get(i)==null) {
-        return "";
-      }
-
-      for (i; i<=this.getTopLevel()-this.backCounter; i++) {
-        this.pathStr += "/";
-        this.pathStr += this.levels.get(i);
-      }
-      return this.pathStr;
-    }
-
-    getPath () {
-      this.levels.i = 1;
-      this.pathStr="";
-      while(this.levels.get(this.levels.i)!=null) {
-        this.pathStr += "/";
-        this.pathStr += this.levels.get(this.levels.i);
-        this.levels.i++;
-      }
-      return this.pathStr;
-    }
-
-    setFullPath (path) {
-      let pathArr =path.split("/");
-      for (var i=0; i<pathArr.length; i++) {
-        this.setPath(i, pathArr[i]);
-      }
-    }
-
-    getTopLevel () {
-      let topLevel = 0;
-      while(this.levels.get(topLevel+1)!=null) {
-        topLevel++;
-      }
-      //console.log(topLevel);
-      return topLevel;
-    }
-
-  }
-
   var pathMaker = new pathmaker();
 
   function setCardProperty (path) {
@@ -336,17 +253,24 @@
             break;
           }
         }
-        changeContent(path, header)
+        changeContent(path, header, false, true);
       });
     }
+
   }
 
-  function changeContent (path, header) {
+  function changeContent (path, header, back, setHistory, callback) {
+
     fetch(`field-guide${path}/${header}/main.json`).then(function(response) {
       return response.json();
     }).then( (json) => {
+      //url and history injection
+      var urlPath = `${path}/${header}`;
+
       document.querySelector("#fgtree h2").innerText = `Home${pathMaker.getPath()}`;
       if (json["organism"]!=null) {
+        if (setHistory) window.history.pushState(urlPath, urlPath, `?p=${path}&o=${header}`);
+
         //console.log("organism");
         newIms();
         if (json.kingdom!=null) {
@@ -376,43 +300,23 @@
         var displayArea = document.getElementById("main-display-area");
         window.scrollTo(0, displayArea.offsetTop - parseInt(window.getComputedStyle(document.getElementById("navbar")).getPropertyValue("height")) -20);
       }
+
       else {
+        if (setHistory) window.history.pushState(urlPath, urlPath, `?p=${urlPath}`);
+        if (back) {
+          pathMaker.backCounter=0;
+        }
         pathMaker.changePath(json.level, json.name);
-        pathMaker.backCounter=0;
-        displayCards(json);
-        //pathMaker.backCounter=0;
-      }
-
-    });
-  }
-
-  function changeContentBack (path, header) {
-    fetch(`field-guide${path}/${header}/main.json`).then(function(response) {
-      return response.json();
-    }).then( (json) => {
-      if (json["organism"]!=null) {
-        //console.log("organism");
-        newIms();
-        document.getElementById("kingdom").innerText="";
-        document.getElementById("phylum").innerText="";
-        document.getElementById("class").innerText="";
-        document.getElementById("order").innerText="";
-        document.getElementById("family").innerText="";
-        document.getElementById("genus").innerText="";
-        document.getElementById("species").innerText="";
-        document.getElementById("genInfo").innerText=json.text;
-        document.getElementById("general-image").src = json.image;
-        document.getElementById("general-header").innerText = json.name;
-      }
-      else {
-        pathMaker.setPath(json.level, json.name);
         displayCards(json);
       }
 
-    });
+    }).finally(function () {
+      if (callback) callback();
+    })
   }
 
-  function displayCards (json) {
+  function displayCards (json) { //display organisms/category cards
+
     document.querySelector("#fgtree h2").innerText = `Home${pathMaker.getCurrentPath()}`;
     //alert(pathMaker.getCurrentPath());
     while(document.getElementsByClassName("card").length!=0) {
@@ -438,8 +342,8 @@
       card.appendChild(imageDiv);
       card.appendChild(textDiv);
       document.getElementsByClassName("displaych")[0].appendChild(card);
-      setCardProperty(pathMaker.getCurrentPath());
     }
+    setCardProperty(pathMaker.getCurrentPath());
     newIms();
     document.getElementById("kingdom").innerText="";
     document.getElementById("phylum").innerText="";
@@ -451,33 +355,21 @@
     document.getElementById("genInfo").innerText=json.text;
     document.getElementById("general-image").src = json.image;
     document.getElementById("general-header").innerText = json.name;
+
   }
 
-  document.querySelector(".mdi-arrow-left").addEventListener("click", function() {
+
+  document.querySelector(".mdi-arrow-left").addEventListener("click", function() { //back button
     let path = pathMaker.getBackwardPath();
-    //console.log(path);
     if (path!==null) {
-      changeContentBack(path, "");
+      changeContent(path, "", true, true);
     }
   });
 
-  setCardProperty("");
-
-  let currentUrl=window.location.href;
-  var url = new URL(currentUrl);
-  let extraPath = url.searchParams.get("p");
-  let organism = url.searchParams.get("o");
-  if (extraPath) {
-    pathMaker.setFullPath(extraPath);
-    changeContent("/" +extraPath, "");
-    if (organism) {
-      changeContent("/" +extraPath + "/" + organism, "");
-    }
-  }
-  else changeContent("", "");
-
   </script>
 
+
+  <script src="js/customurlFG.js" charset="utf-8"></script> <!-- This starts off the home page and handles custom urls -->
   <script src="js/gallery.js" charset="utf-8"></script>
 </body>
 </html>
