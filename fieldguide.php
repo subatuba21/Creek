@@ -26,7 +26,7 @@
   }
 
   h2 {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
   .dropdown {
@@ -150,6 +150,13 @@
     margin-right: 30%;
   }
 
+  #fginfo {
+    text-align: center;
+    margin: 0px;
+    width: 95%;
+    margin-left: 2.5%;
+  }
+
   @media (max-width: 768px) {
     h2:first-of-type {
       margin-top: 80px;
@@ -192,6 +199,9 @@
     #general-header {
       margin-top: 35px;
     }
+    #fginfo {
+      margin-bottom: 10px;
+    }
   }
   </style>
 </head>
@@ -205,7 +215,9 @@
   $_SESSION['page']="field-guide";
   include 'navbar.php';
   ?>
+
   <h2>Organisms at the Arroyo Del Valle!</h2>
+  <p id="fginfo">Scroll down for more info about the current selection.</p>
 
   <div id="fgdisplay" class="cont">
 

@@ -20,5 +20,4 @@ processUrl(currentUrl, true);
 window.onpopstate = function() {
   //alert("what");
   processUrl(window.location.href, false);
-
 }
