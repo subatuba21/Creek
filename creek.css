@@ -325,11 +325,6 @@ h6 {
   .mobile-hidden::after {
     content: "...";
   }
-  .mtgrid {
-    display: block;
-    width: 95%;
-    margin-left: 2.5%;
-  }
   #im1, #im2 {
     display: none;
   }

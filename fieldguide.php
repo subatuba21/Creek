@@ -158,6 +158,9 @@
   }
 
   @media (max-width: 768px) {
+    #speciesInfo p {
+      overflow-x: hidden;
+    }
     h2:first-of-type {
       margin-top: 80px;
       font-size: 15pt;

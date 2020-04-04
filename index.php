@@ -207,6 +207,45 @@
     #banner {
       width: 95%;
     }
+    #maintext {
+      font-size: 14pt;
+    }
+    #herotext {
+      max-width: 80%;
+      background: rgba(220,220,220, 0.75);
+    }
+    #herotext p {
+      font-size: 14pt;
+    }
+    #about p {
+        width: 90%;
+        margin-top: 2%;
+    }
+    #visit {
+      text-align: center;
+      margin-bottom: 2%;
+      margin-left: 5%;
+    }
+
+    #visit p {
+      margin-left: 0%;
+      margin-right: 0%;
+      text-align: left;
+    }
+    .mtgrid {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+    .mtgrid div {
+      width: 90%;
+    }
+    #goal,#use {
+      display: inline-block;
+    }
+    #im1, #im2 {
+      margin-top: 20px;
+    }
   }
 
   @keyframes nav-one {
@@ -317,20 +356,21 @@
         </p>
       </div>
       <div class="mtgrid">
-        <div id="im1">
-          <img src="images/4.jpg" alt="">
-        </div>
-        <div id="im2">
-          <img src="images/11.JPG" alt="">
-        </div>
+
 
         <div id="goal">
           <h2>The Goal</h2>
           The goal of the project is to provide field experience opportunities for Amador science students while at the same time support efforts in transforming the "creek" channel into an environment that is respected, enjoyed, and maintained by the Pleasanton Community. The web site will hopefully act as inspiration to other organizations to initiate similar habitat reclamation projects and promote a heightened level of concern about the "Land Sea" connection. We all need to work together to reclaim all that has been overlooked or forgotten and stop the flow of toxics into our oceans. We must recognize that habitat protection and stable biologically diverse ecosystems must be a priority.
         </div>
+        <div id="im1">
+          <img src="images/4.jpg" alt="">
+        </div>
         <div id="use">
           <h2>Using This Website</h2>
           Use the links in the navigation bar shown above to learn more about the Arroyo Del Valle, the Data that Amador students collect while at the study site, view images of some of the many organisms that can be found there, view images or take a virtual tour of the main study areas, enjoy some of the more beautiful images captured on camera, or marvel at some of the many research endeavors initiated by my students. The navigation bar is present on every page in the web site and should enable you to move in and around the site with ease.
+        </div>
+        <div id="im2">
+          <img src="images/11.JPG" alt="">
         </div>
       </div>
       <div id="filebar">
