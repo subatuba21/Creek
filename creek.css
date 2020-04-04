@@ -196,7 +196,7 @@ h6 {
 }
 
 #navbar-bottom {
-  z-index: 4;
+  z-index: 1;
   position: fixed;
   bottom: 15px;
   width: 100%;

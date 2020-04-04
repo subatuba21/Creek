@@ -116,7 +116,9 @@
       width: 130px;
       background-color: var(--solid-grey);
       cursor: pointer;
-      font-size: 14pt;
+      font-size: 14.5pt;
+      height: 350px;
+      overflow-y: scroll;
     }
 
     #dropup-content div {
