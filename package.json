@@ -4,7 +4,8 @@
   "description": "Creek website",
   "main": "index.php",
   "dependencies": {
-    "@webcomponents/webcomponentsjs": "^2.4.0"
+    "@webcomponents/webcomponentsjs": "^2.4.0",
+    "body-scroll-lock": "^3.0.1"
   },
   "devDependencies": {},
   "scripts": {

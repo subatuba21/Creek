@@ -45,6 +45,7 @@ class gallery extends HTMLElement {
     this.shadowRoot.getElementById("closebutton").addEventListener("click", ()=>{
       console.log("l");
       wrapper.style.display="none";
+      bodyScrollLock.enableBodyScroll(this);
     });
     this.shadowRoot.getElementById("backbutton").addEventListener("click", () => {
       let path = gallery.getpath();
@@ -163,6 +164,7 @@ class gallery extends HTMLElement {
 
   static open(element, path) {
     element.shadowRoot.getElementById("wrapper").style.display = "block";
+    bodyScrollLock.disableBodyScroll(element);
     this.setview(path, element);
   }
 

@@ -1,3 +1,8 @@
+<?php
+session_start();
+$_SESSION['page']="field-guide";
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
@@ -8,7 +13,7 @@
   <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.4.95/css/materialdesignicons.min.css">
-
+    <script src="node_modules/body-scroll-lock/lib/bodyScrollLock.js" charset="utf-8"></script>
   <style>
   /* :root {
   --grey: rgba(220,220,220, .6);
@@ -205,6 +210,12 @@
     #fginfo {
       margin-bottom: 10px;
     }
+    #speciesInfo p {
+      margin-bottom: 0px;
+    }
+    .levels-margin-mobile {
+      margin-bottom: 10px !important;
+    }
   }
   </style>
 </head>
@@ -214,8 +225,6 @@
   var currentFG = "";
   </script>
   <?php
-  session_start();
-  $_SESSION['page']="field-guide";
   include 'navbar.php';
   ?>
 
@@ -288,6 +297,10 @@
 
         //console.log("organism");
         newIms();
+        var levels = document.querySelectorAll(".levels");
+        for (var element of levels) {
+          element.classList.add("levels-margin-mobile");
+        }
         if (json.kingdom!=null) {
           document.getElementById("kingdom").innerText="Kingdom: " + json.kingdom;
         }
@@ -317,6 +330,10 @@
       }
 
       else {
+        var levels = document.querySelectorAll(".levels");
+        for (var element of levels) {
+          element.classList.remove("levels-margin-mobile");
+        }
         if (setHistory) window.history.pushState(urlPath, urlPath, `?p=${urlPath}`);
         if (back) {
           pathMaker.backCounter=0;

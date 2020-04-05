@@ -42,15 +42,13 @@ pageHolder.style.right = (window.innerWidth - parseInt(window.getComputedStyle(p
 pageHolder.style.position = "absolute";
 
 crossIcon.addEventListener("click", function () {
-  document.body.style.height = "";
-  document.body.style.overflowY="";
+  bodyScrollLock.enableBodyScroll(menu);
   menu.close();
 });
 
 document.getElementById('menu').addEventListener("click", function () {
   menu.open();
-  document.body.style.height = "100%";
-  document.body.style.overflowY="hidden";
+  bodyScrollLock.disableBodyScroll(menu);
 });
 
 for (var element of document.querySelectorAll("#navbar-mobile a")) {

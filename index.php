@@ -1,5 +1,5 @@
 <?php
-  session_start();
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -13,19 +13,13 @@
   <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.4.95/css/materialdesignicons.min.css">
   <script src="js/gallery.js" charset="utf-8"></script>
+  <script src="node_modules/body-scroll-lock/lib/bodyScrollLock.js" charset="utf-8"></script>
   <style>
   .nav-transition-one {
     animation-name: nav-one;
     animation-duration: 0.4s;
     animation-fill-mode: forwards;
   }
-
-  #navbar:hover {
-    animation-name: nav-one;
-    animation-duration: 0.4s;
-    animation-fill-mode: forwards;
-  }
-
 
   .nav-transition-two {
     animation-name: nav-two;
@@ -78,129 +72,132 @@
     width: 100%;
     padding-bottom: 20px;
     display: inline-block;
-    }
+  }
 
-    .mtgrid {
-      display: grid;
-      grid-template-columns: 15% 35% 35% 15%;
-      grid-template-rows: 1fr 1fr;
-      justify-content: center;
-      align-content: center;
-      grid-column-gap: 20px;
-      grid-row-gap: 10px;
-      padding-bottom: 20px;
-    }
+  .mtgrid {
+    display: grid;
+    grid-template-columns: 15% 35% 35% 15%;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    align-content: center;
+    grid-column-gap: 20px;
+    grid-row-gap: 10px;
+    padding-bottom: 20px;
+  }
 
-    #im1 {
-      grid-area: 1/2/2/3;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    #im2 {
-      grid-area: 2/2/3/3;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+  #im1 {
+    grid-area: 1/2/2/3;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #im2 {
+    grid-area: 2/2/3/3;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .mtgrid img {
-      width: 80%;
-      object-fit: cover;
-      border-radius: 3px;
+  .mtgrid img {
+    width: 80%;
+    object-fit: cover;
+    border-radius: 3px;
 
-    }
+  }
 
-    #visit {
-      text-align: center;
-      margin-bottom: 2%;
-    }
+  #visit {
+    text-align: center;
+    margin-bottom: 2%;
+  }
 
-    #visit p {
-      margin-left: 15%;
-      margin-right: 15%;
-      text-align: left;
-    }
+  #visit p {
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: left;
+  }
 
-    #use {
-      grid-area: 1/3/2/4;
-      text-align: left;
-    }
+  #use {
+    grid-area: 1/3/2/4;
+    text-align: left;
+  }
 
-    #goal {
-      grid-area: 2/3/3/4;
-      text-align: left;
-    }
+  #goal {
+    grid-area: 2/3/3/4;
+    text-align: left;
+  }
 
-    #panel {
-      grid-area: 1/3/3/4;
-      background: url(pics/rivpic.png);
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-    }
+  #panel {
+    grid-area: 1/3/3/4;
+    background: url(pics/rivpic.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
 
-    #about {
-      width: 100%;
-    }
+  #about {
+    width: 100%;
+  }
 
-    #about p {
-      display: inline-block;
-      width: 70%;
-      margin-top: 2%;
-      margin-bottom: 0px;
-      text-align: left;
-    }
+  #about p {
+    display: inline-block;
+    width: 70%;
+    margin-top: 2%;
+    margin-bottom: 0px;
+    text-align: left;
+  }
 
-    #filebar {
-      display: inline-block;
-      width: 73%;
-      margin-top: 2%;
-      margin-bottom: 2%;
-      background-color: rgba(220,220,220, 0.6);
-      border-radius: 4px;
-      padding: .5%;
-    }
+  #filebar {
+    display: inline-block;
+    width: 73%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    background-color: rgba(220,220,220, 0.6);
+    border-radius: 4px;
+    padding: .5%;
+  }
 
-    #filebar i {
-      display: inline-block;
-      margin-left: 2%;
-      margin-right: 2%;
-      float: left;
-      font-size: 30pt;
-      clear: right;
-      border-right: 2px solid black;
-      padding-right: .9%;
-    }
+  #filebar i {
+    display: inline-block;
+    margin-left: 2%;
+    margin-right: 2%;
+    float: left;
+    font-size: 30pt;
+    clear: right;
+    border-right: 2px solid black;
+    padding-right: .9%;
+  }
 
-    #filebar li {
-      list-style-type: none;
-      margin-right: 2%;
-      float: left;
+  #filebar li {
+    list-style-type: none;
+    margin-right: 2%;
+    float: left;
 
-    }
+  }
 
-    #filebar li:hover {
-      opacity: .6;
-    }
+  #filebar li:hover {
+    opacity: .6;
+  }
 
-    #filebar a{
-      text-decoration: none;
-      color: black;
-    }
+  #filebar a{
+    text-decoration: none;
+    color: black;
+  }
 
-    #filebar ul {
-      position: relative;
-      top: -12px;
-    }
+  #filebar ul {
+    position: relative;
+    top: -12px;
+  }
 
-    #about p::after {
-      content: "...";
-    }
+  #about p::after {
+    content: "...";
+  }
+  #filebar span {
+    display: none;
+  }
 
 
   @media (max-width: 768px) {
@@ -218,8 +215,8 @@
       font-size: 14pt;
     }
     #about p {
-        width: 90%;
-        margin-top: 2%;
+      width: 90%;
+      margin-top: 2%;
     }
     #visit {
       text-align: center;
@@ -245,6 +242,28 @@
     }
     #im1, #im2 {
       margin-top: 20px;
+    }
+    #filebar i {
+      border-right: 0px;
+    }
+    #filebar ul {
+      display: none;
+    }
+    #filebar span {
+      display: block;
+      position: relative;
+      top: 13px;
+      float: right;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+  }
+
+  @media (min-width:768px) {
+    #navbar:hover {
+      animation-name: nav-one;
+      animation-duration: 0.4s;
+      animation-fill-mode: forwards;
     }
   }
 
@@ -289,7 +308,9 @@
     hover++;
   }
 
-  var hoverListen = navbar.addEventListener("mouseover", firstHover);
+  if (window.innerWidth>768) {
+    var hoverListen = navbar.addEventListener("mouseover", firstHover);
+  }
 
   function changeColor(transparent) {
     if (transparent==false) {
@@ -383,6 +404,61 @@
             <a href="">Satelite View</a>
           </li>
         </ul>
+
+        <span>Display Files</span>
+
+        <script>
+
+          var displayFiles = document.querySelector("#filebar span");
+          var fileDiv = document.createElement("div");
+          var shadow=document.createElement("div");
+          shadow.style.position="fixed";
+          shadow.style.top="0px";
+          shadow.style.left="0px";
+          window.addEventListener("resize", function () {
+            shadow.style.height = window.innerHeight + "px";
+            shadow.style.width = window.innerWidth + "px";
+          });
+          shadow.style.height = window.innerHeight + "px";
+          shadow.style.width = window.innerWidth + "px";
+          shadow.style.backgroundColor = "rgba(0,0,0,.7)";
+          shadow.style.display="none";
+          shadow.style.zIndex="5";
+          shadow.style.alignItems="center";
+          shadow.style.justifyContent="center";
+
+          var close = document.createElement("i");
+          close.classList.add("mdi");
+          close.classList.add("mdi-close");
+          close.style.position="absolute";
+          close.style.top="5px";
+          close.style.right="5px";
+          close.style.fontSize="14pt";
+          close.onclick = function () {
+            shadow.style.display="none";
+            bodyScrollLock.enableBodyScroll(shadow);
+          }
+
+          fileDiv.innerHTML += "<h2 style='margin: 0px;'>Useful Files</h2>";
+          fileDiv.style.backgroundColor = "white";
+          fileDiv.style.width="75%";
+          fileDiv.style.padding= "5%";
+          fileDiv.style.position="relative";
+          fileDiv.style.borderRadius="5px";
+          fileDiv.innerHTML+="<ul style='text-align: center; padding-left:0px; margin-top: 5px; list-style:none; font-family: \"Dosis\", \"sans-serif\"; font-size: 14pt'>" + document.querySelector("#filebar ul").innerHTML + "</ul>";
+
+          fileDiv.appendChild(close);
+          shadow.appendChild(fileDiv);
+          document.body.appendChild(shadow);
+          displayFiles.onclick = function () {
+            // document.body.style.opacity=".1";
+            shadow.style.display="flex";
+            bodyScrollLock.disableBodyScroll(shadow);
+          }
+        </script>
+
+
+
 
       </div>
     </div>
