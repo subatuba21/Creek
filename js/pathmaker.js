@@ -54,6 +54,10 @@ class pathmaker {
     return this.pathStr;
   }
 
+  getCurrentConvertedPath() {
+    return this.getCurrentPath().replace(/_/g, " ");
+  }
+
   getPath () {
     this.levels.i = 1;
     this.pathStr="";

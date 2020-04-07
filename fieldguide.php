@@ -291,7 +291,7 @@ $_SESSION['page']="field-guide";
       //url and history injection
       var urlPath = `${path}/${header}`;
 
-      document.querySelector("#fgtree h2").innerText = `Home${pathMaker.getPath()}`;
+      document.querySelector("#fgtree h2").innerText = `Home${pathMaker.getCurrentConvertedPath()}`;
       if (json["organism"]!=null) {
         if (setHistory) window.history.pushState(urlPath, urlPath, `?p=${path}&o=${header}`);
 
@@ -331,6 +331,7 @@ $_SESSION['page']="field-guide";
 
       else {
         var levels = document.querySelectorAll(".levels");
+        let name = json.name.replace(/ /g, "_");
         for (var element of levels) {
           element.classList.remove("levels-margin-mobile");
         }
@@ -338,7 +339,7 @@ $_SESSION['page']="field-guide";
         if (back) {
           pathMaker.backCounter=0;
         }
-        pathMaker.changePath(json.level, json.name);
+        pathMaker.changePath(json.level, name);
         displayCards(json);
       }
 
@@ -349,7 +350,7 @@ $_SESSION['page']="field-guide";
 
   function displayCards (json) { //display organisms/category cards
 
-    document.querySelector("#fgtree h2").innerText = `Home${pathMaker.getCurrentPath()}`;
+    document.querySelector("#fgtree h2").innerText = `Home${pathMaker.getCurrentConvertedPath()}`;
     //alert(pathMaker.getCurrentPath());
     while(document.getElementsByClassName("card").length!=0) {
       for (let olditem of document.getElementsByClassName("card")) {
