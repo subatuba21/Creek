@@ -249,8 +249,8 @@ h6 {
 }
 
 footer {
-  background-color: black;
-  color: white;
+  background-color: #455a16;
+  color: #cad6b3;
   padding: 2em;
   display: flex;
   flex-wrap: wrap;
@@ -265,6 +265,12 @@ footer ul, #contact-footer, #creekwatch-footer {
   width: 18em;
   list-style-type: none;
   padding: 0px;
+}
+
+footer h4 {
+  font-weight: 700;
+  margin: 0px;
+  margin-bottom: 7px;
 }
 
 @media (max-width: 768px) {
@@ -343,5 +349,8 @@ footer ul, #contact-footer, #creekwatch-footer {
   }
   #im1, #im2 {
     display: none;
+  }
+  footer {
+    font-size: 13.5pt;
   }
 }
