@@ -1,3 +1,4 @@
+
 var menu = document.createElement("div");
 menu.id = "navbar-mobile";
 menu.style.width=window.innerWidth + "px";
@@ -57,3 +58,9 @@ for (var element of document.querySelectorAll("#navbar-mobile a")) {
     element.style.fontWeight="600";
   }
 }
+
+window.addEventListener("resize", function () {
+  pageHolder.style.top = (window.innerHeight - parseInt(window.getComputedStyle(pageHolder).getPropertyValue("height")))/2.75  + "px";
+  pageHolder.style.right = (window.innerWidth - parseInt(window.getComputedStyle(pageHolder).getPropertyValue("width")))/2 + "px";
+  pageHolder.style.position = "absolute";
+});

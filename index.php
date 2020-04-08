@@ -463,5 +463,32 @@ session_start();
       </div>
     </div>
     <script src="js/expandb.js" charset="utf-8"></script>
+    <footer>
+      <div id="creekwatch-footer">
+        <p>Creekwatch</p>
+        <img src="avWebLogo.png" alt="">
+        <p>© AV Web Development</p>
+      </div>
+      <ul>
+        Sections
+        <li><a>Home</a></li>
+        <li><a>Study Sites</a></li>
+        <li><a>Data</a></li>
+        <li><a>Field Guide</a></li>
+      </ul>
+      <div id="contact-footer">
+        <p><a>Contact Teachers</a></p>
+        <p><a>Contact Development Team</a></p>
+        <p><a>Want to make a change to the website?</a></p>
+      </div>
+      <div id="other-links-footer">
+        <ul>
+          Other Links
+          <li><a>File Downloads</a></li>
+          <li><a>Endangered Species</a></li>
+          <li><a>Indicator Species</a></li>
+        </ul>
+      </div>
+    </footer>
   </body>
   </html>

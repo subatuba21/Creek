@@ -38,21 +38,12 @@
 
 
     <script>
+    function configureNav() {
       document.getElementById('$page').classList.add('is-active');
       document.getElementById('$page').classList.remove('navbar-item');
       var leftwidth = document.getElementById('navbar-left').clientWidth;
       var height = document.getElementById('navbar-left').clientHeight;
       var rightwidth = document.getElementById('navbar-right').clientWidth;
-      if (leftwidth>rightwidth) {
-        leftwidth = leftwidth.toString();
-        leftwidth += 'px';
-        document.getElementById('navbar-right').style.width = leftwidth;
-      }
-      else {
-        rightwidth = rightwidth.toString();
-        rightwidth += 'px';
-        document.getElementById('navbar-left').style.width = rightwidth;
-      }
       if (window.innerWidth>768){
         height = height.toString();
         height+='px';
@@ -64,6 +55,9 @@
       else {
         document.getElementById('navbar-left').style.height = document.getElementById('navbar-right').clientHeight.toString() + 'px';
       }
+    }
+    window.addEventListener('load', configureNav);
+    window.addEventListener('resize', configureNav);
     </script>
 
     <script src='js/navbar-mobile.js'></script>
