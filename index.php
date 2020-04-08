@@ -409,52 +409,52 @@ session_start();
 
         <script>
 
-          var displayFiles = document.querySelector("#filebar span");
-          var fileDiv = document.createElement("div");
-          var shadow=document.createElement("div");
-          shadow.style.position="fixed";
-          shadow.style.top="0px";
-          shadow.style.left="0px";
-          window.addEventListener("resize", function () {
-            shadow.style.height = window.innerHeight + "px";
-            shadow.style.width = window.innerWidth + "px";
-          });
+        var displayFiles = document.querySelector("#filebar span");
+        var fileDiv = document.createElement("div");
+        var shadow=document.createElement("div");
+        shadow.style.position="fixed";
+        shadow.style.top="0px";
+        shadow.style.left="0px";
+        window.addEventListener("resize", function () {
           shadow.style.height = window.innerHeight + "px";
           shadow.style.width = window.innerWidth + "px";
-          shadow.style.backgroundColor = "rgba(0,0,0,.7)";
+        });
+        shadow.style.height = window.innerHeight + "px";
+        shadow.style.width = window.innerWidth + "px";
+        shadow.style.backgroundColor = "rgba(0,0,0,.7)";
+        shadow.style.display="none";
+        shadow.style.zIndex="5";
+        shadow.style.alignItems="center";
+        shadow.style.justifyContent="center";
+
+        var close = document.createElement("i");
+        close.classList.add("mdi");
+        close.classList.add("mdi-close");
+        close.style.position="absolute";
+        close.style.top="5px";
+        close.style.right="5px";
+        close.style.fontSize="14pt";
+        close.onclick = function () {
           shadow.style.display="none";
-          shadow.style.zIndex="5";
-          shadow.style.alignItems="center";
-          shadow.style.justifyContent="center";
+          bodyScrollLock.enableBodyScroll(shadow);
+        }
 
-          var close = document.createElement("i");
-          close.classList.add("mdi");
-          close.classList.add("mdi-close");
-          close.style.position="absolute";
-          close.style.top="5px";
-          close.style.right="5px";
-          close.style.fontSize="14pt";
-          close.onclick = function () {
-            shadow.style.display="none";
-            bodyScrollLock.enableBodyScroll(shadow);
-          }
+        fileDiv.innerHTML += "<h2 style='margin: 0px;'>Useful Files</h2>";
+        fileDiv.style.backgroundColor = "white";
+        fileDiv.style.width="75%";
+        fileDiv.style.padding= "5%";
+        fileDiv.style.position="relative";
+        fileDiv.style.borderRadius="5px";
+        fileDiv.innerHTML+="<ul style='text-align: center; padding-left:0px; margin-top: 5px; list-style:none; font-family: \"Dosis\", \"sans-serif\"; font-size: 14pt'>" + document.querySelector("#filebar ul").innerHTML + "</ul>";
 
-          fileDiv.innerHTML += "<h2 style='margin: 0px;'>Useful Files</h2>";
-          fileDiv.style.backgroundColor = "white";
-          fileDiv.style.width="75%";
-          fileDiv.style.padding= "5%";
-          fileDiv.style.position="relative";
-          fileDiv.style.borderRadius="5px";
-          fileDiv.innerHTML+="<ul style='text-align: center; padding-left:0px; margin-top: 5px; list-style:none; font-family: \"Dosis\", \"sans-serif\"; font-size: 14pt'>" + document.querySelector("#filebar ul").innerHTML + "</ul>";
-
-          fileDiv.appendChild(close);
-          shadow.appendChild(fileDiv);
-          document.body.appendChild(shadow);
-          displayFiles.onclick = function () {
-            // document.body.style.opacity=".1";
-            shadow.style.display="flex";
-            bodyScrollLock.disableBodyScroll(shadow);
-          }
+        fileDiv.appendChild(close);
+        shadow.appendChild(fileDiv);
+        document.body.appendChild(shadow);
+        displayFiles.onclick = function () {
+          // document.body.style.opacity=".1";
+          shadow.style.display="flex";
+          bodyScrollLock.disableBodyScroll(shadow);
+        }
         </script>
 
 
@@ -481,14 +481,12 @@ session_start();
         <p><a>Contact Development Team</a></p>
         <p><a>Want to make a change to the website?</a></p>
       </div>
-      <div id="other-links-footer">
-        <ul>
-          Other Links
-          <li><a>File Downloads</a></li>
-          <li><a>Endangered Species</a></li>
-          <li><a>Indicator Species</a></li>
-        </ul>
-      </div>
+      <ul>
+        Other Links
+        <li><a>File Downloads</a></li>
+        <li><a>Endangered Species</a></li>
+        <li><a>Indicator Species</a></li>
+      </ul>
     </footer>
   </body>
   </html>
