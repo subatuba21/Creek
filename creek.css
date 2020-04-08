@@ -26,7 +26,6 @@ html, body {
 }
 
 #navbar-left {
-  margin: left: 10px;
   float: left;
   display: inline-flex;
   flex-direction: row;
@@ -35,7 +34,6 @@ html, body {
 }
 
 #navbar-right {
-  margin: right: 10px;
   float: right;
   display: inline-flex;
   flex-direction: row;
@@ -258,7 +256,8 @@ footer {
   flex-wrap: wrap;
   text-align: center;
   justify-content: center;
-
+  font-size: 18pt;
+  font-family: 'Dosis', sans-serif;
 }
 
 footer ul, #contact-footer, #creekwatch-footer {
