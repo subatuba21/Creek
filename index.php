@@ -326,11 +326,11 @@ session_start();
   var below = false;
   window.addEventListener('scroll', function() {
     var scrollpos = window.scrollY;
-    if (scrollpos>(window.innerHeight*7/8)) {
+    if (scrollpos>(window.innerHeight*1/12)) {
       below = true
       changeColor(false);
     }
-    else if (scrollpos<(window.innerHeight*7/8) && below==true) {
+    else if (scrollpos<(window.innerHeight*1/12) && below==true) {
       changeColor(true);
       below=false;
     }
@@ -465,31 +465,45 @@ session_start();
     <script src="js/expandb.js" charset="utf-8"></script>
     <footer>
       <div id="creekwatch-footer">
-        <p>Creekwatch</p>
-        <img src="avWebLogo.png" alt="">
+        <img class="gallery-exception" src="images/avweb.png" alt="hi">
+
+        <script>
+          var avlogo = document.querySelector("#creekwatch-footer img");
+          avlogo.onclick=function() {
+            window.open("https://amadorweb.org", '_blank');
+          }
+        </script>
+
         <p>© AV Web Development</p>
       </div>
 
       <ul>
         <h4>Sections</h4>
-        <li><a>Home</a></li>
-        <li><a>Study Sites</a></li>
-        <li><a>Data</a></li>
-        <li><a>Field Guide</a></li>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="studysites.php">Study Sites</a></li>
+        <li><a href="data.php">Data</a></li>
+        <li><a href="fieldguide.php">Field Guide</a></li>
       </ul>
 
       <ul>
         <h4>Other Links</h4>
-        <li><a>File Downloads</a></li>
-        <li><a>Endangered Species</a></li>
-        <li><a>Indicator Species</a></li>
+        <li><a href="index.php#im2">File Downloads</a></li>
+        <li><a href="fieldguide.php?p=/Endangered_Species">Endangered Species</a></li>
+        <li><a href="fieldguide.php?p=/Indicator_Species">Indicator Species</a></li>
       </ul>
       
-      <div id="contact-footer">
+      <!-- <div id="contact-footer">
         <p><a>Contact Teachers</a></p>
         <p><a>Contact Development Team</a></p>
         <p><a>Want to make a change to the website?</a></p>
-      </div>
+      </div> -->
+
+      <ul>
+        <h4>Contact</h4>
+        <li><a href="">Contact Teachers</a></li>
+        <li><a href="">Contact Development Team</a></li>
+        <li><a href="">Want to make a change to the website?</a></li>
+      </ul>
     </footer>
   </body>
   </html>

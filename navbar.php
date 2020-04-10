@@ -23,9 +23,7 @@
           <a href='fieldguide.php'>Field Guide</a>
         </div>
         </div>
-      <div id='logo'> <!--logo-->
-          <img id='logoimg' src=''>
-      </div>
+
       <div id='navbar-right'>
         <div class='navbar-item'>
           <a href=''>Creekwatch</a>
@@ -47,7 +45,6 @@
       if (window.innerWidth>768){
         height = height.toString();
         height+='px';
-        document.getElementById('logoimg').style.maxHeight = height;
         document.getElementById('navbar').style.maxHeight = height;
         height = document.getElementById('navbar').style.maxHeight;
         document.getElementById('placeholder').style.height = height;

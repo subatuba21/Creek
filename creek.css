@@ -48,23 +48,12 @@ html, body {
   margin: 15px;
 }
 
-@keyframes hoverlink {
-  from {
-    border-bottom: 2px solid #607F1F;
-  }
-  to {
-    border-bottom: 2px solid #ADFF2F;
-  }
-}
-
 .navbar-item a {
   text-decoration: none;
   color: black;
 }
 .navbar-item a:hover {
-  animation-name: hoverlink;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
+  text-decoration: underline;
 }
 
 
@@ -249,7 +238,7 @@ h6 {
 }
 
 footer {
-  background-color: #455a16;
+  background-color: #202020;
   color: #cad6b3;
   padding: 2em;
   display: flex;
@@ -273,6 +262,20 @@ footer h4 {
   margin-bottom: 7px;
 }
 
+footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer img {
+  width: 10em;
+  margin-top: 1em;
+  cursor: pointer;
+}
 @media (max-width: 768px) {
   .bottom-left-sticky {
     font-size: 13pt;
