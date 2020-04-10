@@ -113,34 +113,6 @@
       </div>
     </div>
 
-    <script>
-      var sticky = document.querySelector(".bottom-left-sticky");
-      var stickyHeight = window.getComputedStyle(sticky).getPropertyValue("height");
-
-      var navbarBottom = document.getElementById("navbar-bottom");
-      var navHeight = window.getComputedStyle(navbarBottom).getPropertyValue("height");
-      navbarBottom.style.opacity = "0";
-      navbarBottom.style.display = "none";
-      fixedUntilHeight(navbarBottom, 1000, navHeight);
-      fixedUntilHeight(sticky, 1000, stickyHeight);
-      sticky.style.opacity = "1";
-
-      document.querySelector(".mdi-eye-off-outline").addEventListener("click", function() {
-        fadeIn(sticky);
-        fadeOut(navbarBottom);
-        window.scrollTo(window.scrollX, window.scrollY - 1);
-        window.scrollTo(window.scrollX, window.scrollY + 1);
-
-      });
-
-      sticky.addEventListener("click", function() {
-        fadeOut(sticky);
-        fadeIn(navbarBottom);
-        window.scrollTo(window.scrollX, window.scrollY - 1);
-        window.scrollTo(window.scrollX, window.scrollY + 1);
-      });
-    </script>
-
   </div>
   <!-- <script src="js/sitecont.js" charset="utf-8"></script> -->
   <script src="js/gallery.js" charset="utf-8"></script>
@@ -186,6 +158,12 @@
       <li><a href="">Want to make a change to the website?</a></li>
     </ul>
   </footer>
+
+
+  <script>
+    setUpStickyElements();
+  </script>
+
 </body>
 
 </html>

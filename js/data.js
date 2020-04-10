@@ -17,6 +17,9 @@ for (let button of buttons) {
       return html.text();
     }).then(function(text) {
       document.getElementById("displayarea").innerHTML = text;
+      if (window.innerWidth <= 768) {
+        stopAtFooter();
+      }
     });
   });
   if (button.innerText.trim().toLowerCase() == "conductivity") {
@@ -49,34 +52,7 @@ function adjustElements() {
   }
 }
 
-if (window.innerWidth<=768) {
-  var sticky = document.querySelector(".bottom-left-sticky");
-  var stickyHeight = window.getComputedStyle(sticky).getPropertyValue("height");
-
-  var navbarBottom = document.getElementById("navbar-bottom");
-  var navHeight = window.getComputedStyle(navbarBottom).getPropertyValue("height");
-  navbarBottom.style.opacity = "0";
-  navbarBottom.style.display = "none";
-  fixedUntilHeight(navbarBottom, 1000, navHeight);
-  fixedUntilHeight(sticky, 1000, stickyHeight);
-  sticky.style.opacity = "1";
-
-  document.querySelector(".mdi-eye-off-outline").addEventListener("click", function () {
-    fadeIn(sticky);
-    fadeOut(navbarBottom);
-    window.scrollTo(window.scrollX, window.scrollY - 1);
-    window.scrollTo(window.scrollX, window.scrollY + 1);
-
-  });
-
-  sticky.addEventListener("click", function () {
-    fadeOut(sticky);
-    fadeIn(navbarBottom);
-    window.scrollTo(window.scrollX, window.scrollY - 1);
-    window.scrollTo(window.scrollX, window.scrollY + 1);
-  });
-
-}
+setUpStickyElements();
 
 adjustElements();
 window.addEventListener("resize", adjustElements);

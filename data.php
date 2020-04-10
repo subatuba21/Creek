@@ -360,6 +360,12 @@
       <li><a href="">Want to make a change to the website?</a></li>
     </ul>
   </footer>
+
+  <script>
+    if (window.innerWidth <= 768) {
+      window.addEventListener("load", stopAtFooter);
+    }
+  </script>
 </body>
 
 </html>

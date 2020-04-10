@@ -1,56 +1,94 @@
-function fadeOut (element) {
+function fadeOut(element) {
   let timer = setInterval(function () {
     console.log("fading out");
-    if (parseFloat(element.style.opacity)<=0) {
-      element.style.display="none";
+    if (parseFloat(element.style.opacity) <= 0) {
+      element.style.display = "none";
       clearInterval(timer);
     }
-    let newOpacity = parseFloat(element.style.opacity)-.02;
+    let newOpacity = parseFloat(element.style.opacity) - .02;
     console.log(newOpacity);
 
     element.style.opacity = newOpacity.toString();
-    console.log(sticky.style.opacity);
   }, 7);
 }
 
-function fadeIn (element) {
-  element.style.display="block";
+function fadeIn(element) {
+  element.style.display = "block";
   let timer = setInterval(function () {
     console.log("fading in");
-    if (parseFloat(element.style.opacity)>=1) {
+    if (parseFloat(element.style.opacity) >= 1) {
       clearInterval(timer);
     }
-    let newOpacity = parseFloat(element.style.opacity)+.02;
+    let newOpacity = parseFloat(element.style.opacity) + .02;
     console.log(newOpacity);
 
     element.style.opacity = newOpacity.toString();
-    console.log(sticky.style.opacity);
   }, 7);
 }
 
 
 
-function fixedUntilHeight (element, height, elementHeight) {
-  let rect;
-  let top;
+function fixedUntilFooterHeight(element) {
+  var rect;
+  var top;
+  var footer=document.querySelector("footer");
+
   window.addEventListener("scroll", function () {
+    var elementHeight = window.getComputedStyle(element).getPropertyValue("height");
+    var height = footer.offsetTop - 70;
+
     rect = element.getBoundingClientRect();
-    if (element.style.position=="absolute") {
+    if (element.style.position == "absolute") {
       top = window.scrollY + window.innerHeight - parseInt(window.getComputedStyle(element).getPropertyValue("bottom")) - parseInt(window.getComputedStyle(element).getPropertyValue("height"));
     }
     else {
       top = parseInt(rect.top) + window.scrollY;
     }
-    if (top>=height) {
-      element.style.position="absolute";
+    if (top >= height) {
+      element.style.position = "absolute";
       element.style.top = height + "px";
       if (elementHeight) {
-        element.style.height=elementHeight;
+        element.style.height = elementHeight;
       }
     }
     else {
       element.style.position = "fixed";
       element.style.top = "";
     }
+  });
+}
+
+function setUpStickyElements() {
+  window.addEventListener("load", () => {
+    var sticky = document.querySelector(".bottom-left-sticky");
+    var stickyHeight = window.getComputedStyle(sticky).getPropertyValue("height");
+
+    var navbarBottom = document.getElementById("navbar-bottom");
+    var navHeight = window.getComputedStyle(navbarBottom).getPropertyValue("height");
+
+    var footerDistanceFromTop = document.querySelector("footer").offsetTop - 60;
+
+
+    navbarBottom.style.opacity = "0";
+    navbarBottom.style.display = "none";
+    sticky.style.opacity = "1";
+
+    fixedUntilFooterHeight(navbarBottom);
+    fixedUntilFooterHeight(sticky);
+
+    document.querySelector(".mdi-eye-off-outline").addEventListener("click", function () {
+      fadeIn(sticky);
+      fadeOut(navbarBottom);
+      window.scrollTo(window.scrollX, window.scrollY - 1);
+      window.scrollTo(window.scrollX, window.scrollY + 1);
+    });
+
+    sticky.addEventListener("click", function () {
+      fadeOut(sticky);
+      fadeIn(navbarBottom);
+      window.scrollTo(window.scrollX, window.scrollY - 1);
+      window.scrollTo(window.scrollX, window.scrollY + 1);
+    });
+
   });
 }
