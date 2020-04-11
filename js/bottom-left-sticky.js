@@ -35,7 +35,7 @@ function fixedUntilFooterHeight(element) {
 
   window.addEventListener("scroll", function () {
     var elementHeight = window.getComputedStyle(element).getPropertyValue("height");
-    var height = footer.offsetTop - 70;
+    var height = footer.offsetTop - 60;
 
     rect = element.getBoundingClientRect();
     if (element.style.position == "absolute") {
@@ -65,9 +65,6 @@ function setUpStickyElements() {
 
     var navbarBottom = document.getElementById("navbar-bottom");
     var navHeight = window.getComputedStyle(navbarBottom).getPropertyValue("height");
-
-    var footerDistanceFromTop = document.querySelector("footer").offsetTop - 60;
-
 
     navbarBottom.style.opacity = "0";
     navbarBottom.style.display = "none";
