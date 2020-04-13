@@ -344,13 +344,6 @@ footer img {
     width: 95%;
     margin-left: 2.5%;
   }
-  .mobile-hidden {
-    display: none;
-  }
-
-  .mobile-hidden::after {
-    content: "...";
-  }
   #im1, #im2 {
     display: none;
   }

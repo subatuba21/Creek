@@ -151,7 +151,7 @@
         font-size: 13pt;
         margin: 1.5%;
         margin-top: 50px;
-        margin-bottom: 25px;
+        margin-bottom: 45px;
       }
 
       #displayarea p {
