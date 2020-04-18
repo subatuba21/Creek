@@ -285,6 +285,10 @@ session_start();
         animation-duration: 0.4s;
         animation-fill-mode: forwards;
       }
+
+      #expandb-mobile {
+        display: none;
+      }
     }
 
 
@@ -388,6 +392,7 @@ session_start();
     <div class="expandb">
       <i class="mdi mdi-arrow-down-drop-circle"></i>
     </div>
+
     <script>
       var expandButton = document.querySelector(".expandb i");
       expandButton.onclick = function() {
@@ -400,16 +405,40 @@ session_start();
         document.querySelector(".expandb").style.display = "none";
       }
     </script>
+
     <img src="images/banner2.jpg" alt="" id="banner">
     <div id="visit">
       <h2>Visiting the Creek</h2>
       <p>
         Visiting the creek site requires a short walk from Amador. We typically will get there and back in a single class period. While at the study site, Amador students assess water quality by collecting chemical measurements, capturing indicator species, and making qualitative observations regarding the abundance and distribution of flora and fauna. Grant money provided by the Amador Parent Teacher Student Association, Pleasanton Partners In Education and the Tri Valley Community Fund have enabled us to purchase the necessary tools to collect, store, and
-        <!-- <span class="mobile-hidden"> -->
-        display what we have found. Significant changes have been observed over the years and fortunately most have been positive. Recently the city has followed our lead and began introducing native plant species accompanied by wire to protect the plants from deer and irrigation to sustain the young plants during the summer. We envision that one day the Arroyo Del Valle "creek" will be a place where members of the Pleasanton community will enjoy bringing their children to observe and appreciate an abundance of wildlife. We hope this web site will encourage you to visit the study area and become an active participant in the revitalization and beautification of this wonderful Pleasanton ecosystem. While there, if you see any Endangered Species or acquire information that may assist us in our research please e-mail ethiel@pleasanton.k12.ca.us.
-        <!-- </span> -->
+        <span class="mobile-hidden">
+          display what we have found. Significant changes have been observed over the years and fortunately most have been positive. Recently the city has followed our lead and began introducing native plant species accompanied by wire to protect the plants from deer and irrigation to sustain the young plants during the summer. We envision that one day the Arroyo Del Valle "creek" will be a place where members of the Pleasanton community will enjoy bringing their children to observe and appreciate an abundance of wildlife. We hope this web site will encourage you to visit the study area and become an active participant in the revitalization and beautification of this wonderful Pleasanton ecosystem. While there, if you see any Endangered Species or acquire information that may assist us in our research please e-mail ethiel@pleasanton.k12.ca.us.
+        </span>
       </p>
     </div>
+    <div class="expandb" id="expandb-mobile">
+      <i class="mdi mdi-arrow-down-drop-circle"></i>
+    </div>
+
+    <script>
+      function expandbMobile() {
+        if (window.innerWidth < 768) {
+          document.querySelector("#visit p").classList.add("not-hidden");
+        }
+      }
+
+      expandbMobile();
+
+      var expandButton = document.querySelector("#expandb-mobile");
+      expandButton.onclick = function() {
+        document.querySelector("#visit p").classList.remove("not-hidden");
+        document.querySelector("#visit p").classList.remove("not-hidden");
+        // document.querySelector("#visit p").style.marginBottom = "20px";
+        document.querySelector("#visit .mobile-hidden").style.display = "inline";
+        expandButton.style.display = "none";
+      }
+    </script>
+
     <div class="mtgrid">
       <div id="use">
         <h2>Using This Website</h2>
