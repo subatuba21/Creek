@@ -1,7 +1,7 @@
 {
   "name": "Not Tolerant",
-  "image": "images/creek_good.jpg",
+  "image": "images/Field_Guide/Animals/Arthropods/mayfly.jpg",
   "level": 2,
   "text": "A multitude of organisms have been observed in the Arroyo Del Valle. We have been able to capture images of many using hand held cameras as well as a flex cam connected to a microscope back in the classroom. We plan on adding new creatures to our field guide as we are lucky enough to capture them on camera. Biology students are made aware of there levels of complexity and evolutionary relationships during the course of the year. A simple phylogenetic tree, as shown above, helps the students to organize what we find into it's appropriate taxonomic category and visualize their evolutionary origins. ",
-  "folders": [["Caddis_fly","images/Animals/caddisfly.jpg"],["Dobson_fly","images/Animals/dobsonfly.jpg"],["Mayfly","images/Animals/mayfly.jpg"],["Stonefly","images/Animals/stonefly.jpg"],["Water_Bug","images/Animals/waterbug.jpg"],["Boatman","images/Animals/boatman.jpg"],["Bullfrog","images/Animals/bullfrog.jpg"],["Chub","images/Animals/chub.jpg"]]
+  "folders": [["Caddisfly","images/Field_Guide/Animals/Arthropods/caddisfly.jpg"],["Dobsonfly","images/Field_Guide/Animals/Arthropods/dobsonfly.jpg"],["Mayfly","images/Field_Guide/Animals/Arthropods/mayfly.jpg"],["Stonefly","images/Field_Guide/Animals/Arthropods/stonefly.jpg"],["Water_Bug","images/Field_Guide/Animals/Arthropods/waterbug.jpg"],["Boatman","images/Field_Guide/Animals/Arthropods/boatman.jpg"],["Bullfrog","images/Field_Guide/Animals/Vertebrates/bullfrog.jpg"],["Chub","images/Field_Guide/Animals/Vertebrates/chub.jpg"]]
 }

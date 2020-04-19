@@ -33,7 +33,7 @@ function fixedUntilFooterHeight(element) {
   var top;
   var footer=document.querySelector("footer");
 
-  window.addEventListener("scroll", function () {
+  function adjustSticky() {
     var elementHeight = window.getComputedStyle(element).getPropertyValue("height");
     var height = footer.offsetTop - 60;
 
@@ -55,7 +55,10 @@ function fixedUntilFooterHeight(element) {
       element.style.position = "fixed";
       element.style.top = "";
     }
-  });
+  }
+
+  window.addEventListener("scroll", adjustSticky);
+  setInterval(adjustSticky, 50);
 }
 
 function setUpStickyElements() {

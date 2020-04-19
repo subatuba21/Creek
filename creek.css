@@ -148,7 +148,7 @@ h6 {
   display: inline;
   padding: 10px;
   font-family: 'Dosis', sans-serif;
-  font-size: 16pt;
+  font-size: 14pt;
   cursor: pointer;
   z-index: 2;
 }
@@ -204,7 +204,7 @@ h6 {
 
 #navbar-bottom .navbar-item {
   margin-top: 0px;
-  font-size: 1.3vw;
+  font-size: 16pt;
 }
 
 #navbar-bottom .navbar-item span {
@@ -218,7 +218,7 @@ h6 {
 }
 
 #navbar-bottom i {
-  font-size: 1.6vw;
+  font-size: 19pt;
   position: relative;
   top: 3px;
   color: 	black;
@@ -230,7 +230,7 @@ h6 {
   padding: .3%;
   border-radius: 2px;
   border: none;
-  font-size: .9vw;
+  font-size: 13pt;
   display: inline-block;
 }
 
