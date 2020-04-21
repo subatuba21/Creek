@@ -8,13 +8,43 @@ getsite.onreadystatechange = function() {
       alert("That is not a valid study site.");
     }
     else {
-      document.getElementById('siteheader').innerText = 'Site ' + site;
-      document.getElementById('sitetext').innerText = restext['text'];
-      document.getElementById('siteimages').innerHTML = "";
-      restext['images'].forEach(function(element) {
-        document.getElementById('siteimages').innerHTML += element;
-      });
-      newIms();
+
+      if (restext['images'].length==0) {
+        document.getElementById('siteheader').innerText = 'Site ' + site;
+        document.getElementById('sitetext').innerText = restext['text'];
+        document.getElementById('siteimages').innerHTML = "";
+      }
+      
+      else {
+
+        restext['images'].forEach(function (element) {
+          document.getElementById('siteimages').innerHTML = element + document.getElementById('siteimages').innerHTML;
+        });
+
+        document.getElementById('siteimages').firstElementChild.onload = function () {
+          var savedChildren=[];
+
+          for (var child of document.getElementById('siteimages').children) {
+            if (child.style.display==="none") {
+              savedChildren.push(child);
+            } 
+          }
+
+          document.getElementById('siteimages').innerHTML="";
+
+          for (var child of savedChildren) {
+            document.getElementById('siteimages').appendChild(child);
+          }
+
+          document.getElementById('siteheader').innerText = 'Site ' + site;
+          document.getElementById('sitetext').innerText = restext['text'];
+          document.getElementById('siteimages').style.height = "auto";
+          for (var child of document.getElementById('siteimages').children) {
+            child.style.display="inline-block";
+          }
+        }
+        newIms();
+      }
     }
   }
 };
