@@ -317,74 +317,64 @@ $_SESSION['page'] = "field-guide";
         var urlPath = `${path}/${header}`;
 
         //path buttons
-        var headerOfTree = document.querySelector("#fgtree h2");
-        headerOfTree.innerHTML="";
-
-        var fgPath = `Home/${pathMaker.getCurrentPath()}${header}`
+        var fgPath = `Home${pathMaker.getCurrentPath()}`
         fgPath = fgPath.split("/");
-        console.log(fgPath);
         for (var i = 0; i < fgPath.length; i++) {
-          let button = document.createElement("a");
-          button.innerText = fgPath[i];
-          let pathOfButton = "";
-          for (var e = 1; e <= i; e++) {
-            pathOfButton += `${fgPath[e]}/`;
+          let pathOfButton="";
+          for (var e=0; e<=1; e++) {
+            pathOfButton+=fgPath[e]
           }
-          button.onclick = function() {
-            changeContent(pathOfButton, "", true, true);
-          }
-          headerOfTree.appendChild(button);
         }
 
-        //document.querySelector("#fgtree h2").innerText = `Home${pathMaker.getCurrentConvertedPath()}`;
-        if (json["organism"] != null) {
-          if (setHistory) window.history.pushState(urlPath, urlPath, `?p=${path}&o=${header}`);
+          //document.querySelector("#fgtree h2").innerText = `Home${pathMaker.getCurrentConvertedPath()}`;
+          if (json["organism"] != null) {
+            if (setHistory) window.history.pushState(urlPath, urlPath, `?p=${path}&o=${header}`);
 
-          //console.log("organism");
-          newIms();
-          var levels = document.querySelectorAll(".levels");
-          for (var element of levels) {
-            element.classList.add("levels-margin-mobile");
+            //console.log("organism");
+            newIms();
+            var levels = document.querySelectorAll(".levels");
+            for (var element of levels) {
+              element.classList.add("levels-margin-mobile");
+            }
+            if (json.kingdom != null) {
+              document.getElementById("kingdom").innerText = "Kingdom: " + json.kingdom;
+            }
+            if (json.phylum != null) {
+              document.getElementById("phylum").innerText = "Phylum: " + json.phylum;
+            }
+            if (json.class != null) {
+              document.getElementById("class").innerText = "Class: " + json.class;
+            }
+            if (json.order != null) {
+              document.getElementById("order").innerText = "Order: " + json.order;
+            }
+            if (json.family != null) {
+              document.getElementById("family").innerText = "Family: " + json.family;
+            }
+            if (json.genus != null) {
+              document.getElementById("genus").innerText = "Genus: " + json.genus;
+            }
+            if (json.species != null) {
+              document.getElementById("species").innerText = "Species: " + json.species;
+            }
+            document.getElementById("genInfo").innerText = json.text;
+            document.getElementById("general-image").src = json.image;
+            document.getElementById("general-header").innerText = json.name;
+            var displayArea = document.getElementById("main-display-area");
+            window.scrollTo(0, displayArea.offsetTop - parseInt(window.getComputedStyle(document.getElementById("navbar")).getPropertyValue("height")) - 20);
+          } else {
+            var levels = document.querySelectorAll(".levels");
+            let name = json.name.replace(/ /g, "_");
+            for (var element of levels) {
+              element.classList.remove("levels-margin-mobile");
+            }
+            if (setHistory) window.history.pushState(urlPath, urlPath, `?p=${urlPath}`);
+            if (back) {
+              pathMaker.backCounter = 0;
+            }
+            pathMaker.changePath(json.level, name);
+            displayCards(json);
           }
-          if (json.kingdom != null) {
-            document.getElementById("kingdom").innerText = "Kingdom: " + json.kingdom;
-          }
-          if (json.phylum != null) {
-            document.getElementById("phylum").innerText = "Phylum: " + json.phylum;
-          }
-          if (json.class != null) {
-            document.getElementById("class").innerText = "Class: " + json.class;
-          }
-          if (json.order != null) {
-            document.getElementById("order").innerText = "Order: " + json.order;
-          }
-          if (json.family != null) {
-            document.getElementById("family").innerText = "Family: " + json.family;
-          }
-          if (json.genus != null) {
-            document.getElementById("genus").innerText = "Genus: " + json.genus;
-          }
-          if (json.species != null) {
-            document.getElementById("species").innerText = "Species: " + json.species;
-          }
-          document.getElementById("genInfo").innerText = json.text;
-          document.getElementById("general-image").src = json.image;
-          document.getElementById("general-header").innerText = json.name;
-          var displayArea = document.getElementById("main-display-area");
-          window.scrollTo(0, displayArea.offsetTop - parseInt(window.getComputedStyle(document.getElementById("navbar")).getPropertyValue("height")) - 20);
-        } else {
-          var levels = document.querySelectorAll(".levels");
-          let name = json.name.replace(/ /g, "_");
-          for (var element of levels) {
-            element.classList.remove("levels-margin-mobile");
-          }
-          if (setHistory) window.history.pushState(urlPath, urlPath, `?p=${urlPath}`);
-          if (back) {
-            pathMaker.backCounter = 0;
-          }
-          pathMaker.changePath(json.level, name);
-          displayCards(json);
-        }
 
       }).finally(function() {
         if (callback) callback();
@@ -393,7 +383,7 @@ $_SESSION['page'] = "field-guide";
 
     function displayCards(json) { //display organisms/category cards
 
-      //document.querySelector("#fgtree h2").innerText = `Home${pathMaker.getCurrentConvertedPath()}`;
+      document.querySelector("#fgtree h2").innerText = `Home${pathMaker.getCurrentConvertedPath()}`;
       //alert(pathMaker.getCurrentPath());
       while (document.getElementsByClassName("card").length != 0) {
         for (let olditem of document.getElementsByClassName("card")) {

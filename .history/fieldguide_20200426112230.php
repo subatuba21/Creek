@@ -320,7 +320,7 @@ $_SESSION['page'] = "field-guide";
         var headerOfTree = document.querySelector("#fgtree h2");
         headerOfTree.innerHTML="";
 
-        var fgPath = `Home/${pathMaker.getCurrentPath()}${header}`
+        var fgPath = `Home/${pathMaker.getCurrentPath()}`
         fgPath = fgPath.split("/");
         console.log(fgPath);
         for (var i = 0; i < fgPath.length; i++) {
@@ -331,7 +331,7 @@ $_SESSION['page'] = "field-guide";
             pathOfButton += `${fgPath[e]}/`;
           }
           button.onclick = function() {
-            changeContent(pathOfButton, "", true, true);
+            changeContent(pathOfButton, "", false, true);
           }
           headerOfTree.appendChild(button);
         }

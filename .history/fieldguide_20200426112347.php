@@ -331,7 +331,7 @@ $_SESSION['page'] = "field-guide";
             pathOfButton += `${fgPath[e]}/`;
           }
           button.onclick = function() {
-            changeContent(pathOfButton, "", true, true);
+            changeContent(pathOfButton, "", false, true);
           }
           headerOfTree.appendChild(button);
         }

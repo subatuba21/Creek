@@ -320,18 +320,18 @@ $_SESSION['page'] = "field-guide";
         var headerOfTree = document.querySelector("#fgtree h2");
         headerOfTree.innerHTML="";
 
-        var fgPath = `Home/${pathMaker.getCurrentPath()}${header}`
+        var fgPath = `/{pathMaker.getCurrentPath()}`
         fgPath = fgPath.split("/");
         console.log(fgPath);
         for (var i = 0; i < fgPath.length; i++) {
           let button = document.createElement("a");
           button.innerText = fgPath[i];
           let pathOfButton = "";
-          for (var e = 1; e <= i; e++) {
+          for (var e = 0; e <= i; e++) {
             pathOfButton += `${fgPath[e]}/`;
           }
           button.onclick = function() {
-            changeContent(pathOfButton, "", true, true);
+            changeContent(pathOfButton, "", false, true);
           }
           headerOfTree.appendChild(button);
         }

@@ -317,25 +317,8 @@ $_SESSION['page'] = "field-guide";
         var urlPath = `${path}/${header}`;
 
         //path buttons
-        var headerOfTree = document.querySelector("#fgtree h2");
-        headerOfTree.innerHTML="";
-
-        var fgPath = `Home/${pathMaker.getCurrentPath()}${header}`
-        fgPath = fgPath.split("/");
-        console.log(fgPath);
-        for (var i = 0; i < fgPath.length; i++) {
-          let button = document.createElement("a");
-          button.innerText = fgPath[i];
-          let pathOfButton = "";
-          for (var e = 1; e <= i; e++) {
-            pathOfButton += `${fgPath[e]}/`;
-          }
-          button.onclick = function() {
-            changeContent(pathOfButton, "", true, true);
-          }
-          headerOfTree.appendChild(button);
-        }
-
+        var
+        
         //document.querySelector("#fgtree h2").innerText = `Home${pathMaker.getCurrentConvertedPath()}`;
         if (json["organism"] != null) {
           if (setHistory) window.history.pushState(urlPath, urlPath, `?p=${path}&o=${header}`);
@@ -393,7 +376,7 @@ $_SESSION['page'] = "field-guide";
 
     function displayCards(json) { //display organisms/category cards
 
-      //document.querySelector("#fgtree h2").innerText = `Home${pathMaker.getCurrentConvertedPath()}`;
+      document.querySelector("#fgtree h2").innerText = `Home${pathMaker.getCurrentConvertedPath()}`;
       //alert(pathMaker.getCurrentPath());
       while (document.getElementsByClassName("card").length != 0) {
         for (let olditem of document.getElementsByClassName("card")) {
