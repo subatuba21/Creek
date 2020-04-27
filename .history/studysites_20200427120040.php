@@ -46,6 +46,7 @@
 
     @media (max-width: 768px) {
       #sitecont {
+        margin-top: 60px;
         width: 95%;
       }
 

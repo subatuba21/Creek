@@ -31,7 +31,7 @@ $_SESSION['page'] = "field-guide";
       text-align: center;
     }
 
-    #intro {
+    h2 {
       margin-bottom: 10px;
       margin-top: 80px;
     }
@@ -178,7 +178,7 @@ $_SESSION['page'] = "field-guide";
           overflow-x: hidden;
         }
 
-        h2 {
+        #intro {
           font-size: 15pt;
         }
 

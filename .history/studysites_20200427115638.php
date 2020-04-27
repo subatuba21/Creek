@@ -46,6 +46,7 @@
 
     @media (max-width: 768px) {
       #sitecont {
+        margin-top: 60px;
         width: 95%;
       }
 
@@ -60,6 +61,12 @@
       .siteims {
         display: inline-block;
         width: 85%;
+      }
+    }
+
+    @media (max-width: 1200px) {
+      #sitecont {
+        margin-top: 60px;
       }
     }
   </style>

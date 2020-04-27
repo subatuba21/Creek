@@ -31,9 +31,8 @@ $_SESSION['page'] = "field-guide";
       text-align: center;
     }
 
-    #intro {
+    h2 {
       margin-bottom: 10px;
-      margin-top: 80px;
     }
 
     .dropdown {
@@ -173,12 +172,17 @@ $_SESSION['page'] = "field-guide";
       margin-left: 2.5%;
     }
 
+    h2 {
+      margin-top: 80px;
+    }
+
       @media (max-width: 768px) {
         #speciesInfo p {
           overflow-x: hidden;
         }
 
         h2 {
+          margin-top: 80px;
           font-size: 15pt;
         }
 
@@ -253,7 +257,7 @@ $_SESSION['page'] = "field-guide";
   include 'navbar.php';
   ?>
 
-  <h2 id="intro">Organisms at the Arroyo Del Valle!</h2>
+  <h2>Organisms at the Arroyo Del Valle!</h2>
   <p id="fginfo">Scroll down for more info about the current selection.</p>
 
   <div id="fgdisplay" class="cont">

@@ -1,0 +1,354 @@
+/*creek.css*/
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap');
+
+html, body {
+  margin: 0px;
+  background-color: var(--body-color);
+  //margin-top: 2em;
+}
+
+:root {
+  --light-green: #7FFF00;
+  --body-color: #7aa329;
+  --grey: rgba(220,220,220, .6);
+  --solid-grey: #b5c594;
+}
+
+#navbar {
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  font-family: 'Dosis', sans-serif;
+  font-size: 15pt;
+  text-align: center;
+  background-color: var(--body-color);
+  z-index: 3;
+  box-shadow: 0px 1px 10px;
+}
+
+#navbar-left {
+  float: left;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#navbar-right {
+  float: right;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 1px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 20pt;
+}
+
+.navbar-item {
+  margin: 15px;
+}
+
+.navbar-item a {
+  text-decoration: none;
+  color: black;
+}
+.navbar-item a:hover {
+  text-decoration: underline;
+}
+
+
+.is-active a {
+  margin: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  color: black;
+}
+
+
+#logo {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+}
+
+#logoimg {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+h1 {
+  font-family: 'Dosis', sans-serif;
+  font-size: 60pt;
+  color: black;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+h2 {
+  font-family: 'Dosis', sans-serif;
+  font-size: 20pt;
+  font-weight: 600;
+  text-align: center;
+}
+
+.c1 {
+  background: url(pics/leafp.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.c2 {
+  background: url(pics/fish.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h6 {
+  width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+.separator {
+  width: 20%;
+  margin-top: 50px;
+  color: #256d7b;
+}
+
+.computer-hidden {
+  display: none;
+}
+
+.expandb {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 30pt;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  color: var(--light-green);
+  cursor: pointer;
+}
+
+#menu {
+  display: none;
+}
+
+.bottom-left-sticky {
+  position: fixed;
+  bottom: 15px;
+  left: 15px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 8px;
+  background-color: #b5c594;
+  display: inline;
+  padding: 10px;
+  font-family: 'Dosis', sans-serif;
+  font-size: 14pt;
+  cursor: pointer;
+  z-index: 2;
+}
+
+#navbar-mobile a {
+  display: block;
+  font-family: 'Dosis', sans-serif;
+  font-size: 16pt;
+  text-decoration: none;
+  color: black;
+  margin-top: 25px;
+  transition: width 1s;
+}
+
+#navbar-mobile {
+  text-align: center;
+  transition: width 1s;
+  background-color: var(--solid-grey);
+}
+
+#navbar-mobile i {
+  cursor: pointer;
+  font-size: 25px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+   /* transition: width 1s;  */
+}
+
+#navbar-mobile div {
+  transition: width 1s;
+}
+
+#navbar-bottom {
+  z-index: 1;
+  position: fixed;
+  bottom: 15px;
+  width: 100%;
+  font-family: 'Dosis', sans-serif;
+  font-size: 15pt;
+  background-color: white;
+  text-align: center;
+  background-color: transparent;
+  /* margin-bottom: .8%; */
+  -webkit-touch-callout: none; /* iOS Safari */
+-webkit-user-select: none; /* Safari */
+ -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+        user-select: none; /* Non-prefixed version, currently
+                              supported by Chrome, Opera and Firefox */
+}
+
+#navbar-bottom .navbar-item {
+  margin-top: 0px;
+  font-size: 16pt;
+}
+
+#navbar-bottom .navbar-item span {
+  padding-top:.4%;
+  padding-bottom: .7%;
+  padding-left: .9%;
+  padding-right: .7%;
+  border-radius: 3px;
+  background-color: #b5c594;
+  box-shadow: 0px 2px 3px 2px #474747;
+}
+
+#navbar-bottom i {
+  font-size: 19pt;
+  position: relative;
+  top: 3px;
+  color: 	black;
+  cursor: pointer;
+}
+
+#sitechanger {
+  background-color: var(--grey);
+  padding: .3%;
+  border-radius: 2px;
+  border: none;
+  font-size: 13pt;
+  display: inline-block;
+}
+
+.mdi-eye-off-outline {
+  margin-left: 10px;
+}
+
+footer {
+  background-color: #202020;
+  color: #cad6b3;
+  padding: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  font-size: 18pt;
+  font-family: 'Dosis', sans-serif;
+}
+
+footer ul, #contact-footer, #creekwatch-footer {
+  text-align: center;
+  width: 18em;
+  list-style-type: none;
+  padding: 0px;
+}
+
+footer h4 {
+  font-weight: 700;
+  margin: 0px;
+  margin-bottom: 7px;
+}
+
+footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer img {
+  width: 10em;
+  margin-top: 1em;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .bottom-left-sticky {
+    font-size: 13pt;
+    padding: 5px;
+  }
+  #sitechanger {
+    font-size: 13pt;
+    width: 60px;
+  }
+  #navbar-bottom .navbar-item {
+    font-size: 16pt;
+  }
+  #navbar-bottom .navbar-item span {
+    font-size: 13pt;
+    padding: 10px;
+  }
+  #navbar-bottom i {
+    font-size: 17pt;
+  }
+
+  #navbar-mobile {
+    display: block;
+  }
+
+  #navbar-right {
+    display: inline-block;
+  }
+  #menu {
+    display: inline-block;
+    font-size: 25pt;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  #navbar-left .navbar-item, .is-active {
+    display: none;
+  }
+  #navbar-left {
+    justify-content: flex-start;
+    font-size: 20pt;
+  }
+  #maintext {
+    font-size: 13pt;
+  }
+  #about p{
+    width: 95%;
+  }
+
+  h1 {
+    font-size: 20pt;
+  }
+  #herotext {
+    max-width: 75%;
+    width: 75%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border-radius: 3px;
+  }
+  #herotext p {
+    font-size: 14pt;
+  }
+  #hero {
+    background-size: cover;
+  }
+  #visit p{
+    width: 95%;
+    margin-left: 2.5%;
+  }
+  #im1, #im2 {
+    display: none;
+  }
+  footer {
+    font-size: 13.5pt;
+  }
+}

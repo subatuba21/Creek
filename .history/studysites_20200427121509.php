@@ -10,6 +10,8 @@
   <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.4.95/css/materialdesignicons.min.css">
   <script src="node_modules/body-scroll-lock/lib/bodyScrollLock.js" charset="utf-8"></script>
+  <script src="js/startingHeight.js"></script>
+
   <style>
     #sitetext {
       display: block;
@@ -46,6 +48,7 @@
 
     @media (max-width: 768px) {
       #sitecont {
+        margin-top: 60px;
         width: 95%;
       }
 

@@ -178,7 +178,7 @@ $_SESSION['page'] = "field-guide";
           overflow-x: hidden;
         }
 
-        h2 {
+        #intro {
           font-size: 15pt;
         }
 

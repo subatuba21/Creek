@@ -43,6 +43,7 @@
         height+='px';
         document.getElementById('navbar').style.maxHeight = height;
         height = document.getElementById('navbar').style.maxHeight;
+        document.getElementById('placeholder').style.height = height;
       }
       else {
         document.getElementById('navbar-left').style.height = document.getElementById('navbar-right').clientHeight.toString() + 'px';

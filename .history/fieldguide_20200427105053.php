@@ -31,9 +31,8 @@ $_SESSION['page'] = "field-guide";
       text-align: center;
     }
 
-    #intro {
+    h2 {
       margin-bottom: 10px;
-      margin-top: 80px;
     }
 
     .dropdown {
@@ -173,74 +172,75 @@ $_SESSION['page'] = "field-guide";
       margin-left: 2.5%;
     }
 
-      @media (max-width: 768px) {
-        #speciesInfo p {
-          overflow-x: hidden;
-        }
+    @media (max-width: 768px) {
+      #speciesInfo p {
+        overflow-x: hidden;
+      }
 
-        h2 {
-          font-size: 15pt;
-        }
+      h2:first-of-type {
+        margin-top: 80px;
+        font-size: 15pt;
+      }
 
-        .card-image {
-          display: none;
-        }
+      .card-image {
+        display: none;
+      }
 
-        .mdi-arrow-left {
-          margin-left: 10%;
-        }
+      .mdi-arrow-left {
+        margin-left: 10%;
+      }
 
-        .mdi-arrow-right {
-          margin-right: 10%;
-        }
+      .mdi-arrow-right {
+        margin-right: 10%;
+      }
 
-        /* .arrow {
+      /* .arrow {
         font-size: 20pt;
         margin-top: 10px;
       } */
 
-        #fgtree {
-          padding: 0px;
-          display: block;
-          padding-bottom: 10px
-        }
-
-        #fgtree h2 {
-          display: inline-block;
-          margin-top: 10px;
-        }
-
-        .card-text {
-          font-size: 15pt;
-        }
-
-        p {
-          font-size: 13pt;
-        }
-
-        .displaych img {
-          width: 100%;
-          margin: 0%;
-          float: left;
-          margin-bottom: 10px;
-        }
-
-        #general-header {
-          margin-top: 35px;
-        }
-
-        #fginfo {
-          margin-bottom: 10px;
-        }
-
-        #speciesInfo p {
-          margin-bottom: 0px;
-        }
-
-        .levels-margin-mobile {
-          margin-bottom: 10px !important;
-        }
+      #fgtree {
+        padding: 0px;
+        display: block;
+        padding-bottom: 10px
       }
+
+      #fgtree h2:first-of-type {
+        display: inline-block;
+        margin-top: 10px;
+      }
+
+      .card-text {
+        font-size: 15pt;
+      }
+
+      p {
+        font-size: 13pt;
+      }
+
+      .displaych img {
+        width: 100%;
+        margin: 0%;
+        float: left;
+        margin-bottom: 10px;
+      }
+
+      #general-header {
+        margin-top: 35px;
+      }
+
+      #fginfo {
+        margin-bottom: 10px;
+      }
+
+      #speciesInfo p {
+        margin-bottom: 0px;
+      }
+
+      .levels-margin-mobile {
+        margin-bottom: 10px !important;
+      }
+    }
   </style>
 </head>
 
@@ -253,7 +253,7 @@ $_SESSION['page'] = "field-guide";
   include 'navbar.php';
   ?>
 
-  <h2 id="intro">Organisms at the Arroyo Del Valle!</h2>
+  <h2>Organisms at the Arroyo Del Valle!</h2>
   <p id="fginfo">Scroll down for more info about the current selection.</p>
 
   <div id="fgdisplay" class="cont">
@@ -316,6 +316,7 @@ $_SESSION['page'] = "field-guide";
         //url and history injection
         var urlPath = `${path}/${header}`;
 
+        var orgHeader="";
         //document.querySelector("#fgtree h2").innerText = `Home${pathMaker.getCurrentConvertedPath()}`;
         if (json["organism"] != null) {
           if (setHistory) window.history.pushState(urlPath, urlPath, `?p=${path}&o=${header}`);
@@ -352,8 +353,7 @@ $_SESSION['page'] = "field-guide";
           document.getElementById("general-header").innerText = json.name;
           var displayArea = document.getElementById("main-display-area");
           window.scrollTo(0, displayArea.offsetTop - parseInt(window.getComputedStyle(document.getElementById("navbar")).getPropertyValue("height")) - 20);
-          var fgPath = `Home/${pathMaker.getCurrentPath()}/**${header}`
-
+          var fgPath = `Home/${pathMaker.getCurrentPath()}/${header}`
         } else {
           var levels = document.querySelectorAll(".levels");
           let name = json.name.replace(/ /g, "_");
@@ -367,6 +367,7 @@ $_SESSION['page'] = "field-guide";
           pathMaker.changePath(json.level, name);
           displayCards(json);
           var fgPath = `Home/${pathMaker.getCurrentPath()}`
+          orgHeader = `${header}`
         }
 
         //path buttons
@@ -382,21 +383,13 @@ $_SESSION['page'] = "field-guide";
           separator.style.marginRight = "5px";
           separator.classList.add("mdi", "mdi-arrow-right-thick");
 
-
-          button.innerText = fgPath[i].replace(/_/g, " ").replace(/\*\*/, "");
+          button.innerText = fgPath[i].replace(/_/g, " ");;
           let pathOfButton = "";
-          let optionalHeader = ""
-
           for (var e = 1; e <= i; e++) {
-            if (fgPath[e].substring(0, 2) != "**") {
-              pathOfButton += `${fgPath[e]}/`;
-            } else {
-              optionalHeader = fgPath[e].substring(2);
-            }
+            pathOfButton += `${fgPath[e]}/`;
           }
-
           button.onclick = function() {
-            changeContent(pathOfButton, optionalHeader, false, true);
+            changeContent(pathOfButton, "", false, true);
           }
 
           if (button.innerText.trim() != "" && i != 0) {

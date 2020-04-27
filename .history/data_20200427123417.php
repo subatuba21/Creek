@@ -159,7 +159,6 @@
 
       #displayarea h2 {
         font-size: 19pt;
-        margin-top: 6px;
       }
 
       #datagrid {

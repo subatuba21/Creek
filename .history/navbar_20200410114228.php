@@ -30,6 +30,10 @@
         </div>
       </div>
     </div>
+    <div id='placeholder' style='$homeDis'>
+
+    </div>
+
 
     <script>
     function configureNav() {
@@ -43,14 +47,11 @@
         height+='px';
         document.getElementById('navbar').style.maxHeight = height;
         height = document.getElementById('navbar').style.maxHeight;
+        document.getElementById('placeholder').style.height = height;
       }
       else {
         document.getElementById('navbar-left').style.height = document.getElementById('navbar-right').clientHeight.toString() + 'px';
       }
-
-      var cHeight = parseInt(window.getComputedStyle(document.getElementById('navbar')).getPropertyValue('height'));
-      document.body.style.marginTop=cHeight+'px';
-      console.log(document.body.style.marginTop);
     }
     window.addEventListener('load', configureNav);
     window.addEventListener('resize', configureNav);

@@ -149,6 +149,7 @@
         background-color: transparent;
         box-shadow: 0px 0px 0px;
         font-size: 13pt;
+        margin: 1.5%;
         margin-bottom: 45px;
       }
 
@@ -159,7 +160,6 @@
 
       #displayarea h2 {
         font-size: 19pt;
-        margin-top: 6px;
       }
 
       #datagrid {
