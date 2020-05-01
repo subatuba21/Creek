@@ -52,14 +52,13 @@ print "
         print "
         var cHeight = parseInt(window.getComputedStyle(document.getElementById('navbar')).getPropertyValue('height'));
         document.body.style.marginTop=cHeight+'px';
-        console.log(document.body.style.marginTop);";
+        console.log(document.body.style.marginTop);"
         
       }
-      print "
     }
     window.addEventListener('load', configureNav);
     window.addEventListener('resize', configureNav);
     </script>
 
     <script src='js/navbar-mobile.js'></script>
-  ";
+  

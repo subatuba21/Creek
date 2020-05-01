@@ -173,81 +173,74 @@ $_SESSION['page'] = "field-guide";
       margin-left: 2.5%;
     }
 
-    .button {
-      cursor: pointer;
-    }
-    .button:hover {
-      text-decoration: underline;
-    }
+      @media (max-width: 768px) {
+        #speciesInfo p {
+          overflow-x: hidden;
+        }
 
-    @media (max-width: 768px) {
-      #speciesInfo p {
-        overflow-x: hidden;
-      }
+        h2 {
+          font-size: 15pt;
+        }
 
-      h2 {
-        font-size: 15pt;
-      }
+        .card-image {
+          display: none;
+        }
 
-      .card-image {
-        display: none;
-      }
+        .mdi-arrow-left {
+          margin-left: 10%;
+        }
 
-      .mdi-arrow-left {
-        margin-left: 10%;
-      }
+        .mdi-arrow-right {
+          margin-right: 10%;
+        }
 
-      .mdi-arrow-right {
-        margin-right: 10%;
-      }
-
-      /* .arrow {
+        /* .arrow {
         font-size: 20pt;
         margin-top: 10px;
       } */
 
-      #fgtree {
-        padding: 0px;
-        display: block;
-        padding-bottom: 10px
-      }
+        #fgtree {
+          padding: 0px;
+          display: block;
+          padding-bottom: 10px
+        }
 
-      #fgtree h2 {
-        display: block;
-        padding-top: 10px;
-      }
+        #fgtree h2 {
+          display: inline-block;
+          margin-top: 10px;
+        }
 
-      .card-text {
-        font-size: 15pt;
-      }
+        .card-text {
+          font-size: 15pt;
+        }
 
-      p {
-        font-size: 13pt;
-      }
+        p {
+          font-size: 13pt;
+        }
 
-      .displaych img {
-        width: 100%;
-        margin: 0%;
-        float: left;
-        margin-bottom: 10px;
-      }
+        .displaych img {
+          width: 100%;
+          margin: 0%;
+          float: left;
+          margin-bottom: 10px;
+        }
 
-      #general-header {
-        margin-top: 35px;
-      }
+        #general-header {
+          margin-top: 35px;
+        }
 
-      #fginfo {
-        margin-bottom: 10px;
-      }
+        #fginfo {
+          margin-bottom: 10px;
+        }
 
-      #speciesInfo p {
-        margin-bottom: 0px;
-      }
+        #speciesInfo p {
+          margin-bottom: 0px;
+        }
 
-      .levels-margin-mobile {
-        margin-bottom: 10px !important;
+        .levels-margin-mobile {
+          margin-bottom: 10px !important;
+        }
       }
-    }
   </style>
 </head>
 
@@ -388,7 +381,7 @@ $_SESSION['page'] = "field-guide";
           separator.style.marginLeft = "5px";
           separator.style.marginRight = "5px";
           separator.classList.add("mdi", "mdi-arrow-right-thick");
-          button.classList.add("button");
+          button.style.cursor = "pointer";
 
           button.innerText = fgPath[i].replace(/_/g, " ").replace(/\*\*/, "");
           let pathOfButton = "";

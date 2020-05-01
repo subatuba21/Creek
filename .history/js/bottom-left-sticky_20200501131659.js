@@ -77,7 +77,7 @@ function setUpStickyElements() {
     fixedUntilFooterHeight(sticky);
 
     document.querySelector(".mdi-eye-off-outline").addEventListener("click", function () {
-      if (document.title.toLowerCase()=="data") bodyScrollLock.enableBodyScroll(document.getElementById("dropup-content"));
+      if (window.location=="data") bodyScrollLock.enableBodyScroll(document.getElementById("dropup-content"));
       fadeIn(sticky);
       fadeOut(navbarBottom);
       window.scrollTo(window.scrollX, window.scrollY - 1);
@@ -85,7 +85,6 @@ function setUpStickyElements() {
     });
 
     sticky.addEventListener("click", function () {
-      if (document.title.toLowerCase() == "data" && document.getElementById("dropup-content").style.display!="none") bodyScrollLock.disableBodyScroll(document.getElementById("dropup-content"));
       fadeOut(sticky);
       fadeIn(navbarBottom);
       window.scrollTo(window.scrollX, window.scrollY - 1);

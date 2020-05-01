@@ -115,7 +115,7 @@
 
     #sitechanger {
       padding: .1%;
-      padding-bottom: .3%;
+      padding-bottom: .2%;
       font-size: 16pt;
       cursor: pointer;
     }
@@ -133,9 +133,7 @@
         background-color: transparent;
         box-shadow: 0px 0px 0px;
         font-size: 13pt;
-        margin: 10px;
-        margin-bottom: 55px;
-
+        margin-bottom: 45px;
       }
 
       #displayarea p {

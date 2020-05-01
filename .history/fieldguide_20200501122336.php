@@ -213,8 +213,8 @@ $_SESSION['page'] = "field-guide";
       }
 
       #fgtree h2 {
-        display: block;
-        padding-top: 10px;
+        display: inline-block;
+        margin-top: 50000px;
       }
 
       .card-text {

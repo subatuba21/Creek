@@ -4,9 +4,7 @@ document.getElementById("sitechanger").addEventListener("click", function() {
   if (clicked) {
     document.getElementById("dropup-content").style.display = "none";
     clicked=false;
-    bodyScrollLock.enableBodyScroll(document.getElementById("dropup-content"));
   } else {
-    bodyScrollLock.disableBodyScroll(document.getElementById("dropup-content"));
     document.getElementById("dropup-content").style.display = "block";
     clicked=true;
   }

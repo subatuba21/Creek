@@ -214,7 +214,7 @@ $_SESSION['page'] = "field-guide";
 
       #fgtree h2 {
         display: block;
-        padding-top: 10px;
+        margin-top: 10px;
       }
 
       .card-text {

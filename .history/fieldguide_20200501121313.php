@@ -173,9 +173,6 @@ $_SESSION['page'] = "field-guide";
       margin-left: 2.5%;
     }
 
-    .button {
-      cursor: pointer;
-    }
     .button:hover {
       text-decoration: underline;
     }
@@ -213,8 +210,8 @@ $_SESSION['page'] = "field-guide";
       }
 
       #fgtree h2 {
-        display: block;
-        padding-top: 10px;
+        display: inline-block;
+        margin-top: 10px;
       }
 
       .card-text {

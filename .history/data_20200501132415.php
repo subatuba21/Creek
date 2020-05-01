@@ -133,9 +133,8 @@
         background-color: transparent;
         box-shadow: 0px 0px 0px;
         font-size: 13pt;
-        margin: 10px;
         margin-bottom: 55px;
-
+        margin: 10px;
       }
 
       #displayarea p {

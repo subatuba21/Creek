@@ -85,7 +85,6 @@ function setUpStickyElements() {
     });
 
     sticky.addEventListener("click", function () {
-      if (document.title.toLowerCase() == "data" && document.getElementById("dropup-content").style.display!="none") bodyScrollLock.disableBodyScroll(document.getElementById("dropup-content"));
       fadeOut(sticky);
       fadeIn(navbarBottom);
       window.scrollTo(window.scrollX, window.scrollY - 1);

@@ -55,11 +55,10 @@ print "
         console.log(document.body.style.marginTop);";
         
       }
-      print "
     }
     window.addEventListener('load', configureNav);
     window.addEventListener('resize', configureNav);
     </script>
 
     <script src='js/navbar-mobile.js'></script>
-  ";
+  

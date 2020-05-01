@@ -186,7 +186,7 @@ $_SESSION['page'] = "field-guide";
       }
 
       h2 {
-        font-size: 15pt;
+        font-size: 200pt;
       }
 
       .card-image {
@@ -213,8 +213,8 @@ $_SESSION['page'] = "field-guide";
       }
 
       #fgtree h2 {
-        display: block;
-        padding-top: 10px;
+        display: inline-block;
+        margin-top: 10px;
       }
 
       .card-text {

@@ -173,9 +173,6 @@ $_SESSION['page'] = "field-guide";
       margin-left: 2.5%;
     }
 
-    .button {
-      cursor: pointer;
-    }
     .button:hover {
       text-decoration: underline;
     }
@@ -213,8 +210,8 @@ $_SESSION['page'] = "field-guide";
       }
 
       #fgtree h2 {
-        display: block;
-        padding-top: 10px;
+        display: inline-block;
+        margin-top: 10px;
       }
 
       .card-text {
@@ -388,7 +385,7 @@ $_SESSION['page'] = "field-guide";
           separator.style.marginLeft = "5px";
           separator.style.marginRight = "5px";
           separator.classList.add("mdi", "mdi-arrow-right-thick");
-          button.classList.add("button");
+          button.style.cursor = "pointer";
 
           button.innerText = fgPath[i].replace(/_/g, " ").replace(/\*\*/, "");
           let pathOfButton = "";

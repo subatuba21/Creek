@@ -13,16 +13,12 @@
   <script src="node_modules/body-scroll-lock/lib/bodyScrollLock.js" charset="utf-8"></script>
   <style>
     #displayarea {
-      font-size: 20pt;
+      margin: 10px;
+      font-size: 18pt;
       font-family: 'Dosis', sans-serif;
+      overflow-y: scroll;
+      overflow: -moz-scrollbars-vertical;
       min-height: 0;
-      width: 71%;
-      display: inline-block;
-      text-align: left;
-    }
-
-    #displayarea h2 {
-      font-size: 25pt;
     }
 
     #displayarea p {
@@ -47,8 +43,36 @@
     }
 
     #datagrid {
-      display: inline-block;
-      text-align: center;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: auto auto auto auto auto;
+      padding: 10px;
+    }
+
+    #buttonarea {
+      grid-area: 1/1/6/2;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      flex-basis: 33%;
+    }
+
+    .button {
+      display: flex;
+      width: 45%;
+      margin: 10px;
+      border-radius: 10px;
+      background: rgba(220, 220, 220, .6);
+      justify-content: center;
+      align-items: center;
+      font-size: 18pt;
+      font-family: 'Dosis', sans-serif;
+      box-shadow: 0px 4px black;
+    }
+
+    .button:active {
+      box-shadow: 0 1px black;
+      transform: translateY(3px);
     }
 
     #displayword {
@@ -87,7 +111,7 @@
     #dropup-content {
       display: none;
       position: absolute;
-      bottom: 50px;
+      bottom: 40px;
       background-color: #f1f1f1;
       width: 130px;
       background-color: var(--solid-grey);
@@ -106,36 +130,22 @@
     }
 
     #navbar-bottom {
-      display: inline-block;
+      display: none;
     }
 
     .bottom-left-sticky {
-      display: block;
+      display: none;
     }
 
-    #sitechanger {
-      padding: .1%;
-      padding-bottom: .3%;
-      font-size: 16pt;
-      cursor: pointer;
-    }
 
-    @media (max-width:768px) {
-      #sitechanger {
-        padding: 1px;
-        padding-bottom: 1px;
-        font-size: 14.5pt;
-      }
 
+    /* @media (max-width:768px) { */
       #displayarea {
-        display: inline-block;
-        width: auto;
+        display: block;
         background-color: transparent;
         box-shadow: 0px 0px 0px;
         font-size: 13pt;
-        margin: 10px;
-        margin-bottom: 55px;
-
+        margin-bottom: 45px;
       }
 
       #displayarea p {
@@ -163,11 +173,7 @@
       .bottom-left-sticky {
         display: block;
       }
-
-      #dropup-content {
-        bottom: 40px;
-      }
-    }
+    /* } */
   </style>
 </head>
 

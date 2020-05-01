@@ -13,10 +13,11 @@
   <script src="node_modules/body-scroll-lock/lib/bodyScrollLock.js" charset="utf-8"></script>
   <style>
     #displayarea {
+      margin: 10px;
       font-size: 20pt;
       font-family: 'Dosis', sans-serif;
       min-height: 0;
-      width: 71%;
+      width: 75%;
       display: inline-block;
       text-align: left;
     }
@@ -114,16 +115,16 @@
     }
 
     #sitechanger {
-      padding: .1%;
-      padding-bottom: .3%;
+      padding: 2px;
+      padding-bottom: 6px;
       font-size: 16pt;
       cursor: pointer;
     }
 
     @media (max-width:768px) {
       #sitechanger {
-        padding: 1px;
-        padding-bottom: 1px;
+        padding: .5%;
+        padding-bottom: .5%;
         font-size: 14.5pt;
       }
 
@@ -133,9 +134,7 @@
         background-color: transparent;
         box-shadow: 0px 0px 0px;
         font-size: 13pt;
-        margin: 10px;
-        margin-bottom: 55px;
-
+        margin-bottom: 45px;
       }
 
       #displayarea p {
@@ -162,10 +161,6 @@
 
       .bottom-left-sticky {
         display: block;
-      }
-
-      #dropup-content {
-        bottom: 40px;
       }
     }
   </style>
