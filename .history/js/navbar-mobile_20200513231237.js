@@ -28,8 +28,7 @@ var pageHolder = document.createElement("div");
  "<a href='index.php'>Home</a>" +
 "<a href='studysites.php'>Study Sites</a>" +
 "<a href='data.php'>Data</a>" +
-"<a href='fieldguide.php'>Field Guide</a>" + 
-"<a style='cursor:pointer' onclick='gallery.open(document.querySelector(\"image-gallery\"), \"\")'>Open Gallery</a>";
+"<a href='fieldguide.php' onclick='gallery.open(\"\", document.querySelector(\"gallery\"))'>Field Guide</a>";
 
 var currentPage = document.title.toLowerCase();
 console.log(currentPage);

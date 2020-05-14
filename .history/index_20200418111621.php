@@ -8,7 +8,7 @@ session_start();
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- suitable for mobile devices-->
-  <title>Home</title>
+  <title>AV Creek Website</title>
   <link rel="stylesheet" href="creek.css">
   <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">

@@ -22,8 +22,8 @@ print "
         <div class='navbar-item' id='field-guide'>
           <a href='fieldguide.php'>Field Guide</a>
         </div>
-        <div class='navbar-item' id='gallery' style='cursor: pointer'>
-          <a style='cursor:pointer' onclick='gallery.open(document.querySelector(\"image-gallery\"), \"\")'>Open Gallery</a>
+        <div class='navbar-item' id='gallery'>
+          <a>Open Gallery</a>
         </div>
         </div>
 

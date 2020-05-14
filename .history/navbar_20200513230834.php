@@ -23,7 +23,7 @@ print "
           <a href='fieldguide.php'>Field Guide</a>
         </div>
         <div class='navbar-item' id='gallery' style='cursor: pointer'>
-          <a style='cursor:pointer' onclick='gallery.open(document.querySelector(\"image-gallery\"), \"\")'>Open Gallery</a>
+          <a onclick='open()>Open Gallery</a>
         </div>
         </div>
 
