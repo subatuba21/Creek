@@ -1,0 +1,15 @@
+{
+    "organism": "yes",
+    "name": "California Tiger Salamander",
+    "kingdom": "Animalia",
+    "phylum": "Chordata",
+    "class": "Amphibia",
+    "order": "Urodela",
+    "family": "Ambystomatidae",
+    "genus": "Ambystoma",
+    "species": "Ambystoma californiense",
+    "text": "Keep a look out for any of these species!\n",
+    "convertedName": "California_Tiger_Salamander",
+    "link": 0,
+    "image": "images/Field_Guide/Endangered_Species/tiger_salam.jpg"
+}

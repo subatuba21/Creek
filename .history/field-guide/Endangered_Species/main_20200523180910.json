@@ -1,0 +1,7 @@
+{
+  "name": "Endangered Species",
+  "image": "images/Field_Guide/Endangered_Species/kitfox.jpg",
+  "level": 1,
+  "text": "Keep a look out for any of these species!\n\nThe organisms above are known to have been present in the Arroyo habitat at one time. They are listed as endangered species. We hope at some point one or more of these will be sighted so that the Arroyo might be eligible special protection and its return to a more natural state might be realized.",
+  "folders": [["Congdon's_Tarplant", "images/Field_Guide/Endangered_Species/tarplant.jpg"], ["Palmate-bracted_Bird's-beak", "images/Field_Guide/Endangered_Species/birdbeak.jpg"], ["Vernal_Pool_Fairy_Shrimp", "images/Field_Guide/Endangered_Species/fairy_shrimp.jpg"], ["California_Tiger_Salamander", "images/Field_Guide/Endangered_Species/tiger_salam.jpg"], ["California_Red-legged_Frog", "images/Field_Guide/Endangered_Species/redfrog.jpg"], ["Western_Pond_Turtle", "images/Field_Guide/Endangered_Species/turtle.jpg"], ["Sharp-skinned_Hawk", "images/Field_Guide/Endangered_Species/sshawk.jpg"], ["Cooper's_Hawk", "images/Field_Guide/Endangered_Species/cprhwk.jpg"], ["Western_Burrowing_Owl", "images/Field_Guide/Endangered_Species/burowl.jpg"], ["Loggerhead_Shrike", "images/Field_Guide/Endangered_Species/shrike.jpg"], ["California_Yellow_Warbler", "images/Field_Guide/Endangered_Species/warbler.jpg"]]
+}

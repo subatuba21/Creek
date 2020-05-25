@@ -1,0 +1,15 @@
+{
+    "organism": "yes",
+    "name": "California Tiger Salamander",
+    "kingdom": "Animalia",
+    "phylum": "Chordata",
+    "class": "Amphibia",
+    "order": "Urodela",
+    "family": "Ambystomatidae",
+    "genus": "Ambystoma",
+    "species": "Ambystoma californiense",
+    "text": "Keep a look out for any of these species!\n\nCommonly 17.8-30 cm. in length, the Pacific Tiger Salamanders are characterized by having a robust smooth skinned body, short rounded snout, and black and yellow spots. The eyes are large and stick out from the head more so than most salamanders, and have recognizable black pupils.",
+    "convertedName": "California_Tiger_Salamander",
+    "link": 0,
+    "image": "images/Field_Guide/Endangered_Species/tiger_salam.jpg"
+}
