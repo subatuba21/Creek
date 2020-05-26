@@ -56,7 +56,7 @@ document.getElementById('sitechanger').addEventListener("keydown", event => {
       site: site
     };
 
-    getsite.open("GET", "study-sites/siteprint.php", true);
+    getsite.open("POST", "study-sites/siteprint.php", true);
     getsite.setRequestHeader("Content-Type", "application/json");
     getsite.send(JSON.stringify(jsonu));
   }
@@ -70,7 +70,7 @@ document.getElementById("arrow-go").addEventListener("click", function() {
     site: site
   };
 
-  getsite.open("GET", "study-sites/siteprint.php", true);
+  getsite.open("POST", "study-sites/siteprint.php", true);
   getsite.setRequestHeader("Content-Type", "application/json");
   getsite.send(JSON.stringify(jsonu));
 });
@@ -87,7 +87,7 @@ document.getElementById("arrow-left").addEventListener("click", function() {
     site: site
   };
 
-  getsite.open("GET", "study-sites/siteprint.php", true);
+  getsite.open("POST", "study-sites/siteprint.php", true);
   getsite.setRequestHeader("Content-Type", "application/json");
   getsite.send(JSON.stringify(jsonu));
 });
@@ -104,7 +104,7 @@ document.getElementById("arrow-right").addEventListener("click", function() {
     site: site
   };
 
-  getsite.open("GET", "study-sites/siteprint.php", true);
+  getsite.open("POST", "study-sites/siteprint.php", true);
   getsite.setRequestHeader("Content-Type", "application/json");
   getsite.send(JSON.stringify(jsonu));
 });
