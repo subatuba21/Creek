@@ -1,0 +1,15 @@
+{
+    "organism": "yes",
+    "name": "Loggerhead Shrike",
+    "kingdom": "Animalia",
+    "phylum": "Chordata",
+    "class": "Aves",
+    "order": "Passeriformes",
+    "family": "Laniidae",
+    "genus": "Lanius",
+    "species": "Lanius ludovicianus",
+    "text": "Keep a look out for any of these species!\n\nUsually 20 to 25 centimeters in length, is slightly smaller than the Northern Shrike and slightly darker grey on top. It has a white bottom and a black face mask which extends over the bill.",
+    "convertedName": "Loggerhead_Shrike",
+    "link": 0,
+    "image": "images/Field_Guide/Endangered_Species/shrike.jpg"
+}

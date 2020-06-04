@@ -1,0 +1,15 @@
+{
+    "organism": "yes",
+    "name": "Western Pond Turtle",
+    "kingdom": "Animalia",
+    "phylum": "Chordata",
+    "class": "Reptilia",
+    "order": "Testudines",
+    "family": "Emydidae",
+    "genus": "Actinemys",
+    "species": "Actinemys marmorata",
+    "text": "Keep a look out for any of these species!\n\n",
+    "convertedName": "Western_Pond_Turtle",
+    "link": 0,
+    "image": "images/Field_Guide/Endangered_Species/fairy_shrimp.jpg"
+}
