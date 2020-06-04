@@ -164,7 +164,13 @@ class gallery extends HTMLElement {
 
   static open(element, path) {
     element.shadowRoot.getElementById("wrapper").style.display = "block";
-    bodyScrollLock.disableBodyScroll(element);
+
+    bodyScrollLock.disableBodyScroll(element, {
+      allowTouchMove: child => {
+        if (child.id="cont") return true;
+      }
+    });
+    
     this.setview(path, element);
   }
 
