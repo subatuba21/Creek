@@ -6,7 +6,9 @@ document.getElementById("sitechanger").addEventListener("click", function() {
     clicked=false;
     bodyScrollLock.enableBodyScroll(document.getElementById("dropup-content"));
   } else {
-    bodyScrollLock.disableBodyScroll(document.getElementById("dropup-content"));
+    bodyScrollLock.disableBodyScroll(document.getElementById("dropup-content"), {
+      reserveScrollBarGap: true
+    });
     document.getElementById("dropup-content").style.display = "block";
     clicked=true;
   }

@@ -294,7 +294,7 @@ session_start();
 
     @keyframes nav-one {
       from {
-        background-color: transparent;
+        background-color: var(--grey);
         box-shadow: 0px 0px 0px;
       }
 
@@ -311,7 +311,7 @@ session_start();
       }
 
       to {
-        background-color: transparent;
+        background-color: var(--grey);
         box-shadow: 0px 0px 0px;
       }
     }

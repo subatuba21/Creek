@@ -3,7 +3,7 @@ $page = $_SESSION['page'];
 $homestyle = '';
 $homeDis = '';
 if ($page == 'home') {
-  $homestyle = 'background-color: rgba(255, 0, 0, 0); box-shadow:0px 0px 0px';
+  $homestyle = 'background-color: var(--grey); box-shadow:0px 0px 0px';
   $homeDis = 'display:none;';
 }
 print "
