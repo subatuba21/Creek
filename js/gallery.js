@@ -66,6 +66,12 @@ class gallery extends HTMLElement {
   static setview(path, object) {
     var oldObjects = object.shadowRoot.getElementById("cont").querySelectorAll(".item");
     gallery.setpath(`Home${path}`);
+    if(gallery.getpath()==="Home") {
+      object.shadowRoot.getElementById("backbutton").style.opacity=".3";
+    }
+    else {
+      object.shadowRoot.getElementById("backbutton").style.opacity = "1";
+    }
     if (object.shadowRoot.getElementById("main-image-div")!=null) {
       object.shadowRoot.getElementById("main-image-div").remove();
     }

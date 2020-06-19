@@ -176,8 +176,13 @@ $_SESSION['page'] = "field-guide";
     .button {
       cursor: pointer;
     }
+
     .button:hover {
       text-decoration: underline;
+    }
+
+    #general-header {
+      margin-bottom: 5px;
     }
 
     @media (max-width: 768px) {
@@ -275,6 +280,7 @@ $_SESSION['page'] = "field-guide";
 
     <div class="displaych" id="main-display-area">
       <h2 id="general-header"></h2>
+      <p style="text-align: center; width: 95%; margin-left: 2.5%; margin-top: 0px; margin-bottom: 1.5em">Scroll up to view organisms and categories.</p>
       <img id="general-image" src="" alt="image">
       <div id='speciesInfo'>
         <p id="kingdom" class="levels"></p>
@@ -409,6 +415,13 @@ $_SESSION['page'] = "field-guide";
           if (button.innerText.trim() != "" && i != 0) {
             headerOfTree.appendChild(separator);
           }
+
+          if (button.innerText.trim() != "" && (i == fgPath.length - 1 || fgPath.length==2)) {
+            let currentSelecSpan = document.createElement("span");
+            currentSelecSpan.style.fontWeight = "500";
+            currentSelecSpan.innerText = "Current Selection: ";
+            headerOfTree.appendChild(currentSelecSpan);
+          }
           headerOfTree.appendChild(button);
 
         }
@@ -448,6 +461,8 @@ $_SESSION['page'] = "field-guide";
       }
       setCardProperty(pathMaker.getCurrentPath());
       newIms();
+
+      //Handles categories - changeContent handles info for organisms
       document.getElementById("kingdom").innerText = "";
       document.getElementById("phylum").innerText = "";
       document.getElementById("class").innerText = "";
