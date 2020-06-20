@@ -416,13 +416,14 @@ $_SESSION['page'] = "field-guide";
             headerOfTree.appendChild(separator);
           }
 
-          if (button.innerText.trim() != "" && (i == fgPath.length - 1 || fgPath.length==2)) {
+          if (button.innerText.trim() != "" && (i == fgPath.length - 1 || fgPath.length == 2)) {
             let currentSelecSpan = document.createElement("span");
             currentSelecSpan.style.fontWeight = "500";
             currentSelecSpan.innerText = "Current Selection: ";
             headerOfTree.appendChild(currentSelecSpan);
-          }
-          headerOfTree.appendChild(button);
+            button.style.fontWeight = "600";
+            currentSelecSpan.appendChild(button);
+          } else headerOfTree.appendChild(button);
 
         }
 
