@@ -15,7 +15,7 @@
     #displayarea {
       font-size: 20pt;
       font-family: 'Dosis', sans-serif;
-      min-height: 0;
+      min-height: 95vh;
       width: 71%;
       display: inline-block;
       text-align: left;

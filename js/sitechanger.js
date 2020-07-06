@@ -45,6 +45,7 @@ getsite.onreadystatechange = function() {
         }
         newIms();
       }
+      window.scrollTo(0, 0);
     }
   }
 };

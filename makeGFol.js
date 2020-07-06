@@ -5,6 +5,7 @@ const getPath = readline.createInterface({
   output: process.stdout
 });
 
+//Put path as images to refresh entire folder
 getPath.question("Path: ", (path) => {
   var dir = fs.opendirSync(path);
   var remaining = true;

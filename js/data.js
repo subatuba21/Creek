@@ -24,6 +24,7 @@ for (let button of buttons) {
       if (window.innerWidth <= 768) {
         stopAtFooter();
       }
+      window.scrollTo(0, 0);
     });
   });
   if (button.innerText.trim().toLowerCase() == "conductivity") {

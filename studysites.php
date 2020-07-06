@@ -37,6 +37,7 @@
       font-size: 25pt;
       width: 75%;
       display: inline-block;
+      min-height: 95vh;
     }
 
     #siteheader {
