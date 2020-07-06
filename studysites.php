@@ -130,33 +130,38 @@
       <p>© AV Web Development</p>
     </div>
 
-    <ul>
+    <div>
       <h4>Sections</h4>
-      <li><a href="index.php">Home</a></li>
-      <li><a href="studysites.php">Study Sites</a></li>
-      <li><a href="data.php">Data</a></li>
-      <li><a href="fieldguide.php">Field Guide</a></li>
-    </ul>
+      <ul>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="studysites.php">Study Sites</a></li>
+        <li><a href="data.php">Data</a></li>
+        <li><a href="fieldguide.php">Field Guide</a></li>
+      </ul>
+    </div>
 
-    <ul>
+    <div>
       <h4>Other Links</h4>
-      <li><a href="index.php#im2">File Downloads</a></li>
-      <li><a href="fieldguide.php?p=/Endangered_Species">Endangered Species</a></li>
-      <li><a href="fieldguide.php?p=/Indicator_Species">Indicator Species</a></li>
-    </ul>
+      <ul>
+        <li><a href="index.php#im2">File Downloads</a></li>
+        <li><a href="fieldguide.php?p=/Endangered_Species">Endangered Species</a></li>
+        <li><a href="fieldguide.php?p=/Indicator_Species">Indicator Species</a></li>
+      </ul>
+    </div>
 
     <!-- <div id="contact-footer">
         <p><a>Contact Teachers</a></p>
         <p><a>Contact Development Team</a></p>
         <p><a>Want to make a change to the website?</a></p>
       </div> -->
-
-    <ul>
+    <div>
       <h4>Contact</h4>
-      <li><a href="">Contact Teachers</a></li>
-      <li><a href="">Contact Development Team</a></li>
-      <li><a href="">Want to make a change to the website?</a></li>
-    </ul>
+      <ul>
+        <li><a href="">Contact Teachers</a></li>
+        <li><a href="">Contact Development Team</a></li>
+        <li><a href="">Want to make a change to the website?</a></li>
+      </ul>
+    </div>
   </footer>
 
 

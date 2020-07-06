@@ -242,6 +242,7 @@ footer {
   background-color: #202020;
   color: #cad6b3;
   padding: 2em;
+  padding-top: 3em;
   display: flex;
   flex-wrap: wrap;
   text-align: center;
@@ -255,6 +256,10 @@ footer ul, #contact-footer, #creekwatch-footer {
   width: 18em;
   list-style-type: none;
   padding: 0px;
+}
+
+footer ul {
+  margin-top: 0px;
 }
 
 footer h4 {
