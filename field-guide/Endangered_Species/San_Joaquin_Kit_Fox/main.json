@@ -1,0 +1,15 @@
+{
+    "organism": "yes",
+    "name": "San Joaquin Kit Fox",
+    "kingdom": "Animalia",
+    "phylum": "Chordata",
+    "class": "Mammalia",
+    "order": "Carnivora",
+    "family": "Canidae",
+    "genus": "Vulpes",
+    "species": "Vulpes macrotis",
+    "text": "Keep a look out for any of these species!\n\nCharecterized by large ears, they genearally are 6 and a half pounds and are a hybrid of the Tawny Fox.",
+    "convertedName": "San_Joaquin_Kit_Fox",
+    "link": 0,
+    "image": "images/Field_Guide/Endangered_Species/kitfox.jpg"
+}
