@@ -1,6 +1,6 @@
 /*creek.css*/
-@import url('https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap');
 
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap');
 html, body {
   margin: 0px;
   background-color: var(--body-color);
@@ -9,7 +9,7 @@ html, body {
 :root {
   --light-green: #7FFF00;
   --body-color: #7aa329;
-  --grey: rgba(220,220,220, .6);
+  --grey: rgba(220, 220, 220, .6);
   --solid-grey: #b5c594;
 }
 
@@ -52,10 +52,10 @@ html, body {
   text-decoration: none;
   color: black;
 }
+
 .navbar-item a:hover {
   text-decoration: underline;
 }
-
 
 .is-active a {
   margin: 15px;
@@ -63,7 +63,6 @@ html, body {
   text-decoration: none;
   color: black;
 }
-
 
 #logo {
   display: inline-flex;
@@ -109,8 +108,8 @@ h2 {
 
 h6 {
   width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
 }
 
 .separator {
@@ -175,7 +174,7 @@ h6 {
   position: absolute;
   top: 10px;
   right: 10px;
-   /* transition: width 1s;  */
+  /* transition: width 1s;  */
 }
 
 #navbar-mobile div {
@@ -193,12 +192,18 @@ h6 {
   text-align: center;
   background-color: transparent;
   /* margin-bottom: .8%; */
-  -webkit-touch-callout: none; /* iOS Safari */
--webkit-user-select: none; /* Safari */
- -khtml-user-select: none; /* Konqueror HTML */
-   -moz-user-select: none; /* Old versions of Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
-        user-select: none; /* Non-prefixed version, currently
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
                               supported by Chrome, Opera and Firefox */
 }
 
@@ -208,7 +213,7 @@ h6 {
 }
 
 #navbar-bottom .navbar-item span {
-  padding-top:.4%;
+  padding-top: .4%;
   padding-bottom: .7%;
   padding-left: .9%;
   padding-right: .7%;
@@ -221,7 +226,7 @@ h6 {
   font-size: 19pt;
   position: relative;
   top: 3px;
-  color: 	black;
+  color: black;
   cursor: pointer;
 }
 
@@ -242,7 +247,6 @@ footer {
   background-color: #202020;
   color: #cad6b3;
   padding: 2em;
-  padding-top: 3em;
   display: flex;
   flex-wrap: wrap;
   text-align: center;
@@ -253,13 +257,19 @@ footer {
 
 footer ul, #contact-footer, #creekwatch-footer {
   text-align: center;
-  width: 18em;
   list-style-type: none;
   padding: 0px;
 }
 
 footer ul {
   margin-top: 0px;
+}
+
+footer div, #creekwatch-footer {
+  margin-top: 1em;
+  padding-left: 4em;
+  padding-right: 4em;
+  width: max-content;
 }
 
 footer h4 {
@@ -279,9 +289,10 @@ footer a:hover {
 
 footer img {
   width: 10em;
-  margin-top: 1em;
   cursor: pointer;
+  display: block;
 }
+
 @media (max-width: 768px) {
   .bottom-left-sticky {
     font-size: 13pt;
@@ -301,11 +312,9 @@ footer img {
   #navbar-bottom i {
     font-size: 17pt;
   }
-
   #navbar-mobile {
     display: block;
   }
-
   #navbar-right {
     display: inline-block;
   }
@@ -325,10 +334,9 @@ footer img {
   #maintext {
     font-size: 13pt;
   }
-  #about p{
+  #about p {
     width: 95%;
   }
-
   h1 {
     font-size: 20pt;
   }
@@ -345,7 +353,7 @@ footer img {
   #hero {
     background-size: cover;
   }
-  #visit p{
+  #visit p {
     width: 95%;
     margin-left: 2.5%;
   }

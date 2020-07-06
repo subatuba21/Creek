@@ -291,14 +291,6 @@
         <p><a>Contact Development Team</a></p>
         <p><a>Want to make a change to the website?</a></p>
       </div> -->
-    <div>
-      <h4>Contact</h4>
-      <ul>
-        <li><a href="">Contact Teachers</a></li>
-        <li><a href="">Contact Development Team</a></li>
-        <li><a href="">Want to make a change to the website?</a></li>
-      </ul>
-    </div>
   </footer>
 
   <script src="js/gallery.js" charset="utf-8"></script>
