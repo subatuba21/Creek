@@ -294,11 +294,6 @@
   </footer>
 
   <script src="js/gallery.js" charset="utf-8"></script>
-  <script>
-    if (window.innerWidth <= 768) {
-      window.addEventListener("load", stopAtFooter);
-    }
-  </script>
 </body>
 
 </html>

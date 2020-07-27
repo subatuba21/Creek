@@ -21,9 +21,6 @@ for (let button of buttons) {
       return html.text();
     }).then(function(text) {
       document.getElementById("displayarea").innerHTML = text;
-      if (window.innerWidth <= 768) {
-        stopAtFooter();
-      }
       window.scrollTo(0, 0);
     });
   });
