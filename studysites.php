@@ -44,6 +44,27 @@
       font-size: 30pt;
     }
 
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    /* Firefox */
+    input[type=number] {
+      -moz-appearance: textfield;
+    }
+
+    input[type=number]:invalid {
+      box-shadow: 0px 0px 0px 1px red inset;
+    }
+
+    input[type=number]::placeholder {
+      color: black;
+      opacity: .4;
+    }
+
+
 
     @media (max-width: 768px) {
       #sitecont {
@@ -103,7 +124,7 @@
       <div class="navbar-item">
         <span>
           Enter site number:
-          <input id='sitechanger' style="font-family: 'Dosis', sans-serif;" type="text" name="site" placeholder="1-14">
+          <input id='sitechanger' style="font-family: 'Dosis', sans-serif;" type="number" name="site" placeholder="1-14" min="1" max="14">
           <i class="mdi mdi-arrow-right-drop-circle-outline" id='arrow-go'></i>
           <i style="margin-left: 1%;" class="mdi mdi-arrow-left" id='arrow-left'></i>
           <i class="mdi mdi-arrow-right" id='arrow-right'></i>
@@ -160,7 +181,7 @@
   <script>
     setUpStickyElements();
   </script>
-
+  <script src="js/sitesAndDataRouting.js"></script>
 </body>
 
 </html>

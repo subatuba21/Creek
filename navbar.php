@@ -15,7 +15,32 @@ print "
         </div>
         <div class='navbar-item' id='study-sites'>
           <a href='studysites.php'>Study Sites</a>
+          <div class='dropdown'>
+            <a href='studysites.php'>Home</a>
+            <a href='studysites.php?page=1'>Site 1</a>
+            <a href='studysites.php?page=2'>Site 2</a>
+            <a href='studysites.php?page=3'>Site 3</a>
+            <a href='studysites.php?page=4'>Site 4</a>
+            <a href='studysites.php?page=5'>Site 5</a>
+            <a href='studysites.php?page=6'>Site 6</a>
+            <a href='studysites.php?page=7'>Site 7</a>
+            <a href='studysites.php?page=8'>Site 8</a>
+            <a href='studysites.php?page=9'>Site 9</a>
+            <a href='studysites.php?page=10'>Site 10</a>
+            <a href='studysites.php?page=11'>Site 11</a>
+            <a href='studysites.php?page=12'>Site 12</a>
+            <a href='studysites.php?page=13'>Site 13</a>
+            <a href='studysites.php?page=14'>Site 14</a>
+          </div>
         </div>
+        <script> 
+          document.querySelector('#study-sites').onmouseover = function() {
+            this.querySelector('.dropdown').style.display='inline-block';
+          }
+          document.querySelector('#study-sites').onmouseout = function() {
+            this.querySelector('.dropdown').style.display='none';
+          }
+        </script>
         <div class='navbar-item' id='data'>
           <a href='data.php'>Data</a>
         </div>
@@ -51,14 +76,13 @@ print "
         document.getElementById('navbar-left').style.height = document.getElementById('navbar-right').clientHeight.toString() + 'px';
       }
 ";
-      if ($page!='home') {
-        print "
+if ($page != 'home') {
+  print "
         var cHeight = parseInt(window.getComputedStyle(document.getElementById('navbar')).getPropertyValue('height'));
         document.body.style.marginTop=cHeight+'px';
         console.log(document.body.style.marginTop);";
-        
-      }
-      print "
+}
+print "
     }
     window.addEventListener('load', configureNav);
     window.addEventListener('resize', configureNav);

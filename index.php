@@ -373,7 +373,7 @@ session_start();
     <image-gallery></image-gallery>
     <div id='herotext'>
       <h1>Arroyo Del Valle</h1>
-      <p>Project Creek Watch, started in the Fall of 1994, is a long term scientific study of the Arroyo Del Valle "Creek" located in the city of Pleasanton, California. This project is sponsored & cooridinated by the Amador Valley High School Science Department which is part of the Pleasanton Unified School District. It was awarded the prestigious California Golden Bell Award for excellence in education in 1999.</p>
+      <p>Project Creek Watch, started in the Fall of 1994, is a long term scientific study of the Arroyo Del Valle "Creek" located in the city of Pleasanton, California. This project is sponsored & coordinated by the Amador Valley High School Science Department which is part of the Pleasanton Unified School District. It was awarded the prestigious California Golden Bell Award for excellence in education in 1999.</p>
     </div>
   </div>
   <div id="maintext">

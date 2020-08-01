@@ -57,7 +57,40 @@ html, body {
   text-decoration: underline;
 }
 
-.is-active a {
+#navbar .dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  background-color: var(--solid-grey);
+  width: 70px;
+  padding: 5px;
+  padding-top: 0px;
+  text-align: left;
+  border: 2px solid black;
+  border-top: 0px;
+  font-size: 14pt;
+}
+
+#navbar .is-active .dropdown {
+  left: 15px;
+}
+
+#study-sites, #data {
+  position: relative;
+}
+
+#navbar .dropdown a {
+  display: block;
+  text-decoration: none;
+  color: black;
+}
+
+#navbar .dropdown a:hover {
+ opacity: .6;
+}
+
+.is-active>a {
   margin: 15px;
   font-weight: 700;
   text-decoration: none;

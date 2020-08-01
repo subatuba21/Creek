@@ -109,3 +109,13 @@ document.getElementById("arrow-right").addEventListener("click", function() {
   getsite.setRequestHeader("Content-Type", "application/json");
   getsite.send(JSON.stringify(jsonu));
 });
+
+function goToSite(value) {
+  var jsonu = {
+    site: parseInt(value)
+  }
+  site=value;
+  getsite.open("POST", "study-sites/siteprint.php", true);
+  getsite.setRequestHeader("Content-Type", "application/json");
+  getsite.send(JSON.stringify(jsonu));
+}
