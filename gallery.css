@@ -91,6 +91,7 @@ h2 {
 
 .image-item-wrapper span {
   font-size: 20pt;
+  display: none;
 }
 
 .image-item-wrapper img {

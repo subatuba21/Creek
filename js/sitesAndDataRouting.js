@@ -8,5 +8,8 @@ function route() {
     if (document.title==="Study Sites" && numbers.includes(page)) {
         goToSite(page);
     }
+    if (document.title === "Data") {
+        goToPage(page);
+    }
 }
 route();

@@ -72,6 +72,10 @@ html, body {
   font-size: 14pt;
 }
 
+#navbar #data .dropdown {
+  width: 120px;
+}
+
 #navbar .is-active .dropdown {
   left: 15px;
 }
@@ -87,7 +91,7 @@ html, body {
 }
 
 #navbar .dropdown a:hover {
- opacity: .6;
+  opacity: .6;
 }
 
 .is-active>a {
@@ -161,7 +165,7 @@ h6 {
   text-align: center;
   font-size: 30pt;
   margin-top: 1%;
-  margin-bottom: 1%;
+  margin-bottom: 20px;
   color: var(--light-green);
   cursor: pointer;
 }
@@ -395,5 +399,8 @@ footer img {
   }
   footer {
     font-size: 13.5pt;
+  }
+  .expandb {
+    margin-bottom: 10px;
   }
 }

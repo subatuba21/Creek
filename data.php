@@ -280,7 +280,7 @@
     <div>
       <h4>Other Links</h4>
       <ul>
-        <li><a href="index.php#im2">File Downloads</a></li>
+        <li><a href="index.php?files=t">File Downloads</a></li>
         <li><a href="fieldguide.php?p=/Endangered_Species">Endangered Species</a></li>
         <li><a href="fieldguide.php?p=/Indicator_Species">Indicator Species</a></li>
       </ul>
@@ -294,6 +294,7 @@
   </footer>
 
   <script src="js/gallery.js" charset="utf-8"></script>
+  <script src="js/sitesAndDataRouting.js"></script>
 </body>
 
 </html>

@@ -43,7 +43,32 @@ print "
         </script>
         <div class='navbar-item' id='data'>
           <a href='data.php'>Data</a>
+          <div class='dropdown'>
+            <a href='data.php'>Home</a>
+            <a href='data.php?page=conductivity'>Conductivity</a>
+            <a href='data.php?page=turbidity'>Turbidity</a>
+            <a href='data.php?page=temperature'>Temperature</a>
+            <a href='data.php?page=depth'>Depth</a>
+            <a href='data.php?page=phosphate levels'>Phosphate Levels</a>
+            <a href='data.php?page=ph'>pH</a>
+            <a href='data.php?page=nitrate'>Nitrate</a>
+            <a href='data.php?page=plankton net'>Plankton Net</a>
+            <a href='data.php?page=kick net'>Kick Net</a>
+            <a href='data.php?page=seine net'>Seine Net</a>
+            <a href='data.php?page=dip net'>Dip Net</a>
+            <a href='data.php?page=succession'>Succession</a>
+            <a href='data.php?page=sediments'>Sediments</a>
+            <a href='data.php?page=clean up'>Clean Up</a>
+          </div>
         </div>
+        <script> 
+          document.querySelector('#data').onmouseover = function() {
+            this.querySelector('.dropdown').style.display='inline-block';
+          }
+          document.querySelector('#data').onmouseout = function() {
+            this.querySelector('.dropdown').style.display='none';
+          }
+        </script>
         <div class='navbar-item' id='field-guide'>
           <a href='fieldguide.php'>Field Guide</a>
         </div>

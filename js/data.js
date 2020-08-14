@@ -29,5 +29,15 @@ for (let button of buttons) {
   }
 }
 
+function goToPage(page) {
+  fetch(`data/${page.trim().toLowerCase()}.html`).then(function (html) {
+    if (html.status==404) return;
+    return html.text();
+  }).then(function (text) {
+    document.getElementById("displayarea").innerHTML = text;
+    window.scrollTo(0, 0);
+  });
+}
+
 setUpStickyElements();
 

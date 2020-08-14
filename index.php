@@ -201,8 +201,19 @@ session_start();
       display: none;
     }
 
+    #ericthiel {
+      float: left;
+      margin-right: 20px;
+      border-radius: 2px;
+    }
+
 
     @media (max-width: 768px) {
+      #ericthiel {
+        width: 100%;
+        margin-bottom: 5px;
+      }
+
       #banner {
         width: 95%;
       }
@@ -276,6 +287,20 @@ session_start();
 
       .mobile-hidden {
         display: none;
+      }
+
+      #expandb-mobile {
+        margin: 0px;
+      }
+
+      .not-hidden,
+      #visit {
+        margin-bottom:
+          0px;
+      }
+
+      #use h2 {
+        margin-top: 8px;
       }
     }
 
@@ -378,14 +403,17 @@ session_start();
   </div>
   <div id="maintext">
     <div id="about">
-      <p class="not-hidden">The Arroyo Del Valle is a tributary branching from the Lake del Valle watershed. It winds its way through the town of Pleasanton. Pleasanton's Main Street passes over it and the historic Pleasanton Hotel sits along side the creek bank.
-        What is now a creek used to be a significant tributary supporting a healthy steelhead population. Winter storms would create significant runoff and fill the Arroyo with enough water to allow fish to migrate inland to numerous spawning sites.
-        As <span class="mobile-hidden">the city of Pleasanton continued to grow and housing sprang up along the banks of the Arroyo, erosion became a major concern. Concrete pilings and rip rock was deposited at vulnerable bends in the Arroyo to curb erosion. Formation of local reservoirs needed to recharge the valleys underground aquifer, and water diversion for industry and recreational use led to a significant reduction of water flow and a channel that would end up being dry throughout most of the summer. Due to Kaiser
-          Industries quarry operations, located by the Shadow Cliffs reservoir, there is currently water flow throughout the entire year. Their mining operations involves pumping water from the quarry site into the Del Valle channel creating what the Arroyo has become today. Duing our research there have been three occasions where diversion of water into the channel was stopped to accomodate maintenance operations. This led to the creek completely drying up below the
-          <span class="computer-hidden">
+      <p class="not-hidden">
+        <img src="pics/ericthiel.jpg" alt="" id="ericthiel">
+        The original website for Project Creek Watch was created by the late Eric Thiel, co-founder of the project. He was a valued member of the Amador Valley High School Science department from 1992-2017. <br> <br>
+        The Arroyo Del Valle is a tributary branching from the Lake del Valle watershed. It winds its way through the town of Pleasanton. Pleasanton's Main Street passes over it and the historic Pleasanton Hotel sits along side the creek bank.
+        What is now a creek <span class="mobile-hidden"> used to be a significant tributary supporting a healthy steelhead population. Winter storms would create significant runoff and fill the Arroyo with enough water to allow fish to migrate inland to numerous spawning sites.
+          As the city <span class="computer-hidden"> of Pleasanton continued to grow and housing sprang up along the banks of the Arroyo, erosion became a major concern. Concrete pilings and rip rock was deposited at vulnerable bends in the Arroyo to curb erosion. Formation of local reservoirs needed to recharge the valleys underground aquifer, and water diversion for industry and recreational use led to a significant reduction of water flow and a channel that would end up being dry throughout most of the summer. Due to Kaiser
+            Industries quarry operations, located by the Shadow Cliffs reservoir, there is currently water flow throughout the entire year. Their mining operations involves pumping water from the quarry site into the Del Valle channel creating what the Arroyo has become today. Duing our research there have been three occasions where diversion of water into the channel was stopped to accomodate maintenance operations. This led to the creek completely drying up below the
             Main Street Bridge and killing thousands of fish, amphibians, and countless numbers of aquatic insects. We have made efforts to insure that the company continues a supply of water so as to maintain the ecosystem that they have created. California Fish and Game have assisted us with this effort. For more about what we have observed, visit the Arroyo Field Guide, Arroyo Data Collection, or Arroyo Study Sites.
             The steelhead may be gone but the Arroyo still creates a wonderfull wetland habitat. Stoic trees, blue herons, belted kingfishers, large mouth black bass, blugill, racoons, and other interesting wildlife are still common in the Arroyo Del Valle.
-            Many residents and local industry aren't aware of what the Arroyo once was and what is has the potential to become. It is for this reason that the Amador Valley High School Science Department has begun the Arroyo Del Valle Creek Watch Project. Our mission is to use the creek as an outdoor laboratory. While learning basic concepts in both life and physical sciences students will hopefully develop an appreciation for one of Pleasanton's remaining natural resources and perhaps help to establish a more stable ecosystem.</span>
+            Many residents and local industry aren't aware of what the Arroyo once was and what is has the potential to become. It is for this reason that the Amador Valley High School Science Department has begun the Arroyo Del Valle Creek Watch Project. Our mission is to use the creek as an outdoor laboratory. While learning basic concepts in both life and physical sciences students will hopefully develop an appreciation for one of Pleasanton's remaining natural resources and perhaps help to establish a more stable ecosystem.
+          </span>
         </span>
       </p>
     </div>
@@ -459,10 +487,10 @@ session_start();
       <i class="mdi mdi-file-download-outline"></i>
       <ul>
         <li>
-          <a href="">Map</a>
+          <a href="pics/creekmap(1).jpg" target="_blank">Map</a>
         </li>
         <li>
-          <a href="">Satelite View</a>
+          <a href="pics/satellite.jpg" target="_blank">Satellite View</a>
         </li>
       </ul>
 
@@ -550,7 +578,7 @@ session_start();
     <div>
       <h4>Other Links</h4>
       <ul>
-        <li><a href="index.php#im2">File Downloads</a></li>
+        <li><a href="index.php?files=t">File Downloads</a></li>
         <li><a href="fieldguide.php?p=/Endangered_Species">Endangered Species</a></li>
         <li><a href="fieldguide.php?p=/Indicator_Species">Indicator Species</a></li>
       </ul>
@@ -562,6 +590,15 @@ session_start();
         <p><a>Want to make a change to the website?</a></p>
       </div> -->
   </footer>
+  <script>
+    var search = window.location.search;
+    if (search === "?files=t") {
+      document.querySelector("#filebar").scrollIntoView({
+        block: "center",
+        behavior: "smooth"
+      });
+    }
+  </script>
 </body>
 
 </html>
