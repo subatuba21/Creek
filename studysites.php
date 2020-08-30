@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.4.95/css/materialdesignicons.min.css">
   <script src="node_modules/body-scroll-lock/lib/bodyScrollLock.js" charset="utf-8"></script>
+  <meta name="description" content="This site was created for Amador Valley High students to study the creek next to the high school, the Arroyo Del Valle. The home page has information about the study of the creek at Amador, the original creator of the website, as well as useful documents such as maps. The study sites page gives information about the various study sites that Amador students observe and collect data on. The data page gives students information about the various fields of data that can be collected from the creek. The field guide page gives information about the plant, animals, and other organisms that can be found in the creek. The gallery shows many interesting pictures of the creek taken by Amador students and teachers.">
   <style>
     #sitetext {
       display: block;
