@@ -14,7 +14,7 @@
       $imnum = 0;
       $text = file_get_contents($urlt);
       $studysite = array('text' => $text, 'images' => array());
-      if (file_exists($urlim)) {
+      if (file_exists($urlm)) {
         $images = array_diff(scandir($urlm), array('..', '.'));
         foreach ($images as $image) {
         $htmlstr = "<img class='siteims' src='images/Study_Sites/$urlim/$image' style='display: none'>";
