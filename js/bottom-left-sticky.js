@@ -69,9 +69,10 @@ function setUpStickyElements() {
     var navbarBottom = document.getElementById("navbar-bottom");
     var navHeight = window.getComputedStyle(navbarBottom).getPropertyValue("height");
 
-    navbarBottom.style.opacity = "0";
-    navbarBottom.style.display = "none";
-    sticky.style.opacity = "1";
+    navbarBottom.style.opacity = "1";
+    navbarBottom.style.display = "block";
+    sticky.style.display = "none";
+    sticky.style.opacity = "0";
 
     fixedUntilFooterHeight(navbarBottom);
     fixedUntilFooterHeight(sticky);

@@ -16,7 +16,7 @@ print "
         <div class='navbar-item' id='study-sites'>
           <a href='studysites.php'>Study Sites</a>
           <div class='dropdown'>
-            <a href='studysites.php'>Home</a>
+            
             <a href='studysites.php?page=1'>Site 1</a>
             <a href='studysites.php?page=2'>Site 2</a>
             <a href='studysites.php?page=3'>Site 3</a>
@@ -44,7 +44,7 @@ print "
         <div class='navbar-item' id='data'>
           <a href='data.php'>Data</a>
           <div class='dropdown'>
-            <a href='data.php'>Home</a>
+            
             <a href='data.php?page=conductivity'>Conductivity</a>
             <a href='data.php?page=turbidity'>Turbidity</a>
             <a href='data.php?page=temperature'>Temperature</a>

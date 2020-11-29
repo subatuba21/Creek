@@ -1,3 +1,8 @@
+<?php
+  session_start();
+  $_SESSION['page'] = "data";
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -174,8 +179,6 @@
 
 <body>
   <?php
-  session_start();
-  $_SESSION['page'] = "data";
   include 'navbar.php';
   ?>
   <image-gallery></image-gallery>
@@ -261,7 +264,7 @@
       <script>
         var avlogo = document.querySelector("#creekwatch-footer img");
         avlogo.onclick = function() {
-          window.open("https://amadorweb.org", '_blank');
+          window.open("https://amadorweb.org/home.html", '_blank');
         }
       </script>
 

@@ -530,7 +530,7 @@ session_start();
       <script>
         var avlogo = document.querySelector("#creekwatch-footer img");
         avlogo.onclick = function() {
-          window.open("https://amadorweb.org", '_blank');
+          window.open("https://amadorweb.org/home.html", '_blank');
         }
       </script>
 
