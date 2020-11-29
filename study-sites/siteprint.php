@@ -14,10 +14,12 @@
       $imnum = 0;
       $text = file_get_contents($urlt);
       $studysite = array('text' => $text, 'images' => array());
-      $images = array_diff(scandir($urlm), array('..', '.'));
-      foreach ($images as $image) {
+      if (file_exists($urlim)) {
+        $images = array_diff(scandir($urlm), array('..', '.'));
+        foreach ($images as $image) {
         $htmlstr = "<img class='siteims' src='images/Study_Sites/$urlim/$image' style='display: none'>";
         array_push($studysite['images'], $htmlstr);
+        }
       }
       print json_encode($studysite);
     }
