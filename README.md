@@ -1,4 +1,8 @@
 # Creek
+ 
+The official website for Amador Valley High School's study of the Arroyo Del Valle.
 
-Tasks to do:
-1. Get a search bar going on field-guide
+## Run the site
+
+To run the site, please download a PHP server/software (XAMPP, MAMP) and open up the directory through the server.
+
